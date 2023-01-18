@@ -44,29 +44,29 @@ phylum auth login
 
 ![Login](https://raw.githubusercontent.com/phylum-dev/documentation/main/assets/cli-login.webp)
 
-### Create a New Phylum Project
+### Setup Your Phylum Project
 
-All analysis jobs *_must_* be associated with a Phylum project. To create a
+All analysis jobs *_must_* be associated with a Phylum project. To setup your
 project, run the following:
 
 ```sh
-phylum project create <projectName>
+phylum init
 ```
 
-![Create Project](https://raw.githubusercontent.com/phylum-dev/documentation/main/assets/create-project.webp)
+![Setup Project](TODO)
 
 ### Analyze your Project
 
-To begin analyzing your project for software supply chain risks, submit a
+To begin analyzing your project for software supply chain risks, submit your
 lockfile to Phylum.
 
 Resource: https://blog.phylum.io/insights-and-resources/pick-a-python-lockfile-and-improve-security
 
 ```sh
-phylum analyze <lockfile>
+phylum analyze
 ```
 
-![Analyze Project](https://raw.githubusercontent.com/phylum-dev/documentation/main/assets/submit-job.webp)
+![Analyze Project](TODO)
 
 ### (Optional) View Results in the Phylum UI
 
