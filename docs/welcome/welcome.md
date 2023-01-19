@@ -53,7 +53,7 @@ project, run the following:
 phylum init
 ```
 
-![Setup Project](TODO)
+![Create Project](https://raw.githubusercontent.com/phylum-dev/documentation/main/assets/phylum-init.webp)
 
 ### Analyze your Project
 
@@ -66,7 +66,7 @@ Resource: https://blog.phylum.io/insights-and-resources/pick-a-python-lockfile-a
 phylum analyze
 ```
 
-![Analyze Project](TODO)
+![Analyze Project](https://raw.githubusercontent.com/phylum-dev/documentation/main/assets/phylum-analyze.webp)
 
 ### (Optional) View Results in the Phylum UI
 
