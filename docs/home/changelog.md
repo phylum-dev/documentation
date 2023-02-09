@@ -5,7 +5,10 @@ hidden: true
 ---
 
 ## 2023 Weeks 1-6
+### New
 - The ability to delete Groups was added to the UI/CLI/API
 - An extension supporting the `pip` package manager for installation pre-check and sandboxing was published
-- Multi-lockfile support allows Phylum analysis jobs/projects to contain results for multiple ecosystems
-- `phylum package` command now supports single package submission
+
+### Improved
+- `phylum package` command now automatically submits a package for analysis if results are not already available
+- Phylum project/analysis job submissions can now contain multiple lockfiles/ecosystems
