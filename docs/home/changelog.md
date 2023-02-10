@@ -1,7 +1,7 @@
 ---
 title: Changelog
 category: 6255e67693d5200013b1fa40
-hidden: true
+hidden: false
 ---
 
 ## 2023 Weeks 1-6
