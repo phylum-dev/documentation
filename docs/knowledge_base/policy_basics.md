@@ -20,7 +20,7 @@ issue contains "risk level cannot exceed medium" if {
 }
 ```
 
-This policy can be executed using `opa eval --data phylum.rego --data <YOUR POLICY>.rego --data constants.json --input input.json --schema schemas --format pretty data.phylum.job`.
+This policy can be executed using `opa eval --data phylum.rego --data <YOUR POLICY>.rego --data constants.json --input input.json --schema schema --format pretty data.phylum.job`.
 
 | Input | Description | Provider |
 | --- | --- | --- |
