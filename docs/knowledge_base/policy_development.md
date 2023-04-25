@@ -26,13 +26,37 @@ curl -H "Authorization: Bearer ${token}" "https://api.phylum.io/api/v0/data/jobs
 
 Note: You can obtain a Job ID by using the [`phylum history`](https://docs.phylum.io/docs/phylum_history) command from the Phylum CLI.
 
+# Evaluating policies locally
+
+A policy can be evaluated using `opa eval --data phylum.rego --data <YOUR POLICY>.rego --data constants.json --input input.json --schema schema --format pretty data.phylum.job`.
+
+| Input | Description | Provider |
+| --- | --- | --- |
+| `phylum.rego` | defines rules for jobs, dependencies, and issues | Phylum |
+| `<YOUR POLICY>.rego` | policy you want to test | User |
+| `constants.json` | constants that can be used in your custom policy | Phylum |
+| `input.json` | input data to evaluate, generally from a Phylum job response | User |
+| `schema` | location of the schema files | Phylum |
+| `data.phylum.job` | entry point | Static value |
+
+If everything is working, you will receive JSON output from `opa` that looks like this:
+
+```json
+{
+  "dependencies": [],
+  "errors": []
+}
+```
+
+This is what the output looks like when the job is allowed by the policy. When the policy blocks something, there will be additional data describing the failure.
+
 # Automated testing
 
 Open Policy Agent has documentation on [policy testing](https://www.openpolicyagent.org/docs/latest/policy-testing/). Writing an automated test for your Phylum policy looks something like this:
 
 ```rego
 # example_test.rego
-# This is a test for the example showing how to block high severity issues.
+# This is a test for the default.rego which blocks high/critical severity issues.
 
 package policy
 
@@ -40,27 +64,27 @@ import data.phylum.level
 import future.keywords.if
 
 test_block_high if {
-    # Evaluate the rule with mocked input.
-    reasons := issue with data.issue as {
+    # Mock input
+    check := issue with data.issue as {
         "tag": "tag",
         "severity": level.HIGH
     }
-
-    reasons == {"High severity issues must be addressed"}
+    # Evaluate if the set contains the expected result
+    check == {"risk level cannot exceed medium"}
 }
 
 test_allow_medium if {
-    # Evaluate the rule with mocked input.
-    reasons := issue with data.issue as {
+    # Mock input
+    check := issue with data.issue as {
         "tag": "tag",
         "severity": level.MEDIUM
     }
-
-    reasons == set()
+    # Evaluate if the set is empty
+    check == set()
 }
 ```
 
-The test can be executed using `opa test phylum.rego example.rego example_test.rego`.
+This test requires `constants.json` from the Phylum SDK. The test can be executed against the Phylum `default.rego` policy using `opa test constants.json default.rego example_test.rego`.
 
 # Evaluating policies using the Phylum API
 
