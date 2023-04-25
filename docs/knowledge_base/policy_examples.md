@@ -8,6 +8,8 @@ hidden: false
 
 The policy transforms your threat model into a description of why the job is being blocked. There are multiple ways to define why a job should be blocked.
 
+The `METADATA` block contains `OPA` [Annotations](https://www.openpolicyagent.org/docs/latest/annotations/) which correlate to the schema and can be used for type checking.
+
 ## Blocking an issue
 
 The most common reason to block a job is because one of the dependencies has a known issue within one of Phylum's risk domains.
