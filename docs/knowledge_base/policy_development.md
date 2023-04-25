@@ -98,6 +98,6 @@ curl -H "Authorization: Bearer $(phylum auth token -b)" -H "Content-Type: text/p
 
 If the endpoint is called with no body, the project's saved policy will be used.
 
-It is also possible to send a JSON body including a list of packages to be excluded from the policy input data, for example to evaluate a proposed change. See the API documentation for details.
+Suppressed issues and ignored dependencies when performing a comparison are filtered out before applying the policy and will not be visible in the policy input.
 
 If policy evaluation is successful, the result will contain both the policy output as well as a generated report in Markdown format.
