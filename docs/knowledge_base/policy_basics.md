@@ -28,7 +28,7 @@ This policy can be executed using `opa eval --data phylum.rego --data <YOUR POLI
 | `<YOUR POLICY>.rego` | policy you want to test | User |
 | `constants.json` | constants that can be used in your custom policy | Phylum |
 | `input.json` | input data to evaluate, generally from a Phylum job response | User |
-| `schemas` | location of the schema files | Phylum |
+| `schema` | location of the schema files | Phylum |
 | `data.phylum.job` | entry point | Static value |
 
 If everything is working, you will receive JSON output from `opa` that looks like this:
