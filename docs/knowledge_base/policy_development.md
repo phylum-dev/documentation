@@ -66,7 +66,7 @@ The test can be executed using `opa test phylum.rego example.rego example_test.r
 
 Using the [`evaluate_policy`](https://api.phylum.io/api/v0/swagger/index.html#/Jobs/evaluate_policy) API, it's possible to evaluate policies within Phylum. This is the same API used by Phylum tooling.
 
-To evaluate an existing job using example.rego you can make an API call like this:
+To evaluate an existing job using `example.rego` you can make an API call like this:
 
 ```sh
 curl -H "Authorization: Bearer $(phylum auth token -b)" -H "Content-Type: text/plain" --data-binary @example.rego https://api.phylum.io/api/v0/data/jobs/YOUR_JOB_ID/policy/evaluate
