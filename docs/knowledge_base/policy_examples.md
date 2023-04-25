@@ -12,7 +12,7 @@ The policy transforms your threat model into a description of why the job is bei
 
 The most common reason to block a job is because one of the dependencies has a known issue within one of Phylum's risk domains.
 
-The following policy shows ways to block issues based on a per-domain threshold.
+The following policy shows ways to block using an `issue` rule based on a per-domain threshold.
 
 ```rego
 package policy
@@ -23,16 +23,28 @@ import future.keywords.contains
 import future.keywords.if
 import future.keywords.in
 
+# METADATA
+# scope: rule
+# schemas:
+#   - data.issue: schema.issue
 issue contains "risk level cannot exceed medium" if {
 	data.issue.domain in {domain.AUTHOR, domain.ENGINEERING, domain.VULNERABILITY}
 	data.issue.severity > level.MEDIUM
 }
 
+# METADATA
+# scope: rule
+# schemas:
+#   - data.issue: schema.issue
 issue contains "malicious risk level cannot exceed low" if {
 	data.issue.domain == domain.MALICIOUS
 	data.issue.severity > level.LOW
 }
 
+# METADATA
+# scope: rule
+# schemas:
+#   - data.issue: schema.issue
 issue contains "license risk level cannot exceed high" if {
 	data.issue.domain == domain.LICENSE
 	data.issue.severity > level.HIGH
@@ -82,7 +94,7 @@ When Phylum sees this output from the policy, it will block the job and generate
 
 ## Blocking a dependency
 
-If a dependency is being blocked for some other reason, the policy can indicate this by using the `errors` property on the dependency in the output.
+You may also block on a dependency-level characteristic using a `dependency` rule.
 
 The following policy blocks packages belonging to a namespace.
 
@@ -92,6 +104,10 @@ package policy
 import future.keywords.contains
 import future.keywords.if
 
+# METADATA
+# scope: rule
+# schemas:
+#   - data.dependency: schema.dependency
 dependency contains "AGPL licensed software is not allowed." if {
         regex.match("(?i)\\bAGPL\\b", data.dependency.license)
 }
@@ -134,7 +150,7 @@ When Phylum sees this output from the policy, it will block the job and generate
 
 ## Blocking a job
 
-Finally, if a policy wants to block a job for a reason that is not related to a specific dependency, the policy can provide errors at the top level.
+If a policy wants to block a job for a reason that is not related to a specific dependency, the policy can use a `job` rule.
 
 The following policy blocks any job that introduces an NPM dependency. Only one error is generated, even if hundreds of dependencies have been added.
 
@@ -144,9 +160,15 @@ package policy
 import data.phylum.ecosystem
 import future.keywords.contains
 import future.keywords.if
+import future.keywords.in
 
-dependency contains "This project must not have NPM dependencies." if {
-        data.dependency.ecosystem == ecosystem.NPM
+# METADATA
+# scope: rule
+# schemas:
+#   - data.job: schema.job
+job contains "This project must not have NPM dependencies." if {
+        some deps in input.dependencies
+        deps.ecosystem == ecosystem.NPM
 }
 ```
 
@@ -169,16 +191,10 @@ When the policy fails, the output will look something like this:
 
 ```json
 {
-  "dependencies": [
-    {
-      "errors": [
-        "This project must not have NPM dependencies."
-      ],
-      "id": "4cc36d79-b8ce-5b7d-89c1-6f6a31f59819",
-      "issues": []
-    }
-  ],
-  "errors": []
+  "dependencies": [],
+  "errors": [
+    "This project must not have NPM dependencies."
+  ]
 }
 ```
 
