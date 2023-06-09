@@ -1,8 +1,7 @@
 # Contributing
 
-Contributions are welcome and appreciated!
-
-_You_ can contribute in many ways:
+This guide is written for both internal contributors (Phylum, Inc. employees) and external/community contributors.
+Community contributions are possible by submitting issues.
 
 ## Types of Contributions
 
@@ -24,14 +23,6 @@ Please use the "bug report" template which should remind you to include:
 
 [security]: https://github.com/phylum-dev/documentation/blob/main/SECURITY.md
 
-### Fix Bugs
-
-Look through the GitHub issues for bugs to work on.
-
-### Write New Content
-
-Look through the GitHub issues for desired new content to write.
-
 ### Submit Feedback
 
 The best way to send feedback is to file an issue at <https://github.com/phylum-dev/documentation/issues>.
@@ -42,6 +33,14 @@ If you are proposing new content, please use the "new content" template which sh
 * Explain how the content should look and feel
 * Suggest page name and metadata for new pages
 * Provide mockups/outlines where possible
+
+### Fix Bugs
+
+Internal contributors can look through the GitHub issues for bugs to work on.
+
+### Write New Content
+
+Internal contributors can look through the GitHub issues for desired new content to write.
 
 ## Security Disclosures
 
@@ -57,7 +56,7 @@ is expected to treat other people with respect and more generally to follow the 
 
 ## Local Development
 
-Ready to contribute with content submissions and pull requests (PRs)?
+Internal contributors (Phylum, Inc. employees) are able to contribute with content submissions and pull requests (PRs).
 Here's how to set up the Phylum `documentation` repository for local development.
 
 1. Clone the `phylum-dev/documentation` repo locally
