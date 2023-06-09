@@ -29,8 +29,8 @@ More information is available on the [contributing documentation][contributing] 
 
 ## Code of Conduct
 
-Everyone participating in the `phylum-ci` project, and in particular in the issue tracker and pull requests, is
-expected to treat other people with respect and more generally to follow the guidelines articulated in the
+Everyone participating in the `phylum-dev/documentation` project, and in particular in the issue tracker and pull
+requests, is expected to treat other people with respect and more generally to follow the guidelines articulated in the
 [Code of Conduct][CoC].
 
 ## Security Disclosures
