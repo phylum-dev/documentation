@@ -4,6 +4,18 @@ category: 6255e67693d5200013b1fa40
 hidden: false
 ---
 
+## 2023 Weeks 19-24
+### New
+- Threat Feed: Added a threat feed capability highlighting software supply chain attacks (contact [sales](mailto:sales@phylum.io) if interested)
+- Dashboard: Created Dashboard view showing software supply chain statistics
+- CLI: Added support for lockfile generation from manifest files (updated list of supported filetypes [here](https://docs.phylum.io/docs/analyzing-dependencies))
+
+### Improved
+- CLI: Added `pip` version checking to the `phylum pip` extension
+- CLI: Removed `pip-compile` requirement for lockfile generation
+- SBOM: SPDX export supports PURL
+- SBOM: SPDX ingest supports `tag:value` format
+
 ## 2023 Weeks 13-18
 ### New
 - Policy: Open Policy Agent (OPA) has been [implemented](https://docs.phylum.io/docs/policy) allowing users to create custom policies
