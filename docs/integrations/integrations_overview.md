@@ -12,19 +12,21 @@ integrations across the diverse set of environments and ecosystems used by devel
 
 The current Continuous Integration (CI) platforms/environments supported are:
 
-|Platform/Environment|Information Link|
-|--------------------|---------------------|
-|GitHub App|[GitHub Marketplace][github_app_docs]|
-|GitHub Actions|[Documentation][github_action_docs]|
-|GitLab CI|[Documentation][gitlab_docs]|
-|Azure Pipelines|[Documentation][azure_docs]|
-|Bitbucket Pipelines|[Documentation][bb_pipelines_docs]|
-|Git `pre-commit` Hooks|[Documentation][precommit_docs]|
+| Platform/Environment | Information Link |
+| -------------------- | ---------------- |
+| GitHub App | [GitHub Marketplace][github_app_docs] |
+| GitHub Actions | [Documentation][github_action_docs] |
+| GitLab CI | [Documentation][gitlab_docs] |
+| Azure Pipelines | [Documentation][azure_docs] |
+| Bitbucket Pipelines | [Documentation][bb_pipelines_docs] |
 
-Other integrations:
-|Platform/Environment|Information Link|
-|--------------------|---------------------|
-|Dazz|[Documentation][dazz_docs]|
+Other integrations include:
+
+| Platform/Environment | Information Link |
+| -------------------- | ---------------- |
+| Git `pre-commit` Hooks | [Documentation][precommit_docs] |
+| Dazz | [Documentation][dazz_docs] |
+| Sophos | [Documentation][sophos_docs] |
 
 [github_app_docs]: https://github.com/marketplace/phylum-io
 [github_action_docs]: https://docs.phylum.io/docs/github_actions
@@ -33,6 +35,7 @@ Other integrations:
 [bb_pipelines_docs]: https://docs.phylum.io/docs/bitbucket_pipelines
 [precommit_docs]: https://docs.phylum.io/docs/git_precommit
 [dazz_docs]: https://docs.phylum.io/docs/dazz
+[sophos_docs]: https://docs.phylum.io/docs/sophos
 
 ## Future Integrations
 
