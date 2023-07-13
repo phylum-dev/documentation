@@ -25,6 +25,7 @@ Other integrations include:
 | Platform/Environment | Information Link |
 | -------------------- | ---------------- |
 | Git `pre-commit` Hooks | [Documentation][precommit_docs] |
+| Dazz | [Documentation][dazz_docs] |
 | Sophos | [Documentation][sophos_docs] |
 
 [github_app_docs]: https://github.com/marketplace/phylum-io
@@ -33,6 +34,7 @@ Other integrations include:
 [azure_docs]: https://docs.phylum.io/docs/azure_pipelines
 [bb_pipelines_docs]: https://docs.phylum.io/docs/bitbucket_pipelines
 [precommit_docs]: https://docs.phylum.io/docs/git_precommit
+[dazz_docs]: https://docs.phylum.io/docs/dazz
 [sophos_docs]: https://docs.phylum.io/docs/sophos
 
 ## Future Integrations
