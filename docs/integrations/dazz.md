@@ -14,7 +14,7 @@ Current Dazz users can follow the installation instructions found on [Dazz](http
 1. In the Dazz application, select `Connections` and search for Phylum.
 2. Click `Connect` to add the connection.
 3. When prompted, set a `Connection name` and enter the Phylum `Token` you wish to use.
-    - Note: You Phylum token can be retieved using the following command with the Phylum CLI tool
+    - Note: Your Phylum token can be retrieved using the following command with the Phylum CLI tool
      ```sh
      phylum auth token
      ```
