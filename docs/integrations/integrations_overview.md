@@ -21,12 +21,18 @@ The current Continuous Integration (CI) platforms/environments supported are:
 |Bitbucket Pipelines|[Documentation][bb_pipelines_docs]|
 |Git `pre-commit` Hooks|[Documentation][precommit_docs]|
 
+Other integrations:
+|Platform/Environment|Information Link|
+|--------------------|---------------------|
+|Dazz|[Documentation][dazz_docs]|
+
 [github_app_docs]: https://github.com/marketplace/phylum-io
 [github_action_docs]: https://docs.phylum.io/docs/github_actions
 [gitlab_docs]: https://docs.phylum.io/docs/gitlab_ci
 [azure_docs]: https://docs.phylum.io/docs/azure_pipelines
 [bb_pipelines_docs]: https://docs.phylum.io/docs/bitbucket_pipelines
 [precommit_docs]: https://docs.phylum.io/docs/git_precommit
+[dazz_docs]: https://docs.phylum.io/docs/dazz
 
 ## Future Integrations
 
