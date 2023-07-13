@@ -6,21 +6,26 @@ hidden: false
 # Dazz Integration
 
 ## Overview
+
 Phylum can be connected with [Dazz](https://www.dazz.io/) to display Phylum findings in the Dazz application.
 
 ## Getting Started
+
 Current Dazz users can follow the installation instructions found on [Dazz](https://app.dazz.io/docs/en/phylum.html).
 
 1. In the Dazz application, select `Connections` and search for Phylum.
 2. Click `Connect` to add the connection.
 3. When prompted, set a `Connection name` and enter the Phylum `Token` you wish to use.
     - Note: Your Phylum token can be retrieved using the following command with the Phylum CLI tool
+
      ```sh
      phylum auth token
      ```
+
 4. Click `Connect` to finalize the connection.
 
 ## View Findings
+
 1. Select `Findings` from the Dazz navigation bar.
 2. Click `Add Filter`.
 3. Select `Detection Tool`.
