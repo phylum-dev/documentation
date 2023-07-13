@@ -6,7 +6,7 @@ hidden: false
 # Dazz Integration
 
 ## Overview
-Phylum can be connected with Dazz to diaplay Phylum findings in the Dazz application.
+Phylum can be connected with [Dazz](https://www.dazz.io/) to display Phylum findings in the Dazz application.
 
 ## Getting Started
 Current Dazz users can follow the installation instructions found on [Dazz](https://app.dazz.io/docs/en/phylum.html).
