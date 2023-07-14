@@ -27,6 +27,7 @@ Other integrations include:
 | Git `pre-commit` Hooks | [Documentation][precommit_docs] |
 | Dazz | [Documentation][dazz_docs] |
 | Sophos | [Documentation][sophos_docs] |
+| Tines | [Documentation][tines_docs] |
 
 [github_app_docs]: https://github.com/marketplace/phylum-io
 [github_action_docs]: https://docs.phylum.io/docs/github_actions
@@ -36,6 +37,7 @@ Other integrations include:
 [precommit_docs]: https://docs.phylum.io/docs/git_precommit
 [dazz_docs]: https://docs.phylum.io/docs/dazz
 [sophos_docs]: https://docs.phylum.io/docs/sophos
+[tines_docs]: https://docs.phylum.io/docs/tines
 
 ## Future Integrations
 
