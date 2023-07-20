@@ -14,7 +14,7 @@ The current Continuous Integration (CI) platforms/environments supported are:
 
 | Platform/Environment | Information Link |
 | -------------------- | ---------------- |
-| GitHub App | [GitHub Marketplace][github_app_docs] |
+| GitHub App | [Documentation][github_app_docs] |
 | GitHub Actions | [Documentation][github_action_docs] |
 | GitLab CI | [Documentation][gitlab_docs] |
 | Azure Pipelines | [Documentation][azure_docs] |
@@ -29,7 +29,7 @@ Other integrations include:
 | Sophos | [Documentation][sophos_docs] |
 | Tines | [Documentation][tines_docs] |
 
-[github_app_docs]: https://github.com/marketplace/phylum-io
+[github_app_docs]: https://docs.phylum.io/docs/github_app
 [github_action_docs]: https://docs.phylum.io/docs/github_actions
 [gitlab_docs]: https://docs.phylum.io/docs/gitlab_ci
 [azure_docs]: https://docs.phylum.io/docs/azure_pipelines
