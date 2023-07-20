@@ -40,7 +40,7 @@ Once installed, the GitHub app can be managed through the settings menu availabl
 
 ### Monitoring
 
-Monitoring can be activated or paused by selecting the toggle for a given repository. When first activated, a Phylum Project will be created.
+Monitoring can be activated or paused by selecting the toggle for a given repository. When first activated, a Phylum Project will be created and any supported lockfiles in the default branch will be analyzed.
 
 ![GitHub app settings - select repo](https://raw.githubusercontent.com/phylum-dev/documentation/main/assets/gh_app_settings_select_repo.png)
 
@@ -108,9 +108,29 @@ That will provide results and details for individual package issues. Each issue 
 
 Remaining issues may require lockfile modification to find alternative dependencies or otherwise remove the offending package.
 
+After remediation steps are complete, the GitHub app can be re-triggered to run again by pushing new commits to the PR. If no code changes were made to the offending lockfile (issue suppression only), it is possible to manually trigger another run by first clicking the `Details` link for the `Phylum` status check on the PR:
+
+![Phylum app status check failure in PR](https://raw.githubusercontent.com/phylum-dev/documentation/main/assets/gh_app_status_check_details_link.png)
+
+That takes you to the `Checks` tab of the PR, where it is possible to re-run the failed analysis by either clicking the `Re-run` link for the `Phylum` status check specifically or the `Re-run failed checks` option from the `Re-run checks` dropdown menu to include it with all other failed checks.
+
+![Re-trigger Phylum status check](https://raw.githubusercontent.com/phylum-dev/documentation/main/assets/gh_app_re-run_options.png)
+
+### On-demand Analysis
+
+It is possible to perform on-demand analysis of any repository for which the Phylum GitHub app has visibility. This includes all the repositories in the GitHub App Settings menu, whether or not they are actively monitored. The analysis will be of the current state of **the default branch** in the repository, for the [supported lockfiles](https://docs.phylum.io/docs/analyzing-dependencies) that exist there.
+
+To perform an on-demand analysis, click the `Analyze` button for the desired repository:
+
+![GitHub app on-demand analysis button](https://raw.githubusercontent.com/phylum-dev/documentation/main/assets/gh_app_settings_analyze_button.png)
+
+The results will be visible in the `Project` menu view for the selected project under the `Label` corresponding to the default branch:
+
+![GitHub app on-demand analysis results](https://raw.githubusercontent.com/phylum-dev/documentation/main/assets/gh_app_on-demand_analysis.png)
+
 ## FAQ
 
 1. Q: I activated monitoring, but it didn't run a scan. How do I get analysis results?
-   * A: Activating monitoring tells the app to start watching for commits in a PR that modify supported lockfiles. To see scan results, start committing code!
+   * A: Check to ensure the repository contains a [supported lockfile](https://docs.phylum.io/docs/analyzing-dependencies).
 2. Q: Can I manage multiple GitHub App installations in Phylum?
    * A: Yes! If your account is linked to multiple GitHub App installtions, they will be displayed and selectable on the left side of the GitHub App Settings page in the Phylum UI.
