@@ -101,7 +101,7 @@ The threat feed API provides several parameters for interacting with the feed it
 | Parameter | Description |
 | --- | --- |
 | `page` | Specifies the page of the feed to retrieve |
-| `per_page` | Specifies the number of items per page |
+| `per_page` | Specifies the number of items per page (default: 25) |
 | `since` | Fetches items added to the feed since the given date. Must be in the form of `YYYY-MM-DD`, e.g. `2023-06-18`. |
 
 For example, if you want to limit the items per page to 3 since July 19, 2023 you would perform a `GET` request to:
