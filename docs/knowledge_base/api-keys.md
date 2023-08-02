@@ -8,15 +8,15 @@ API keys provide you with the ability to authenticate with the Phylum API withou
 
 ## Generate an API key
 
-API keys can be generated in the [Phylum web UI][ui-tokens] by clicking on user menu in the top right and clicking on "API Access Tokens"
+API keys can be generated in the [Phylum web UI][ui-tokens] by clicking on the user menu in the top right and selecting "API Access Tokens"
 
-[ui-tokens]: https://app.staging.phylum.io/tokens/list
+[ui-tokens]: https://app.phylum.io/tokens/list
 
-![user menu](../../assets/user-menu.png)
+![user menu](https://raw.githubusercontent.com/phylum-dev/documentation/main/assets/user-menu.png)
 
 You will be prompted to provide a name for the new key and then will be given a chance to copy the newly generated API key.
 
-**Important Note:** For security, there is no way to retrieve the value of a API key after initial generation. It is up to the user to securely store the key for later use.
+> ⚠️ For security, there is no way to retrieve the value of an API key after initial generation. It is up to the user to securely store the key for later use.
 
 ## Using an API key
 
@@ -24,7 +24,7 @@ To use a token for authentication, include it as a bearer token on your API requ
 
 ```sh-session
 > API_KEY=ph0_abcdefghijklmnopqrstuvwxyz0123456789ABCDEFG
-> curl -H "Authorization: Bearer $API_KEY" 'https://api.staging.phylum.io/api/v0/groups'
+> curl -H "Authorization: Bearer $API_KEY" 'https://api.phylum.io/api/v0/groups'
 {"groups":[]}
 ```
 
