@@ -13,22 +13,17 @@ The Phylum threat feed provides a curated view into malware being released acros
 
 ## Quickstart
 
-1. Obtain an API key:
+1. Obtain an API from [the Phylum UI](https://app.phylum.io/tokens/list) and set it as follows:
     
     ```bash
-    PHYLUM_API=$(phylum auth token -b)
+    PHYLUM_API=p0_...
     ```
     
 2. Use your API key to retrieve the latest packages in the threat feed:
     
     ```bash
-    curl https://threats.phylum.io -H "x-access-token: $PHYLUM_API" 
+    curl https://threats.phylum.io -H "Authorization: Bearer $PHYLUM_API" 
     ```
-3. (Alternative) You can accomplish steps 1 and 2 in a single line:
-
-   ```bash
-   curl https://threats.phylum.io -H "x-access-token: $(ph auth token -b)"
-   ```    
 
 ## API Response
 
