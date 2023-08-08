@@ -42,7 +42,7 @@ The API key is stored in the `settings.yaml` file. The following command can be 
 phylum auth token
 ```
 
-If you are using the CLI in an environment where a `setting.yaml` file is not available (e.g., CI, scripts, etc.), you can provide an API key to CLI via the `PHYLUM_API_KEY` environment variable. If both the config file and environment variable are present, the key from the environment variable will be used.
+If you are using the CLI in an environment where a `settings.yaml` file is not available (e.g., CI, scripts, etc.), you can provide an API key to CLI via the `PHYLUM_API_KEY` environment variable. If both the config file and environment variable are present, the key from the environment variable will be used.
 
 ## OpenID Connect vs API keys
 
