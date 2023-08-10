@@ -4,6 +4,16 @@ category: 6255e67693d5200013b1fa40
 hidden: false
 ---
 
+## 2023 Weeks 25-30
+### New
+- Search: Added a global search bar which can include contextualized results from your projects
+- Policy: Added support for group-level policy preferences
+- Integration: Added an integration for [Tines](https://docs.phylum.io/docs/tines)
+
+### Improved
+- CLI: Support for NuGet's `packages.lock.json` lockfiles
+- CLI: Support for `pnpm-lock.yaml` lockfiles
+
 ## 2023 Weeks 19-24
 ### New
 - Threat Feed: Added a threat feed capability highlighting software supply chain attacks (contact [sales](mailto:sales@phylum.io) if interested)
