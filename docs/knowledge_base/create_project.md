@@ -79,5 +79,7 @@ phylum-ci
 1. The [Phylum GitHub App](https://docs.phylum.io/docs/github_app) will automatically create a Phylum project when monitoring is activated for a given repository. The Phylum project will be assigned the same name as the repository.
 
 ## FAQ
-1. Q: Can Phylum projects be shared with other accounts?
-   * A: Yes! This feature is available to Pro users via groups.
+
+### Can Phylum projects be shared with other accounts?
+
+Yes! This feature is available to Pro users via groups.
