@@ -26,7 +26,7 @@ Phylum uses tags to uniquely identify issues raised by the system. These tags ca
 | --- | --- | --- |
 | CA0001    | [Bad Author](https://docs.phylum.io/docs/bad_author) | Author is known malicious |
 | CM0001    | [IP Detection](https://docs.phylum.io/docs/ip_identification) | Package contains suspicious IP addresses |
-| CM0003    | Landing Binary | Package is known to contain malware |
+| CM0003    | Landing Binary | Package is using living off the land binaries in a known malicious way |
 | .M0004    | Landing Binary | Package uses suspicious executables |
 | IL0005    | License | Commercial license risk detected |
 | IM0006    | NPM Hooks | Package uses install hooks to ask for donations |
@@ -55,3 +55,4 @@ Phylum uses tags to uniquely identify issues raised by the system. These tags ca
 | HM0036    | [Webhook Exfil](https://docs.phylum.io/docs/webhook_exfil) | A package that appears to exfil data through a webhook |
 | HM0037    | Malware Bazaar Check | A package's file contains a hash that hits on Malware Bazaar |
 | CM0038    | Triaged Malware Rule (via threat feed) | Manually reviewed and confirmed to contain malware |
+| HM0099    | [Basic Javascript Obfuscation](https://docs.phylum.io/docs/obfuscated_javascript) | Package contains obfuscated Javascript |
