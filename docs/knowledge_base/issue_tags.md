@@ -6,7 +6,7 @@ hidden: false
 
 ## Issue Tags
 
-Phylum uses tags to uniquely identify issues raised by the system. These tags can be used in custom policy creation.
+Phylum uses tags to uniquely identify issues raised by the system. These tags can be used in custom [policy](https://docs.phylum.io/docs/policy) creation.
 
 - Severities
   - Minimum (`I`)
