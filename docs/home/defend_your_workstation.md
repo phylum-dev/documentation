@@ -98,7 +98,7 @@ up to date in 122ms
 
 Phylum provides support for a number of common package managers used in the [supported ecosystems](https://docs.phylum.io/docs/analyzing-dependencies). These include `npm`, `yarn`, `pip`, `poetry`, `bundle`, `cargo` and more on the way! To get the current list, check the [official extensions](https://github.com/phylum-dev/cli/tree/main/extensions). The ecosystem extensions there are included by default when installing the Phylum CLI.
 
-Note: The pre-check feature is available for all listed ecosystem extensions, but the installation sandbox component is currently only support for `npm`, `yarn`, and `pip`.
+Note: The pre-check feature is available for all listed ecosystem extensions, but the installation sandbox component is currently only supported for `npm`, `yarn`, and `pip`.
 
 Phylum may not currently provide an official ecosystem extension for a package manager that [is otherwise supported](https://docs.phylum.io/docs/analyzing-dependencies). Please do one of the following to get that support:
 
