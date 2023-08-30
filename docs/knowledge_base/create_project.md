@@ -8,11 +8,15 @@ hidden: false
 
 Phylum projects are used to represent a software project; often a git repository. A Phylum project organizes the dependencies and findings for your software project. This page enumerates the ways a Phylum project can be created.
 
+> **NOTE:** Project creation does not trigger an analysis of the project. Instead, the [`phylum analyze`](https://docs.phylum.io/docs/phylum_analyze) command will trigger an analysis job and organize the results in the specified Phylum project.
+
 ## Walkthrough
 
 ### Phylum CLI
 
-#### Via `phylum init` command
+---
+
+**Via [`phylum init`](https://docs.phylum.io/docs/phylum_init) command:**
 
 1. Navigate to the directory of the relevant software project
 2. Use the [CLI tool](https://docs.phylum.io/docs/quickstart) to initialize a Phylum project, the interactive prompt will default to the name of the directory, or you may specify the desired project name
@@ -42,7 +46,9 @@ lockfiles:
   type: pip
 ```
 
-#### Via `phylum project` command
+---
+
+**Via [`phylum project`](https://docs.phylum.io/docs/phylum_project) command:**
 
 1. Navigate to the directory of the relevant software project
 2. Use the [CLI tool](https://docs.phylum.io/docs/quickstart) to create a new Phylum project
@@ -82,4 +88,4 @@ phylum-ci
 
 ### Can Phylum projects be shared with other accounts?
 
-Yes! This feature is available to Pro users via groups.
+Yes! This feature is available to Pro users via [groups](https://docs.phylum.io/docs/groups).
