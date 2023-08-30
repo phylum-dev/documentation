@@ -14,4 +14,4 @@ Environment variables, while generally uninteresting, can sometimes refer to cri
 
 # Examples
 
-In April of 2022, researchers discovered a set of malicious packages on PyPi that would search through environment variables looking for the location of local browser storage folders. Once found, the aim of the malware was to steal AWS or other user credentials.
+In April of 2022, researchers discovered a set of malicious packages on PyPI that would search through environment variables looking for the location of local browser storage folders. Once found, the aim of the malware was to steal AWS or other user credentials.
