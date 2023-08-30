@@ -130,7 +130,10 @@ The results will be visible in the `Project` menu view for the selected project 
 
 ## FAQ
 
-1. Q: I activated monitoring, but it didn't run a scan. How do I get analysis results?
-   * A: Check to ensure the repository contains a [supported lockfile](https://docs.phylum.io/docs/analyzing-dependencies).
-2. Q: Can I manage multiple GitHub App installations in Phylum?
-   * A: Yes! If your account is linked to multiple GitHub App installtions, they will be displayed and selectable on the left side of the GitHub App Settings page in the Phylum UI.
+### I activated monitoring, but it didn't run a scan. How do I get analysis results?
+
+Check to ensure the repository contains a [supported lockfile](https://docs.phylum.io/docs/analyzing-dependencies).
+
+### Can I manage multiple GitHub App installations in Phylum?
+
+Yes! If your account is linked to multiple GitHub App installtions, they will be displayed and selectable on the left side of the GitHub App Settings page in the Phylum UI.
