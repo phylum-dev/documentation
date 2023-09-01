@@ -52,7 +52,7 @@ A monitored repository will automatically run a Phylum check for every commit to
 
 ![GitHub app status check in PR](https://raw.githubusercontent.com/phylum-dev/documentation/main/assets/gh_app_status_check_running.png)
 
-A comment will be written to the PR if an issue is identified that fails the [defined policy](https://docs.phylum.io/docs/policy). There will be no comment if no dependencies were added or modified for a given PR. If one or more dependencies are still processing (no results available), then the note will make that clear and the CI job will only fail if dependencies that have _completed analysis results_ do not meet the active policy.
+A comment will be written to the PR if an issue is identified that fails the [defined policy](https://docs.phylum.io/docs/policy). There will be no comment if no dependencies were added or modified for a given PR. If one or more dependencies are still processing (no results available), then the comment will make that clear and the CI job will only fail if dependencies that have **completed analysis results** do not meet the active policy.
 
 ### Example Comments
 
@@ -102,7 +102,7 @@ There are several options to remediate failures determined by the GitHub app. A 
 
 ![GitHub app PR comment link to project](https://raw.githubusercontent.com/phylum-dev/documentation/main/assets/gh_app_view_project_link.png)
 
-That will provide results and details for individual package issues. Each issue can be reviewed and suppressed if it is found to be a false positive, irrelevant, or otherwise acceptable to proceed:
+That will provide results and details for individual package issues. Each issue can be reviewed and the entire package suppressed if all issues within it are found to be false positive, irrelevant, or otherwise acceptable to proceed:
 
 ![Phylum app issue suppression](https://raw.githubusercontent.com/phylum-dev/documentation/main/assets/issue_suppression.png)
 
