@@ -18,7 +18,7 @@ hidden: false
 ### New
 - Threat Feed: Added a threat feed capability highlighting software supply chain attacks (contact [sales](mailto:sales@phylum.io) if interested)
 - Dashboard: Created Dashboard view showing software supply chain statistics
-- CLI: Added support for lockfile generation from manifest files (updated list of supported filetypes [here](https://docs.phylum.io/docs/analyzing-dependencies))
+- CLI: Added support for lockfile generation from manifest files (updated list of supported filetypes [here](https://docs.phylum.io/docs/lockfile_generation))
 
 ### Improved
 - CLI: Added `pip` version checking to the `phylum pip` extension
