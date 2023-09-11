@@ -48,7 +48,7 @@ Monitoring can be activated or paused by selecting the toggle for a given reposi
 >
 > ![GitHub app settings - PRO](https://raw.githubusercontent.com/phylum-dev/documentation/main/assets/gh_app_settings_pro.png)
 
-A monitored repository will automatically run a Phylum check for every commit to a Pull Request looking for changes to [supported lockfiles](https://docs.phylum.io/docs/analyzing-dependencies). If a change is found, the lockfile is submitted for analysis:
+A monitored repository will automatically run a Phylum check for every commit to a Pull Request looking for changes to [supported lockfiles](https://docs.phylum.io/docs/supported_lockfiles). If a change is found, the lockfile is submitted for analysis:
 
 ![GitHub app status check in PR](https://raw.githubusercontent.com/phylum-dev/documentation/main/assets/gh_app_status_check_running.png)
 
@@ -118,7 +118,7 @@ That takes you to the `Checks` tab of the PR, where it is possible to re-run the
 
 ### On-demand Analysis
 
-It is possible to perform on-demand analysis of any repository for which the Phylum GitHub app has visibility. This includes all the repositories in the GitHub App Settings menu, whether or not they are actively monitored. The analysis will be of the current state of **the default branch** in the repository, for the [supported lockfiles](https://docs.phylum.io/docs/analyzing-dependencies) that exist there.
+It is possible to perform on-demand analysis of any repository for which the Phylum GitHub app has visibility. This includes all the repositories in the GitHub App Settings menu, whether or not they are actively monitored. The analysis will be of the current state of **the default branch** in the repository, for the [supported lockfiles](https://docs.phylum.io/docs/supported_lockfiles) that exist there.
 
 To perform an on-demand analysis, click the `Analyze` button for the desired repository:
 
@@ -132,7 +132,7 @@ The results will be visible in the `Project` menu view for the selected project 
 
 ### I activated monitoring, but it didn't run a scan. How do I get analysis results?
 
-Check to ensure the repository contains a [supported lockfile](https://docs.phylum.io/docs/analyzing-dependencies).
+Check to ensure the repository contains a [supported lockfile](https://docs.phylum.io/docs/supported_lockfiles).
 
 ### Can I manage multiple GitHub App installations in Phylum?
 
