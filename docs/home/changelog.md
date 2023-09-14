@@ -4,6 +4,19 @@ category: 6255e67693d5200013b1fa40
 hidden: false
 ---
 
+## 2023 Weeks 31-36
+### New
+- API Token: Added an [API token service](https://docs.phylum.io/docs/api-keys) making it much easier to interact directly with the API
+- Policy: Added support for group-level package suppression
+- CLI: Capture and display lockfile paths making it easier to see where a dependency comes from
+- SBOM: Added CycloneDX support for both SBOM ingest and export
+
+### Improved
+- UI: Improved project detail page view focusing more on package-level triage
+- CLI: Added `bundle` and `cargo` extensions for Phylum [pre-check](https://docs.phylum.io/docs/defend_your_workstation)
+- Search: Added support for contexualized CVE searching in the global search bar
+- Dashboard: Added contexualized dashboard elements
+
 ## 2023 Weeks 25-30
 ### New
 - Search: Added a global search bar which can include contextualized results from your projects
