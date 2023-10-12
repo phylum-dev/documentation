@@ -8,7 +8,7 @@ Phylum groups allow users to view/submit projects and analysis jobs in a shared 
 
 1. [Create a group](https://docs.phylum.io/docs/phylum_group_create) for your team to use
 2. [Create a project](https://docs.phylum.io/docs/phylum_project_create) using the `--group` option and your group name
-3. [Analyze](https://docs.phylum.io/docs/phylum_analyze) the desired lock file
+3. [Analyze](https://docs.phylum.io/docs/phylum_analyze) the desired dependency files
 
 Any user that is a member of the group will be able to access the analysis results.
 

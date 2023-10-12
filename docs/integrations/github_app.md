@@ -137,3 +137,9 @@ Check to ensure the repository contains a [supported lockfile](https://docs.phyl
 ### Can I manage multiple GitHub App installations in Phylum?
 
 Yes! If your account is linked to multiple GitHub App installtions, they will be displayed and selectable on the left side of the GitHub App Settings page in the Phylum UI.
+
+### I want to monitor manifest files. Is that possible?
+
+It is not currently possible to monitor and analyze dependency manifest files. The GitHub App is limited to lockfiles
+only. If you still want to analyze manifest files, consider using the
+[Phylum GitHub Actions Integration](https://docs.phylum.io/docs/github_actions) instead.

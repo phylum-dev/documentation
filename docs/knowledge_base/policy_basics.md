@@ -20,9 +20,10 @@ import future.keywords.if
 # schemas:
 #   - data.issue: schema.issue
 issue contains "risk level cannot exceed medium" if {
-	data.issue.severity > level.MEDIUM
+    data.issue.severity > level.MEDIUM
 }
 ```
+
 This is a basic policy using an `issue` rule to block any HIGH/CRITICAL issues.
 
 The `issue` rule will contain the specified text when the `if` statement is `true`. `OPA` iterates through the job input data evaluating the expression against the severity and the level.

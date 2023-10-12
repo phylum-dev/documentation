@@ -27,13 +27,13 @@ conditions:
 ## Overview
 
 Once configured for a repository, the Bitbucket Pipelines integration will provide analysis of project
-dependencies from lockfiles. This can happen in a branch or default pipeline as a result of a commit or in a pull
-request (PR) pipeline.
+dependencies from manifests and lockfiles. This can happen in a branch or default pipeline as a result of a commit
+or in a pull request (PR) pipeline.
 
 For PR pipelines, analyzed dependencies will include any that are added/modified in the PR.
 
-For branch pipelines, the analyzed dependencies will be determined by comparing lockfiles in the branch to the
-default branch. **All** dependencies will be analyzed when the branch pipeline is run on the default branch.
+For branch pipelines, the analyzed dependencies will be determined by comparing dependency files in the branch to
+the default branch. **All** dependencies will be analyzed when the branch pipeline is run on the default branch.
 
 The results will be provided in the pipeline logs and provided as a comment on the PR. The CI job will return an
 error (i.e., fail the build) if any of the analyzed dependencies fail to meet the established policy.
@@ -47,8 +47,8 @@ the CI job will only fail if dependencies that have _completed analysis results_
 Bitbucket Cloud is supported for repositories hosted on <https://bitbucket.org/>. Bitbucket Data Center is not
 currently supported.
 
-The Bitbucket Pipelines environment is primarily supported through the use of a Docker image. The pre-requisites for
-using this image are:
+The Bitbucket Pipelines environment is primarily supported through the use of a Docker image. The pre-requisites
+for using this image are:
 
 * Access to the [phylumio/phylum-ci Docker image][docker_image]
 * A [Bitbucket access token][bb_tokens] with API access
@@ -113,8 +113,8 @@ See also [`phylum auth register`][phylum_register] command documentation and con
 for this token. Provide the token value in a user-defined variable named `PHYLUM_API_KEY`.
 
 A Bitbucket token with API access is required to use the API (e.g., to post comments). This can be a repository,
-project, or workspace access token. The token needs the `pullrequest` (read) scope. The name given to the token will
-be the one that appears to post the comments on the PR. Therefore, it might be worth naming it something like
+project, or workspace access token. The token needs the `pullrequest` (read) scope. The name given to the token
+will be the one that appears to post the comments on the PR. Therefore, it might be worth naming it something like
 `Phylum Analysis`. See the [Bitbucket Access Tokens][bb_tokens] documentation for more info.
 
 Note, the Bitbucket token is only required when this Phylum integration is used in
@@ -207,17 +207,42 @@ For instance, at the time of this writing, all of these tag references pointed t
 
 Only the last tag reference, by SHA256 digest, is guaranteed to not have the underlying image it points to change.
 
+The default `phylum-ci` Docker image contains `git` and the installed `phylum` Python package. It also contains an
+installed version of the Phylum CLI and all required tools needed for [lockfile generation][lockfile_generation].
+An advantage of using the default Docker image is that the complete environment is packaged and made available
+with components that are known to work together.
+
+One disadvantage to the default image is it's size. It can take a while to download and may provide more
+tools than required for your specific use case. Special `slim` tags of the `phylum-ci` image are provided as
+an alternative. These tags differ from the default image in that they do not contain the required tools needed
+for [lockfile generation][lockfile_generation] (with the exception of the `pip` tool). The `slim` tags are
+significantly smaller and allow for faster action run times. They are useful for those instances where **no**
+manifest files are present and/or **only** lockfiles are used.
+
+Here are examples of using the slim image tags:
+
+```yaml
+  # NOTE: These are examples. Only one image line for `phylum-ci` is expected.
+
+  # Use the most current release of *both* `phylum-ci` and the Phylum CLI
+  image: phylumio/phylum-ci:slim
+
+  # Use the `slim` image with a specific release version of `phylum-ci` and Phylum CLI
+  image: phylumio/phylum-ci:0.36.0-CLIv5.7.1-slim
+```
+
 See the Docker [image option][image_option] and [build environment][docker_builds] documentation for more information.
 
+[lockfile_generation]: https://docs.phylum.io/docs/lockfile_generation
 [image_option]: https://support.atlassian.com/bitbucket-cloud/docs/docker-image-options/
 [docker_builds]: https://support.atlassian.com/bitbucket-cloud/docs/use-docker-images-as-build-environments/
 
 ### Git clone behavior
 
 The `git` version control system is used within the `phylum-ci` package to do things like determine if there was a
-lockfile change and, when specified, report on new dependencies only. Therefore, a full clone of the repository is
-required to ensure that the local working copy is always pristine and history is available to pull the requested
-information.
+dependency file change and, when specified, report on new dependencies only. Therefore, a full clone of the
+repository is required to ensure that the local working copy is always pristine and history is available to pull the
+requested information.
 
 ```yaml
     - step:
@@ -259,11 +284,23 @@ view the [script options output][script_options] for the latest release.
 
     # Some lockfile types (e.g., Python/pip `requirements.txt`) are ambiguous in that
     # they can be named differently and may or may not contain strict dependencies.
-    # In these cases, it is best to specify an explicit lockfile path.
+    # In these cases it is best to specify an explicit path, either with the `--lockfile`
+    # option or in a `.phylum_project` file. The easiest way to do that is with the
+    # Phylum CLI, using the `phylum init` command (https://docs.phylum.io/docs/phylum_init)
+    # and committing the generated `.phylum_project` file.
     - phylum-ci --lockfile requirements-prod.txt
 
-    # Specify multiple explicit lockfile paths
-    - phylum-ci --lockfile requirements-prod.txt path/to/lock.file
+    # Specify multiple explicit dependency file paths
+    - phylum-ci --lockfile requirements-prod.txt Cargo.toml path/to/dependency.file
+
+    # Force analysis, even when no dependency file has changed. This can be useful for
+    # manifests, where the loosely specified dependencies may not change often but the
+    # completely resolved set of strict dependencies does.
+    - phylum-ci --force-analysis
+
+    # Force analysis for all dependencies in a manifest file. This is especially useful
+    # for *workspace* manifest files where there is no companion lockfile (e.g., libraries).
+    - phylum-ci --force-analysis --all-deps --lockfile Cargo.toml
 
     # Ensure the latest Phylum CLI is installed.
     - phylum-ci --force-install
@@ -276,7 +313,9 @@ view the [script options output][script_options] for the latest release.
       phylum-ci \
         -vv \
         --lockfile requirements-dev.txt \
-        --lockfile requirements-prod.txt path/to/lock.file \
+        --lockfile requirements-prod.txt path/to/dependency.file \
+        --lockfile Cargo.toml \
+        --force-analysis \
         --all-deps
 ```
 

@@ -58,7 +58,7 @@ phylum init
 ### Analyze your Project
 
 To begin analyzing your project for software supply chain risks, submit your
-lockfiles to Phylum.
+dependency files to Phylum.
 
 Resource: https://blog.phylum.io/insights-and-resources/pick-a-python-lockfile-and-improve-security
 

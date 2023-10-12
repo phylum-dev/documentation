@@ -12,8 +12,8 @@ hidden: false
 Phylum is available as a pre-commit hook.
 
 Once configured for a repository, the git `pre-commit` integration will provide analysis of project dependencies
-from a lockfile during a commit containing that lockfile. The hook will fail and provide a report if any of the
-newly added/modified dependencies from the commit fail to meet the established policy.
+from manifests or lockfiles during a commit containing those dependency files. The hook will fail and provide
+a report if any of the newly added/modified dependencies from the commit fail to meet the established policy.
 
 The hook will be skipped if no dependencies were added or modified for a given commit.
 If one or more dependencies are still processing (no results available), then the hook will only fail if
@@ -56,7 +56,7 @@ repos:
     rev: main
     hooks:
       - id: phylum
-        # Optional: Specify the lockfile pattern for your repository
+        # Optional: Specify the dependency file pattern for your repository
         files: ''
         # Optional: Specify additional arguments to be passed to `phylum-ci`
         args: []
@@ -78,7 +78,7 @@ Two common customization keys for the `phylum` hook are `files` and `args`:
 ### File Control
 
 The `files` key in the hook configuration file is the way to ensure the hook only runs when specified
-lockfiles have changed, saving execution time.
+dependency files have changed, saving execution time.
 
 The value for the `files` key is a [Python regular expression][re] and is matched with `re.search`.
 
@@ -94,7 +94,6 @@ The value for the `files` key is a [Python regular expression][re] and is matche
         files: ^poetry\.lock$
 
         # Specify `requirements-*.txt` files
-        # NOTE: Explicit lockfiles should still be specified in the `args` key
         files: ^requirements-.*\.txt$
 
         # Specify both `package-lock.json` and `poetry.lock` on one line
@@ -106,7 +105,8 @@ The value for the `files` key is a [Python regular expression][re] and is matche
                 package-lock\.json|
                 poetry\.lock|
                 requirements-.*\.txt|
-                path/to/lock\.file
+                Cargo\.toml|
+                path/to/dependency\.file
             )$
 ```
 
@@ -141,16 +141,27 @@ with `--help` output as specified in the [Usage section of the top-level README.
         args: [-vv]
 
         # Some lockfile types (e.g., Python/pip `requirements.txt`) are ambiguous in that
-        # they can be named differently and may or may not contain strict dependencies.
-        # In these cases, it is best to specify an explicit lockfile path.
+        # they can be named differently and may be a manifest or a lockfile. In cases where
+        # only specific dependency files are meant to be analyzed, it is best to specify
+        # an explicit path to them.
         args: [--lockfile=requirements-prod.txt]
 
-        # Specify multiple explicit lockfile paths
+        # Specify multiple explicit dependency file paths
         args:
           - --lockfile=requirements-prod.txt
           - --lockfile=package-lock.json
           - --lockfile=poetry.lock
-          - --lockfile=path/to/lock.file
+          - --lockfile=Cargo.toml
+          - --lockfile=path/to/dependency.file
+
+        # Force analysis, even when no dependency file has changed. This can be useful for
+        # manifests, where the loosely specified dependencies may not change often but the
+        # completely resolved set of strict dependencies does.
+        args: [--force-analysis]
+
+        # Force analysis for all dependencies in a manifest file. This is especially useful
+        # for *workspace* manifest files where there is no companion lockfile (e.g., libraries).
+        args: [--force-analysis, --all-deps, --lockfile=Cargo.toml]
 
         # Ensure the latest Phylum CLI is installed.
         args: [--force-install]
@@ -162,6 +173,8 @@ with `--help` output as specified in the [Usage section of the top-level README.
         args:
           - -vv
           - --lockfile=requirements-prod.txt
-          - --lockfile=path/to/lock.file
+          - --lockfile=path/to/dependency.file
+          - --lockfile=Cargo.toml
+          - --force-analysis
           - --all-deps
 ```
