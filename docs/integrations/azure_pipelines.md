@@ -11,13 +11,14 @@ Azure Pipelines [supports several different source repositories][supported_repos
 hosted on [Azure Repos Git][azure_repos_git] and [GitHub][github_repos].
 
 Once configured for a repository, the Azure Pipelines integration will provide analysis of project dependencies from
-lockfiles. This can happen in a branch pipeline run from a CI trigger or in a Pull Request (PR) pipeline run from a
-PR trigger.
+manifests and lockfiles. This can happen in a branch pipeline run from a CI trigger or in a Pull Request (PR)
+pipeline run from a PR trigger.
 
 For PR triggered pipelines, analyzed dependencies will include any that are added/modified in the PR.
 
-For CI triggered pipelines, the analyzed dependencies will be determined by comparing lockfiles in the branch to
-the default branch. **All** dependencies will be analyzed when the CI triggered pipeline is run on the default branch.
+For CI triggered pipelines, the analyzed dependencies will be determined by comparing dependency files in the branch
+to the default branch. **All** dependencies will be analyzed when the CI triggered pipeline is run on the default
+branch.
 
 The results will be provided in the pipeline logs and provided as a comment in a thread on the PR. The CI job will
 return an error (i.e., fail the build) if any of the analyzed dependencies fail to meet the established policy.
@@ -157,9 +158,9 @@ jobs:
 ### Pool selection
 
 The pool is specified at the job level here because this is a [container job][container_job]. While Azure Pipelines
-allows container jobs for `windows-2019` and `ubuntu-*` base `vmImage` images, only `ubuntu-*` is supported by Phylum
-at this time. Keeping that restriction in mind, the pool can be specified at the pipeline or stage level instead.
-See the [YAML schema pool definition][yaml_pool] documentation for more detail.
+allows container jobs for `windows-2019` and `ubuntu-*` base `vmImage` images, only `ubuntu-*` is supported by
+Phylum at this time. Keeping that restriction in mind, the pool can be specified at the pipeline or stage level
+instead. See the [YAML schema pool definition][yaml_pool] documentation for more detail.
 
 [container_job]: https://learn.microsoft.com/azure/devops/pipelines/process/container-phases
 [yaml_pool]: https://learn.microsoft.com/azure/devops/pipelines/yaml-schema/pool
@@ -210,16 +211,41 @@ For instance, at the time of this writing, all of these tag references pointed t
 
 Only the last tag reference, by SHA256 digest, is guaranteed to not have the underlying image it points to change.
 
+The default `phylum-ci` Docker image contains `git` and the installed `phylum` Python package. It also contains an
+installed version of the Phylum CLI and all required tools needed for [lockfile generation][lockfile_generation].
+An advantage of using the default Docker image is that the complete environment is packaged and made available
+with components that are known to work together.
+
+One disadvantage to the default image is it's size. It can take a while to download and may provide more
+tools than required for your specific use case. Special `slim` tags of the `phylum-ci` image are provided as
+an alternative. These tags differ from the default image in that they do not contain the required tools needed
+for [lockfile generation][lockfile_generation] (with the exception of the `pip` tool). The `slim` tags are
+significantly smaller and allow for faster action run times. They are useful for those instances where **no**
+manifest files are present and/or **only** lockfiles are used.
+
+Here are examples of using the slim image tags:
+
+```yaml
+    # NOTE: These are examples. Only one container line for `phylum-ci` is expected.
+
+    # Use the most current release of *both* `phylum-ci` and the Phylum CLI
+    container: phylumio/phylum-ci:slim
+
+    # Use the `slim` image with a specific release version of `phylum-ci` and Phylum CLI
+    container: phylumio/phylum-ci:0.36.0-CLIv5.7.1-slim
+```
+
 [resource_container]: https://learn.microsoft.com/azure/devops/pipelines/yaml-schema/resources-containers-container
 [step_target]: https://learn.microsoft.com/azure/devops/pipelines/process/tasks#step-target
 [yaml_job_container]: https://learn.microsoft.com/azure/devops/pipelines/yaml-schema/jobs-job-container
 [yaml_resources]: https://learn.microsoft.com/azure/devops/pipelines/yaml-schema/resources
+[lockfile_generation]: https://docs.phylum.io/docs/lockfile_generation
 
 ### Repository checkout
 
-The `phylum-ci` logic for determining changes in lockfiles requires git history beyond what is available in a shallow
-clone/checkout/fetch. To ensure the shallow fetch option is disabled for the pipeline, an explicit checkout step is
-specified here, with `fetchDepth` set to `0`. It is also possible to disable the shallow fetch option in the
+The `phylum-ci` logic for determining changes in dependency files requires git history beyond what is available in a
+shallow clone/checkout/fetch. To ensure the shallow fetch option is disabled for the pipeline, an explicit checkout
+step is specified here, with `fetchDepth` set to `0`. It is also possible to disable the shallow fetch option in the
 [pipeline settings UI][pipeline_settings]. See the [YAML schema steps.checkout definition][yaml_checkout] documentation
 for more detail.
 
@@ -273,11 +299,23 @@ view the [script options output][script_options] for the latest release.
 
       # Some lockfile types (e.g., Python/pip `requirements.txt`) are ambiguous in that
       # they can be named differently and may or may not contain strict dependencies.
-      # In these cases, it is best to specify an explicit lockfile path.
+      # In these cases it is best to specify an explicit path, either with the `--lockfile`
+      # option or in a `.phylum_project` file. The easiest way to do that is with the
+      # Phylum CLI, using the `phylum init` command (https://docs.phylum.io/docs/phylum_init)
+      # and committing the generated `.phylum_project` file.
       - script: phylum-ci --lockfile requirements-prod.txt
 
-      # Specify multiple explicit lockfile paths
-      - script: phylum-ci --lockfile requirements-prod.txt path/to/lock.file
+      # Specify multiple explicit dependency file paths
+      - script: phylum-ci --lockfile requirements-prod.txt Cargo.toml path/to/dependency.file
+
+      # Force analysis, even when no dependency file has changed. This can be useful for
+      # manifests, where the loosely specified dependencies may not change often but the
+      # completely resolved set of strict dependencies does.
+      - script: phylum-ci --force-analysis
+
+      # Force analysis for all dependencies in a manifest file. This is especially useful
+      # for *workspace* manifest files where there is no companion lockfile (e.g., libraries).
+      - script: phylum-ci --force-analysis --all-deps --lockfile Cargo.toml
 
       # Ensure the latest Phylum CLI is installed.
       - script: phylum-ci --force-install
@@ -290,7 +328,9 @@ view the [script options output][script_options] for the latest release.
         phylum-ci \
           -vv \
           --lockfile requirements-dev.txt \
-          --lockfile requirements-prod.txt path/to/lock.file \
+          --lockfile requirements-prod.txt path/to/dependency.file \
+          --lockfile Cargo.toml \
+          --force-analysis \
           --all-deps
 ```
 

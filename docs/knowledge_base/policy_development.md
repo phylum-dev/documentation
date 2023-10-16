@@ -4,19 +4,19 @@ category: 6255e67693d5200013b1fa41
 hidden: false
 ---
 
-# Creating a local policy development environment
+## Creating a local policy development environment
 
 It is recommended to set up a local development environment for a better policy development experience. With a local development environment, you gain benefits such as faster feedback, more diagnostic abilities, version control, and automated testing.
 
-## Download the OPA CLI
+### Download the OPA CLI
 
-Follow the instructions at https://www.openpolicyagent.org/docs/latest/#1-download-opa to download a copy of the OPA command line tool and run `opa version` to ensure it is working.
+Follow the instructions at <https://www.openpolicyagent.org/docs/latest/#1-download-opa> to download a copy of the OPA command line tool and run `opa version` to ensure it is working.
 
-## Download the policy SDK
+### Download the policy SDK
 
-Download the policy SDK from https://api.phylum.io/api/v0/data/jobs/policy/sdk.zip and extract it.
+Download the policy SDK from <https://api.phylum.io/api/v0/data/jobs/policy/sdk.zip> and extract it.
 
-## Download input data
+### Download input data
 
 ```sh
 job="YOUR JOB ID"
@@ -26,7 +26,7 @@ curl -H "Authorization: Bearer ${token}" "https://api.phylum.io/api/v0/data/jobs
 
 Note: You can obtain a Job ID by using the [`phylum history`](https://docs.phylum.io/docs/phylum_history) command from the Phylum CLI.
 
-# Evaluating policies locally
+## Evaluating policies locally
 
 A policy can be evaluated using `opa eval --data phylum.rego --data <YOUR POLICY>.rego --data constants.json --input input.json --schema schema --format pretty data.phylum.job`.
 
@@ -50,7 +50,7 @@ If everything is working, you will receive JSON output from `opa` that looks lik
 
 This is what the output looks like when the job is allowed by the policy. When the policy blocks something, there will be additional data describing the failure.
 
-# Automated testing
+## Automated testing
 
 Open Policy Agent has documentation on [policy testing](https://www.openpolicyagent.org/docs/latest/policy-testing/). Writing an automated test for your Phylum policy looks something like this:
 
@@ -86,7 +86,7 @@ test_allow_medium if {
 
 This test requires `constants.json` from the Phylum SDK. The test can be executed against the Phylum `default.rego` policy using `opa test constants.json default.rego example_test.rego`.
 
-# Evaluating policies using the Phylum API
+## Evaluating policies using the Phylum API
 
 Using the [`evaluate_policy`](https://api.phylum.io/api/v0/swagger/index.html#/Jobs/evaluate_policy) API, it's possible to evaluate policies within Phylum. This is the same API used by Phylum tooling.
 

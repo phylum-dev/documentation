@@ -13,7 +13,7 @@ You will need:
 
 1. A Phylum API token
 2. (if required) An SSH key for accessing your Git repository
-3. A Git repository containing a lockfile
+3. A Git repository containing a dependency file
 
 ## Setting Your Phylum API Token
 

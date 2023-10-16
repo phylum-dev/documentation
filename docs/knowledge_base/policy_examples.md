@@ -30,8 +30,8 @@ import future.keywords.in
 # schemas:
 #   - data.issue: schema.issue
 issue contains "risk level cannot exceed medium" if {
-	data.issue.domain in {domain.AUTHOR, domain.ENGINEERING, domain.VULNERABILITY}
-	data.issue.severity > level.MEDIUM
+  data.issue.domain in {domain.AUTHOR, domain.ENGINEERING, domain.VULNERABILITY}
+  data.issue.severity > level.MEDIUM
 }
 
 # METADATA
@@ -39,8 +39,8 @@ issue contains "risk level cannot exceed medium" if {
 # schemas:
 #   - data.issue: schema.issue
 issue contains "malicious risk level cannot exceed low" if {
-	data.issue.domain == domain.MALICIOUS
-	data.issue.severity > level.LOW
+  data.issue.domain == domain.MALICIOUS
+  data.issue.severity > level.LOW
 }
 
 # METADATA
@@ -48,8 +48,8 @@ issue contains "malicious risk level cannot exceed low" if {
 # schemas:
 #   - data.issue: schema.issue
 issue contains "license risk level cannot exceed high" if {
-	data.issue.domain == domain.LICENSE
-	data.issue.severity > level.HIGH
+  data.issue.domain == domain.LICENSE
+  data.issue.severity > level.HIGH
 }
 ```
 
