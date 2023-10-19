@@ -28,6 +28,7 @@ Other integrations include:
 | Dazz | [Documentation][dazz_docs] |
 | Sophos | [Documentation][sophos_docs] |
 | Tines | [Documentation][tines_docs] |
+| Netskope | [Documentation][netskope_docs] |
 
 [github_app_docs]: https://docs.phylum.io/docs/github_app
 [github_marketplace]: https://github.com/marketplace/phylum-io
@@ -39,6 +40,7 @@ Other integrations include:
 [dazz_docs]: https://docs.phylum.io/docs/dazz
 [sophos_docs]: https://docs.phylum.io/docs/sophos
 [tines_docs]: https://docs.phylum.io/docs/tines
+[netskope_docs]: https://docs.phylum.io/docs/netskope
 
 ## Future Integrations
 
