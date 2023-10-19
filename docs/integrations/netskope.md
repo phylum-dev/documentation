@@ -27,7 +27,8 @@ Netskope users who purchase a Phylum threat feed subscription can follow the ins
 
 ### Obtain Your Netskope Tenant Name
 
-1. Your Netskope Tenant name is simply the subdomain of your dashboard URL. For example when you log into your Netskope dashboard, look at the URL. It should be of the form `https://<tenant-name>.goskope.com/ns#/dashboard`. Grab the `<tenant-name>` part of this URL.
+1. If you do not have a Netskope Tenant configured, follow [these directions](https://docs.netskope.com/en/netskope-help/integrations-439794/netskope-cloud-exchange/get-started-with-cloud-exchange/configure-netskope-tenants/) provided by Netskope. Upon completing this configuration, the name you chose will be the Tenant Name.
+2. If you already have a tenant configured, your Netskope Tenant name is simply the subdomain of your dashboard URL. For example when you log into your Netskope dashboard, look at the URL. It should be of the form `https://<tenant-name>.goskope.com/ns#/dashboard`. Grab the `<tenant-name>` part of this URL.
 
 ### Create and Obtain the Name of Your File Hash List
 
