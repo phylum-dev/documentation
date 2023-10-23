@@ -4,6 +4,12 @@ category: 6255e67693d5200013b1fa40
 hidden: false
 ---
 
+## 2023 Weeks 37-42
+### New
+- CLI/CI: Added support for manifest files by leveraging [lockfile generation](https://docs.phylum.io/docs/lockfile_generation)
+- Integration: Added an integration for [Netskope](https://docs.phylum.io/docs/netskope)
+- Experimental: Added GenerativeAI remediation suggestion capability
+
 ## 2023 Weeks 31-36
 ### New
 - API Token: Added an [API token service](https://docs.phylum.io/docs/api-keys) making it much easier to interact directly with the API
