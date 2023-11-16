@@ -29,6 +29,7 @@ Other integrations include:
 | Sophos | [Documentation][sophos_docs] |
 | Tines | [Documentation][tines_docs] |
 | Netskope | [Documentation][netskope_docs] |
+| SumoLogic | [Documentation][sumologic_docs] |
 
 [github_app_docs]: https://docs.phylum.io/docs/github_app
 [github_marketplace]: https://github.com/marketplace/phylum-io
@@ -41,6 +42,7 @@ Other integrations include:
 [sophos_docs]: https://docs.phylum.io/docs/sophos
 [tines_docs]: https://docs.phylum.io/docs/tines
 [netskope_docs]: https://docs.phylum.io/docs/netskope
+[sumologic_docs]: https://docs.phylum.io/docs/sumo_logic
 
 ## Future Integrations
 
