@@ -14,7 +14,7 @@ As new vulnerabilities are discovered, the Phylum platform will search through a
 
 If the new vulnerability does not cause a policy violation, nothing will happen.
 
-If a new policy violation is generated, the package and project will reflect that and the package will not longer be suppressed if it was previously in a suppressed state. Additionally, any [notifications](https://docs.phylum.io/docs/notifications) the project/group has configured will be triggered.
+If a new policy violation is generated, the package and project will reflect that and the package will no longer be suppressed if it was previously in a suppressed state. Additionally, any [notifications](https://docs.phylum.io/docs/notifications) the project/group has configured will be triggered.
 
 ## How to Activate
 
