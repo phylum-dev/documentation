@@ -9,10 +9,6 @@ hidden: false
 
 Snyk provides information around third party software vulnerabilities. By installing the Phylum/Snyk integration, users can augment Snyk data with Phylum's real-time software supply chain attacker capabilities.
 
-# TODO: Add youtube video of Snyk integration
-
-# TODO: Callout to upgrade to pro for Snyk integration
-
 ## Installing
 The Phylum integration for Snyk can be installed [here](https://snyk.phylum.io).
 
