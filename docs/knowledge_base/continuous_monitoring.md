@@ -6,7 +6,7 @@ hidden: false
 
 # Overview
 
-Phylum continuous monitoring ensures the accuracy of package issue data without requiring the user to re-analyze a project.
+Phylum Continuous Monitoring ensures the accuracy of package issue data without requiring the user to re-analyze a project.
 
 ## How It Works
 
