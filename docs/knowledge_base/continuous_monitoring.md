@@ -18,4 +18,4 @@ If a new policy violation is generated, the package and project will reflect tha
 
 ## How to Activate
 
-No activation required! Continuous monitoring is a default platform feature for all Phylum accounts. Phylum Pro users have the additional option to trigger [notifications](https://docs.phylum.io/docs/notifications) on new continuous monitoring violations.
+No activation required! Continuous Monitoring is a default platform feature for all Phylum accounts. Phylum Pro users have the additional option to trigger [notifications](https://docs.phylum.io/docs/notifications) on new Continuous Monitoring violations.
