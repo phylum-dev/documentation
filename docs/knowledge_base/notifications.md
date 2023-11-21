@@ -1,5 +1,5 @@
 ---
-title: Setting up Notifications in Phylum
+title: Notifications
 category: 6255e67693d5200013b1fa41
 hidden: false
 ---
@@ -8,11 +8,13 @@ hidden: false
 
 Phylum supports notification systems using email addresses or webhooks for various platforms including Slack, Microsoft Teams, and Discord. This document guides you through setting up notifications for each of these platforms.
 
+Notifications are a Phylum Pro feature and can be configured at the group or project level. Currently, the only trigger for notifications is [continuous monitoring](https://docs.phylum.io/docs/continuous_monitoring) events.
+
 ## Notification Setup
 
 ### Email Notifications
 
-1. Navigate to the 'Notifications' section in your Phylum account settings.
+1. Navigate to the 'Notifications' section in your Phylum group or project.
 2. Enter the email address where you wish to receive notifications.
 3. Save your settings to enable email notifications.
 
