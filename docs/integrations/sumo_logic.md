@@ -28,7 +28,7 @@ There are two separate pieces of information needed to complete the subscription
 
 1. Create a token using the [CLI](https://docs.phylum.io/docs/phylum_auth_create-token) or the [UI](https://docs.phylum.io/docs/api-keys).
 
-### Install the Phylum app from Sumo Logic App Library
+### Install the Phylum app from Sumo Logic App Catalog
 After configuring collection you can [install](https://help.sumologic.com/05Search/Library/Apps-in-Sumo-Logic/Install-Apps-from-the-Library) the Sumo Logic App for Phylum from App Catalog.
 
 ### Install the Phylum Threat Feed Python Script
