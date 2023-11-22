@@ -16,28 +16,18 @@ Notifications are a Phylum Pro feature and can be configured at the group or pro
 
 1. Navigate to the 'Notifications' section in your Phylum group or project.
 2. Enter the email addresses that you wish to receive notifications.
-3. Save your settings to enable email notifications.
+3. `Confirm` the addresses that will be sent notifications.
+4. A `Subscription Confirmation` email will be sent and each user will need to confirm their subscription.
 
-### Slack Webhook Integration
+### Webhook Integration
 
-1. Create a Slack webhook following the guide at [Slack Webhook Setup](https://api.slack.com/messaging/webhooks#getting_started).
-2. In Phylum, navigate to the 'Notifications' section.
-3. Enter your Slack webhook URL.
-4. Perform a test to ensure the notifications are being sent correctly.
-
-### Microsoft Teams Webhook Integration
-
-1. Set up an incoming webhook in Microsoft Teams as described in [Microsoft Teams Webhook Setup](https://learn.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook).
-2. In your Phylum account, go to the 'Notifications' section.
-3. Enter your Microsoft Teams webhook URL.
-4. Perform a test to ensure the notifications are being sent correctly.
-
-### Discord Webhook Integration
-
-1. Create a Discord webhook following Discord's guidelines at [Discord Webhook Guide](https://discord.com/developers/docs/resources/webhook#execute-slackcompatible-webhook). Note that Discord support currently uses a Slack-compatible webhook format.
-2. In Phylum, access the 'Notifications' section.
-3. Paste your Discord webhook URL.
-4. Perform a test to ensure the notifications are being sent correctly.
+1. Navigate to the 'Notifications' section in your Phylum group or project.
+2. Follow the respective setup guide for the currently supported platforms:
+   - **Slack**: [Slack Webhook Setup](https://api.slack.com/messaging/webhooks#getting_started)
+   - **Microsoft Teams**: [Microsoft Teams Webhook Setup](https://learn.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook)
+   - **Discord**: [Discord Webhook Guide](https://discord.com/developers/docs/resources/webhook#execute-slackcompatible-webhook) (Note: Discord uses a Slack-compatible webhook format)
+3. Enter the webhook URL provided by your chosen platform.
+4. `Update` your settings to enable Webhook notifications.
 
 ## Conclusion
 
