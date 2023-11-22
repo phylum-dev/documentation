@@ -38,7 +38,7 @@ Phylum provides a Python script to load threat feed data into Sumo Logic. This s
 1. Navigate to the Phylum subdirectory of the cloned repository, then to “script”: `cd Phylum/script`
 1. Install the required Python dependencies for the script: `pip install -r requirements.txt`
 1. Create a new lookup table in Sumo Logic under the User’s Personal folder: https://help.sumologic.com/docs/search/lookup-tables/create-lookup-table/
-    1. Note the path to the lookup table: An example path for a lookup table named “threat-table” in a folder named “phylum-threat-data” under the personal folder is: “/Library/Users/pete@phylum.com/phylum-threat-data/threat-table”
+    1. Note the path to the lookup table: An example path for a lookup table named “threat-table” in a folder named “phylum-threat-data” under the personal folder is: `/Library/Users/pete@phylum.com/phylum-threat-data/threat-table`
 1. Edit the Python script named `load_threat_data.py` and change the path in the global variable `PHYLUM_LTABLE_PATH` to match the path from Step 4i.
 1. Export environment variables for Sumo Logic API access. These are required for the script to load Phylum’s threat data into the User’s new lookup table created in Step 4.
     1. `SUMOAID` = Sumo Logic Access ID: `export SUMOAID=XXXXX`
