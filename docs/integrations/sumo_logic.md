@@ -32,7 +32,7 @@ There are two separate pieces of information needed to complete the subscription
 After configuring collection you can [install](https://help.sumologic.com/05Search/Library/Apps-in-Sumo-Logic/Install-Apps-from-the-Library) the Sumo Logic App for Phylum from App Catalog.
 
 ### Install the Phylum Threat Feed Python Script
-Phylum provides a Python script to load threat feed data into Sumologic. This script should be run on a schedule to get regular updates from Phylum’s threat feed. 
+Phylum provides a Python script to load threat feed data into Sumo Logic. This script should be run on a schedule to get regular updates from Phylum’s threat feed. 
 
 1. Clone the repository locally: `git clone https://github.com/SumoLogic/sumologic-public-partner-apps`
 1. Navigate to the Phylum subdirectory of the cloned repository, then to “script”: `cd Phylum/script`
