@@ -26,9 +26,11 @@ Other integrations include:
 | -------------------- | ---------------- |
 | Git `pre-commit` Hooks | [Documentation][precommit_docs] |
 | Dazz | [Documentation][dazz_docs] |
+| Snyk | [Documentation][snyk_docs] |
 | Sophos | [Documentation][sophos_docs] |
 | Tines | [Documentation][tines_docs] |
 | Netskope | [Documentation][netskope_docs] |
+| Sumo Logic | [Documentation][sumologic_docs] |
 
 [github_app_docs]: https://docs.phylum.io/docs/github_app
 [github_marketplace]: https://github.com/marketplace/phylum-io
@@ -41,6 +43,9 @@ Other integrations include:
 [sophos_docs]: https://docs.phylum.io/docs/sophos
 [tines_docs]: https://docs.phylum.io/docs/tines
 [netskope_docs]: https://docs.phylum.io/docs/netskope
+[snyk_docs]: https://docs.phylum.io/docs/snyk
+[sumologic_docs]: https://docs.phylum.io/docs/sumo_logic
+
 
 ## Future Integrations
 
