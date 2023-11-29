@@ -10,11 +10,7 @@ Phylum Continuous Monitoring ensures the accuracy of package issue data without 
 
 ## How It Works
 
-As new vulnerabilities are discovered, the Phylum platform will search through all customer projects for impacted packages. If an impacted package is discovered, the active policy for the project will be evaluated.
-
-If the new vulnerability does not cause a policy violation, nothing will happen.
-
-If a new policy violation is generated, the package and project will reflect that and the package will no longer be suppressed if it was previously in a suppressed state. Additionally, any [notifications](https://docs.phylum.io/docs/notifications) the project/group has configured will be triggered.
+The Phylum platform monitors for new issues that impact dependencies in your project and will re-run your policy when one is found. If that issue violates your policy, we will fire off any configured [notifications](https://docs.phylum.io/docs/notifications) and also unsuppress the package if you previously had it suppressed, so you can address the newly found issue.
 
 ## How to Activate
 
