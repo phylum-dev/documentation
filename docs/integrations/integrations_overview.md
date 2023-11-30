@@ -19,6 +19,7 @@ The current Continuous Integration (CI) platforms/environments supported are:
 | GitLab CI | [Documentation][gitlab_docs] |
 | Azure Pipelines | [Documentation][azure_docs] |
 | Bitbucket Pipelines | [Documentation][bb_pipelines_docs] |
+| CircleCI Orb | [Orb Registry][circleci_orb_registry] |
 
 Other integrations include:
 
@@ -45,7 +46,7 @@ Other integrations include:
 [netskope_docs]: https://docs.phylum.io/docs/netskope
 [snyk_docs]: https://docs.phylum.io/docs/snyk
 [sumologic_docs]: https://docs.phylum.io/docs/sumo_logic
-
+[circleci_orb_registry]: https://circleci.com/developer/orbs/orb/phylum-dev/phylum
 
 ## Future Integrations
 
