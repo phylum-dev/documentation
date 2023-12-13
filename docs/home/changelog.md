@@ -4,6 +4,18 @@ category: 6255e67693d5200013b1fa40
 hidden: false
 ---
 
+## 2023 Weeks 43-48
+### New
+- Notifications: Added email and webhook [notification](https://docs.phylum.io/docs/notifications) feature that triggers on [continuous monitoring](https://docs.phylum.io/docs/continuous_monitoring) events
+- Integration: Added an integration for [Snyk](https://docs.phylum.io/docs/snyk)
+- Integration: Added an integration for [Sumo Logic](https://docs.phylum.io/docs/sumo_logic)
+- Integration: Added an integration for [CircleCI](https://circleci.com/developer/orbs/orb/phylum-dev/phylum)
+- Authentication: Added support for AzureAD authentication provider
+
+### Improved
+- UI: Improved color palette
+- SBOM: Added vulnerabilities to CycloneDX exports
+
 ## 2023 Weeks 37-42
 ### New
 - CLI/CI: Added support for manifest files by leveraging [lockfile generation](https://docs.phylum.io/docs/lockfile_generation)
