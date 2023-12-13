@@ -144,15 +144,15 @@ with `--help` output as specified in the [Usage section of the top-level README.
         # they can be named differently and may be a manifest or a lockfile. In cases where
         # only specific dependency files are meant to be analyzed, it is best to specify
         # an explicit path to them.
-        args: [--lockfile=requirements-prod.txt]
+        args: [--depfile=requirements-prod.txt]
 
         # Specify multiple explicit dependency file paths
         args:
-          - --lockfile=requirements-prod.txt
-          - --lockfile=package-lock.json
-          - --lockfile=poetry.lock
-          - --lockfile=Cargo.toml
-          - --lockfile=path/to/dependency.file
+          - --depfile=requirements-prod.txt
+          - --depfile=package-lock.json
+          - --depfile=poetry.lock
+          - --depfile=Cargo.toml
+          - --depfile=path/to/dependency.file
 
         # Force analysis, even when no dependency file has changed. This can be useful for
         # manifests, where the loosely specified dependencies may not change often but the
@@ -161,7 +161,7 @@ with `--help` output as specified in the [Usage section of the top-level README.
 
         # Force analysis for all dependencies in a manifest file. This is especially useful
         # for *workspace* manifest files where there is no companion lockfile (e.g., libraries).
-        args: [--force-analysis, --all-deps, --lockfile=Cargo.toml]
+        args: [--force-analysis, --all-deps, --depfile=Cargo.toml]
 
         # Ensure the latest Phylum CLI is installed.
         args: [--force-install]
@@ -172,9 +172,9 @@ with `--help` output as specified in the [Usage section of the top-level README.
         # Mix and match for your specific use case.
         args:
           - -vv
-          - --lockfile=requirements-prod.txt
-          - --lockfile=path/to/dependency.file
-          - --lockfile=Cargo.toml
+          - --depfile=requirements-prod.txt
+          - --depfile=path/to/dependency.file
+          - --depfile=Cargo.toml
           - --force-analysis
           - --all-deps
 ```

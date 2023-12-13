@@ -284,14 +284,14 @@ view the [script options output][script_options] for the latest release.
 
     # Some lockfile types (e.g., Python/pip `requirements.txt`) are ambiguous in that
     # they can be named differently and may or may not contain strict dependencies.
-    # In these cases it is best to specify an explicit path, either with the `--lockfile`
+    # In these cases it is best to specify an explicit path, either with the `--depfile`
     # option or in a `.phylum_project` file. The easiest way to do that is with the
     # Phylum CLI, using the `phylum init` command (https://docs.phylum.io/docs/phylum_init)
     # and committing the generated `.phylum_project` file.
-    - phylum-ci --lockfile requirements-prod.txt
+    - phylum-ci --depfile requirements-prod.txt
 
     # Specify multiple explicit dependency file paths
-    - phylum-ci --lockfile requirements-prod.txt Cargo.toml path/to/dependency.file
+    - phylum-ci --depfile requirements-prod.txt Cargo.toml path/to/dependency.file
 
     # Force analysis, even when no dependency file has changed. This can be useful for
     # manifests, where the loosely specified dependencies may not change often but the
@@ -300,7 +300,7 @@ view the [script options output][script_options] for the latest release.
 
     # Force analysis for all dependencies in a manifest file. This is especially useful
     # for *workspace* manifest files where there is no companion lockfile (e.g., libraries).
-    - phylum-ci --force-analysis --all-deps --lockfile Cargo.toml
+    - phylum-ci --force-analysis --all-deps --depfile Cargo.toml
 
     # Ensure the latest Phylum CLI is installed.
     - phylum-ci --force-install
@@ -312,9 +312,9 @@ view the [script options output][script_options] for the latest release.
     - |
       phylum-ci \
         -vv \
-        --lockfile requirements-dev.txt \
-        --lockfile requirements-prod.txt path/to/dependency.file \
-        --lockfile Cargo.toml \
+        --depfile requirements-dev.txt \
+        --depfile requirements-prod.txt path/to/dependency.file \
+        --depfile Cargo.toml \
         --force-analysis \
         --all-deps
 ```
