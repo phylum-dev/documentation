@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksite=self.webpackChunksite||[]).push([[5486],{1723:e=>{e.exports=JSON.parse('{"title":"Rules and Heuristics","slug":"/category/analytics","permalink":"/category/analytics","navigation":{"previous":{"title":"Changelog","permalink":"/home/changelog"},"next":{"title":"Bad Author","permalink":"/analytics/bad_author"}}}')}}]);
