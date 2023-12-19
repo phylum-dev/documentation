@@ -2,7 +2,7 @@
 
 Please [contact us][contact] to ask questions that aren't covered by the documentation or this FAQ page.
 
-[contact]: https://docs.phylum.io/docs/contact_us
+[contact]: ../support/contact_us.md
 
 ## How long does it take for a newly published package to be processed by Phylum?
 

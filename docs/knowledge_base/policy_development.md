@@ -22,7 +22,7 @@ token=$(phylum auth token -b)
 curl -H "Authorization: Bearer ${token}" "https://api.phylum.io/api/v0/data/jobs/${job}/policy/input" -fo input.json
 ```
 
-Note: You can obtain a Job ID by using the [`phylum history`](https://docs.phylum.io/docs/phylum_history) command from the Phylum CLI.
+Note: You can obtain a Job ID by using the [`phylum history`](../cli/commands/phylum_history.md) command from the Phylum CLI.
 
 ## Evaluating policies locally
 

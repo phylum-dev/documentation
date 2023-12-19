@@ -4,7 +4,7 @@
 
 Phylum supports notification systems using email addresses or webhooks for various platforms including Slack, Microsoft Teams, and Discord. This document guides you through setting up notifications for each of these platforms.
 
-Notifications are a Phylum Pro feature and can be configured at the group or project level. Currently, the only trigger for notifications is [Continuous Monitoring](https://docs.phylum.io/docs/continuous_monitoring) events.
+Notifications are a Phylum Pro feature and can be configured at the group or project level. Currently, the only trigger for notifications is [Continuous Monitoring](../knowledge_base/continuous_monitoring.md) events.
 
 ## Notification Setup
 

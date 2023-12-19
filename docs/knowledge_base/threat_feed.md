@@ -8,7 +8,7 @@ The Phylum threat feed provides a curated view into malware being released acros
 
 ## Quickstart
 
-1. Obtain an [API key](https://docs.phylum.io/docs/api-keys) and set it as follows:
+1. Obtain an [API key](../knowledge_base/api-keys.md) and set it as follows:
 
     ```bash
     PHYLUM_API=p0_...

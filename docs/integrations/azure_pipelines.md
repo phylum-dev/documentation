@@ -68,10 +68,10 @@ The pre-requisites for using this image are:
 [GH_PAT]: https://docs.github.com/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
 [fine_pats]: https://docs.github.com/rest/overview/permissions-required-for-fine-grained-personal-access-tokens
 [scopes]: https://docs.github.com/developers/apps/building-oauth-apps/scopes-for-oauth-apps#available-scopes
-[phylum_tokens]: https://docs.phylum.io/docs/api-keys
+[phylum_tokens]: ../knowledge_base/api-keys.md
 [phylum_contact]: https://phylum.io/contact-us/
 [app_register]: https://app.phylum.io/register
-[phylum_register]: https://docs.phylum.io/docs/phylum_auth_register
+[phylum_register]: ../cli/commands/phylum_auth_register.md
 
 ## Configure `azure-pipelines.yml`
 
@@ -234,7 +234,7 @@ Here are examples of using the slim image tags:
 [step_target]: https://learn.microsoft.com/azure/devops/pipelines/process/tasks#step-target
 [yaml_job_container]: https://learn.microsoft.com/azure/devops/pipelines/yaml-schema/jobs-job-container
 [yaml_resources]: https://learn.microsoft.com/azure/devops/pipelines/yaml-schema/resources
-[lockfile_generation]: https://docs.phylum.io/docs/lockfile_generation
+[lockfile_generation]: ../cli/lockfile_generation.md
 
 ### Repository checkout
 
@@ -296,7 +296,7 @@ view the [script options output][script_options] for the latest release.
       # they can be named differently and may or may not contain strict dependencies.
       # In these cases it is best to specify an explicit path, either with the `--depfile`
       # option or in a `.phylum_project` file. The easiest way to do that is with the
-      # Phylum CLI, using the `phylum init` command (https://docs.phylum.io/docs/phylum_init)
+      # Phylum CLI, using `phylum init` command (docs.phylum.io/cli/commands/phylum_init)
       # and committing the generated `.phylum_project` file.
       - script: phylum-ci --depfile requirements-prod.txt
 
@@ -390,7 +390,7 @@ information. Since these tokens are sensitive, **care should be taken to protect
         env:
           # Contact Phylum (phylum.io/contact-us) or register (app.phylum.io/register)
           # to gain access. See also `phylum auth register`
-          # (https://docs.phylum.io/docs/phylum_auth_register) command documentation.
+          # (docs.phylum.io/cli/commands/phylum_auth_register) command documentation.
           # Consider using a bot or group account for this token.
           # This value (`PHYLUM_TOKEN`) will need to be set as a secret variable:
           # https://learn.microsoft.com/azure/devops/pipelines/process/set-secret-variables

@@ -20,7 +20,7 @@ There are two separate pieces of information needed to complete the subscription
 
 ### Obtain a Phylum user account API token
 
-1. Create a token using the [CLI](https://docs.phylum.io/docs/phylum_auth_create-token) or the [UI](https://docs.phylum.io/docs/api-keys).
+1. Create a token using the [CLI](../cli/commands/phylum_auth_create-token.md) or the [UI](../knowledge_base/api-keys.md).
 
 ### Install the Phylum app from Sumo Logic App Catalog
 After configuring collection you can [install](https://help.sumologic.com/05Search/Library/Apps-in-Sumo-Logic/Install-Apps-from-the-Library) the Sumo Logic App for Phylum from App Catalog.

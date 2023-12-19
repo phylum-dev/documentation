@@ -10,7 +10,7 @@ slug: /
 
 Not a user yet? Get the free version [here](https://app.phylum.io/register).
 
-[Quickstart](https://docs.phylum.io/docs/quickstart) -> (set up takes less than 10 minutes)
+[Quickstart](../cli/quickstart.md) -> (set up takes less than 10 minutes)
 
 **OR** install our [GitHub App](https://github.com/marketplace/phylum-io) (a
 free account is created automatically and set up takes 5 minutes)

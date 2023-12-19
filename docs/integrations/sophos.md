@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Sophos Phylum integration allows users to check their dependencies in a specified Git repository using the [Phylum CLI](https://docs.phylum.io/docs/welcome).
+The Sophos Phylum integration allows users to check their dependencies in a specified Git repository using the [Phylum Platform](../home/welcome.md).
 
 You will need:
 
@@ -18,7 +18,7 @@ An API token can be generated using the Phylum CLI. Run the following command:
 phylum auth token
 ```
 
-Copy the token in preparation for adding it to your Sophos Factory credentials. Additional information about Phylum API tokens can be found in [our documentation](https://docs.phylum.io/docs/api-keys).
+Copy the token in preparation for adding it to your Sophos Factory credentials. Additional information about Phylum API tokens can be found in [our documentation](../knowledge_base/api-keys.md).
 
 ### Add To Sophos Factory Credentials
 

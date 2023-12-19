@@ -52,7 +52,7 @@ phylum auth token --bearer
 
 But that access token is only valid for about 6 minutes. If you find yourself regularly needing this, consider using [a CLI extension][extensions-rest-api] to make your API requests.
 
-[extensions-rest-api]: https://docs.phylum.io/docs/extension_rest_api
+[extensions-rest-api]: ../cli/extensions/extension_rest_api.md
 
 If you don't want your CLI to use refresh tokens, update to the latest version and re-authenticate:
 

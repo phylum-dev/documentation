@@ -7,7 +7,7 @@ Phylum provides a GitHub App to get your current and future repositories monitor
 ## Prerequisites
 
 * Ability to install Apps in GitHub
-* [Phylum account linked to GitHub](https://docs.phylum.io/docs/federate_account)
+* [Phylum account linked to GitHub](../knowledge_base/federate_account.md)
 * Phylum Account set to Pro, if additional functionality is desired
 
 ## Installation Walkthrough
@@ -44,11 +44,11 @@ Monitoring can be activated or paused by selecting the toggle for a given reposi
 >
 > ![GitHub app settings - PRO](../../assets/gh_app_settings_pro.png)
 
-A monitored repository will automatically run a Phylum check for every commit to a Pull Request looking for changes to [supported lockfiles](https://docs.phylum.io/docs/supported_lockfiles). If a change is found, the lockfile is submitted for analysis:
+A monitored repository will automatically run a Phylum check for every commit to a Pull Request looking for changes to [supported lockfiles](../cli/supported_lockfiles.md). If a change is found, the lockfile is submitted for analysis:
 
 ![GitHub app status check in PR](../../assets/gh_app_status_check_running.png)
 
-A comment will be written to the PR if an issue is identified that fails the [defined policy](https://docs.phylum.io/docs/policy). There will be no comment if no dependencies were added or modified for a given PR. If one or more dependencies are still processing (no results available), then the comment will make that clear and the CI job will only fail if dependencies that have **completed analysis results** do not meet the active policy.
+A comment will be written to the PR if an issue is identified that fails the [defined policy](../knowledge_base/policy.md). There will be no comment if no dependencies were added or modified for a given PR. If one or more dependencies are still processing (no results available), then the comment will make that clear and the CI job will only fail if dependencies that have **completed analysis results** do not meet the active policy.
 
 ### Example Comments
 
@@ -86,11 +86,11 @@ The GitHub App will automatically create a group with the name of your GitHub ac
 
 ![Phylum groups management](../../assets/phylum_groups_management.png)
 
-The default group that is created is owned by the account that installed the GitHub App. If you would like a different account to manage the GitHub App and group you may [transfer ownership](https://docs.phylum.io/docs/transfer_group_ownership) of the group.
+The default group that is created is owned by the account that installed the GitHub App. If you would like a different account to manage the GitHub App and group you may [transfer ownership](../knowledge_base/transfer_group_ownership.md) of the group.
 
 ### Policy
 
-The Phylum GitHub app uses the [established project policy](https://docs.phylum.io/docs/policy) for making overall success/failure risk decisions. No configuration is required for setting the policy since a default policy is used for all projects. However, [Phylum PRO users](https://www.phylum.io/pricing) may specify custom policies for their projects to exercise fine-grained control over the risk decision logic.
+The Phylum GitHub app uses the [established project policy](../knowledge_base/policy.md) for making overall success/failure risk decisions. No configuration is required for setting the policy since a default policy is used for all projects. However, [Phylum PRO users](https://www.phylum.io/pricing) may specify custom policies for their projects to exercise fine-grained control over the risk decision logic.
 
 ### Remediation
 
@@ -114,7 +114,7 @@ That takes you to the `Checks` tab of the PR, where it is possible to re-run the
 
 ### On-demand Analysis
 
-It is possible to perform on-demand analysis of any repository for which the Phylum GitHub app has visibility. This includes all the repositories in the GitHub App Settings menu, whether or not they are actively monitored. The analysis will be of the current state of **the default branch** in the repository, for the [supported lockfiles](https://docs.phylum.io/docs/supported_lockfiles) that exist there.
+It is possible to perform on-demand analysis of any repository for which the Phylum GitHub app has visibility. This includes all the repositories in the GitHub App Settings menu, whether or not they are actively monitored. The analysis will be of the current state of **the default branch** in the repository, for the [supported lockfiles](../cli/supported_lockfiles.md) that exist there.
 
 To perform an on-demand analysis, click the `Analyze` button for the desired repository:
 
@@ -128,7 +128,7 @@ The results will be visible in the `Project` menu view for the selected project 
 
 ### I activated monitoring, but it didn't run a scan. How do I get analysis results?
 
-Check to ensure the repository contains a [supported lockfile](https://docs.phylum.io/docs/supported_lockfiles).
+Check to ensure the repository contains a [supported lockfile](../cli/supported_lockfiles.md).
 
 ### Can I manage multiple GitHub App installations in Phylum?
 
@@ -138,4 +138,4 @@ Yes! If your account is linked to multiple GitHub App installtions, they will be
 
 It is not currently possible to monitor and analyze dependency manifest files. The GitHub App is limited to lockfiles
 only. If you still want to analyze manifest files, consider using the
-[Phylum GitHub Actions Integration](https://docs.phylum.io/docs/github_actions) instead.
+[Phylum GitHub Actions Integration](../integrations/github_actions.md) instead.
