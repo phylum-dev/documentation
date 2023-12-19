@@ -1,10 +1,4 @@
----
-title: Continuous Monitoring
-category: 6255e67693d5200013b1fa41
-hidden: false
----
-
-# Overview
+# Continuous Monitoring
 
 Phylum Continuous Monitoring ensures the accuracy of package issue data without requiring the user to re-analyze a project.
 

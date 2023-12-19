@@ -1,14 +1,10 @@
----
-title: Executes Code at Remote URL
-category: 629fb303c228520079bef218
-hidden: false
----
+# Executes Code at Remote URL
 
-# Description
+## Description
 
 A package calling `exec` on a remote URL poses both engineering and security risks. At runtime it is pulling source code from a remote URL and executing it.
 
-# Importance
+## Importance
 
 Executing code hosted at a remote URL is dangerous and fragile and is not recommended for many reasons:
 
@@ -18,6 +14,6 @@ Executing code hosted at a remote URL is dangerous and fragile and is not recomm
 - The remote code can change at any time without changing anything in the package itself.
 - Because the code is hosted remotely, an Internet connection is required to pull down the code at runtime. This is not possible to run in some environments because the URL could be blocked or the there might not even be an Internet connection.
 
-# Examples
+## Examples
 
 In January of 2023, Phylum witnessed a known prolific malware author group changing tactics to use the remote code execution technique. One of the many techniques this group previously used involved shipping highly obfuscated malware in the package itself. This is easy to spot because of the large chunk of obfuscated code. Shifting to the simple remote code execution technique not only greatly reduced the size of their malware footprint in the open source ecosystems, but it also greatly reduced the ability to spot the malware from visual inspection alone.

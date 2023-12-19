@@ -1,9 +1,4 @@
----
-title: Integrations Overview
-category: 62cdf6722c2c1602a4b69643
-hidden: false
----
-# Integrations
+# Integrations Overview
 
 Phylum is the software supply chain security company and is eager to provide
 integrations across the diverse set of environments and ecosystems used by developers.

@@ -1,8 +1,4 @@
----
-title: Groups
-category: 6255e67693d5200013b1fa41
-hidden: false
----
+# Groups
 
 Phylum groups allow users to view/submit projects and analysis jobs in a shared group context. This allows users to share results without needing to share account credentials.
 
@@ -14,4 +10,4 @@ Any user that is a member of the group will be able to access the analysis resul
 
 Group administration for adding/removing users, etc. can be found in the `Groups Admin` view on the [Phylum UI](https://app.phylum.io/auth/login).
 
-![image](https://user-images.githubusercontent.com/34108612/169331800-ab114c38-f5fd-4617-a373-4729a54e1311.png)
+![user menu](../../assets/user-menu.png)

@@ -1,14 +1,10 @@
----
-title: Defend Your Workstation
-category: 6255e67693d5200013b1fa40
-hidden: false
----
+# Defend Your Workstation
 
 [Developers are the new high-value targets](https://blog.phylum.io/developers-are-the-new-high-value-targets/). Phylum can defend developers where they work!
 
 In addition to [integrations offered](https://docs.phylum.io/docs/integrations_overview) to protect applications and CI pipelines, Phylum offers a solution to defend developer workstations.
 
-# Overview
+## Overview
 
 Phylum uses a two-pronged approach to protect your system during package installation: package pre-check and an installation sandbox.
 

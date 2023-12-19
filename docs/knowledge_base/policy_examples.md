@@ -1,10 +1,4 @@
----
-title: Policy Examples
-category: 6255e67693d5200013b1fa41
-hidden: false
----
-
-# Examples
+# Policy Examples
 
 The policy transforms your threat model into a description of why the job is being blocked. There are multiple ways to define why a job should be blocked.
 

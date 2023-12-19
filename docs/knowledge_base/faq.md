@@ -1,10 +1,4 @@
----
-title: Frequently Asked Questions (FAQ)
-category: 6255e67693d5200013b1fa41
-hidden: false
----
-
-# FAQs
+# Frequently Asked Questions (FAQ)
 
 Please [contact us][contact] to ask questions that aren't covered by the documentation or this FAQ page.
 

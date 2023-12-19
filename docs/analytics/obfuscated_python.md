@@ -1,10 +1,6 @@
----
-title: Obfuscated Python
-category: 629fb303c228520079bef218
-hidden: false
----
+# Obfuscated Python
 
-# Description
+## Description
 
 In software development, [code obfuscation](<https://en.wikipedia.org/wiki/Obfuscation_(software)>) is the act of deliberately making source code difficult for humans to read or understand with the ultimate purpose of trying to conceal what the code is doing.
 
@@ -23,10 +19,10 @@ def ___________________(__________, ___________):
 
 Without significant time and effort, it's impossible to tell what this code is doing by just looking at it.
 
-# Importance
+## Importance
 
 Finding obfuscated code in the open source ecosystem is noteworthy because it is atypical and goes against the grain of the spirit and purpose of the open source software community. If found it should be treated with caution because it could be hiding malicious intent.
 
-# Examples
+## Examples
 
 In the fall of 2022, Phylum published details of a supply-chain attack on the PyPI ecosystem in which threat actors continued sophisticated attempts to deploy W4SP Stealer onto Python developers' machines. In this campaign, threat actors used typo-squatting to spread malicious and highly obfuscated Python packages. Once installed, these packages would steal login and password information, crypto wallets, browser cookies, and more. Even though the source code to these packages was published publicly, because it was obfuscated, even if the user looked at it, they wouldn't be able to tell they had malicious intent.

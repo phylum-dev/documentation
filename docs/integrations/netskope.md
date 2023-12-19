@@ -1,9 +1,3 @@
----
-title: Netskope Integration
-category: 62cdf6722c2c1602a4b69643
-hidden: false
----
-
 # Netskope Integration
 
 ## Overview

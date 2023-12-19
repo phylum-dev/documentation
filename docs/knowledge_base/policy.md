@@ -1,10 +1,4 @@
----
-title: Policy
-category: 6255e67693d5200013b1fa41
-hidden: false
----
-
-# Overview
+# Policy
 
 Phylum's custom policy support allows you to take control over the allow/block decision for dependencies being added to a Phylum project.
 

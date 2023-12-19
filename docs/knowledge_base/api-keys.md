@@ -1,8 +1,4 @@
----
-title: API Keys
-category: 6255e67693d5200013b1fa41
-hidden: false
----
+# API Keys
 
 API keys provide you with the ability to authenticate with the Phylum API without requiring user credentials. API keys are well suited for CI/CD environments where you may not want to disclose your account information.
 
@@ -12,7 +8,7 @@ API keys can be generated in the [Phylum web UI][ui-tokens] by clicking on the u
 
 [ui-tokens]: https://app.phylum.io/tokens/list
 
-![user menu](https://raw.githubusercontent.com/phylum-dev/documentation/main/assets/user-menu.png)
+![user menu](../../assets/user-menu.png)
 
 You will be prompted to provide a name for the new key and then will be given a chance to copy the newly generated API key.
 
@@ -36,7 +32,7 @@ The CLI generates and stores an API key for its own use. This happens automatica
 phylum auth login
 ```
 
-The API key is stored in the `settings.yaml` file. The following command can be used to retrieve your token value:  
+The API key is stored in the `settings.yaml` file. The following command can be used to retrieve your token value:
 
 ```sh
 phylum auth token

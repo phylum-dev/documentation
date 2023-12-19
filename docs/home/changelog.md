@@ -1,8 +1,4 @@
----
-title: Changelog
-category: 6255e67693d5200013b1fa40
-hidden: false
----
+# Changelog
 
 ## 2023 Weeks 43-48
 ### New

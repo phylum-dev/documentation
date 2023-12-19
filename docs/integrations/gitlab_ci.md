@@ -1,8 +1,3 @@
----
-title: GitLab CI Integration
-category: 62cdf6722c2c1602a4b69643
-hidden: false
----
 # GitLab CI Integration
 
 ## Overview
@@ -26,9 +21,8 @@ the CI job will only fail if dependencies that have _completed analysis results_
 ## Prerequisites
 
 The GitLab CI environment is primarily supported through the use of a Docker image. GitLab [SaaS subscriptions][gl_saas]
-hosted on <https://gitlab.com> are supported. [Self-managed subscriptions][self_managed] are supported for
-"on-premises" installs which still have access to the internet. Self-hosted "offline" (e.g., air-gapped networks)
-installs of GitLab may work but have not been confirmed.
+hosted on [https://gitlab.com](https://gitlab.com) are supported. [Self-managed subscriptions][self_managed] are
+supported for "on-premises" installs which still have access to the internet. Self-hosted "offline" (e.g., air-gapped networks) installs of GitLab may work but have not been confirmed.
 
 The pre-requisites for using this image are:
 

@@ -1,8 +1,3 @@
----
-title: Bitbucket Pipelines Integration
-category: 62cdf6722c2c1602a4b69643
-hidden: false
----
 # Bitbucket Pipelines Integration
 
 ## Quickstart
@@ -44,8 +39,8 @@ the CI job will only fail if dependencies that have _completed analysis results_
 
 ## Prerequisites
 
-Bitbucket Cloud is supported for repositories hosted on <https://bitbucket.org/>. Bitbucket Data Center is not
-currently supported.
+Bitbucket Cloud is supported for repositories hosted on [https://bitbucket.org/](https://bitbucket.org/).
+Bitbucket Data Center is not currently supported.
 
 The Bitbucket Pipelines environment is primarily supported through the use of a Docker image. The pre-requisites
 for using this image are:

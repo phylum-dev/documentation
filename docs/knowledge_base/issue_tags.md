@@ -1,10 +1,4 @@
----
-title: Issue Tags
-category: 6255e67693d5200013b1fa41
-hidden: false
----
-
-## Issue Tags
+# Issue Tags
 
 Phylum uses tags to uniquely identify issues raised by the system. These tags can be used in custom [policy](https://docs.phylum.io/docs/policy) creation.
 

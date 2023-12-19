@@ -1,10 +1,6 @@
----
-title: Notifications
-category: 6255e67693d5200013b1fa41
-hidden: false
----
+# Notifications
 
-# Overview
+## Overview
 
 Phylum supports notification systems using email addresses or webhooks for various platforms including Slack, Microsoft Teams, and Discord. This document guides you through setting up notifications for each of these platforms.
 
