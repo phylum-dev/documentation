@@ -48,7 +48,7 @@ const config = {
           // Make this a "Docs-only" site
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
-          // Remove this to remove the "edit this page" links.
+          // TODO: Remove this to remove the "edit this page" links?
           editUrl: 'https://github.com/phylum-dev/documentation/tree/main/site/',
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
@@ -95,8 +95,17 @@ const config = {
             position: 'left',
             label: 'KB',
           },
-          // TODO: Create a `CLI` sidebar?
-          // TODO: Create an API sidebar?
+          {
+            type: 'docSidebar',
+            sidebarId: 'cliSidebar',
+            position: 'left',
+            label: 'CLI',
+          },
+          {
+            href: 'https://api.phylum.io/api/v0/swagger/index.html',
+            position: 'left',
+            label: 'API',
+          },
           {
             href: 'https://github.com/phylum-dev',
             position: 'right',
@@ -202,6 +211,25 @@ const config = {
       headingIds: true,
     },
   },
+
+  // This plugin is needed due to interactions between docusaurus and webpack not handling symlinks correctly. Without
+  // it, the site won't build due to failures in following the symlinks in `docs` to their git submodules. References:
+  // https://github.com/facebook/docusaurus/issues/3272#issuecomment-876374383
+  // https://github.com/facebook/docusaurus/issues/6257
+  plugins: [
+    function (context, options) {
+      return {
+        name: 'webpack-configuration-plugin',
+        configureWebpack(config, isServer, utils) {
+          return {
+            resolve: {
+              symlinks: false,
+            }
+          };
+        }
+      };
+    },
+  ],
 };
 
 export default config;
