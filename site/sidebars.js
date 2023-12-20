@@ -33,6 +33,7 @@ const sidebars = {
           link: {
             type: 'generated-index',
             title: 'Command Line Tool',
+            slug: '/cli/commands'
           },
           items: [
             {
@@ -112,6 +113,7 @@ const sidebars = {
         type: 'generated-index',
         title: 'Rules and Heuristics',
         description: 'Phylum analytics consist of rules and heuristics:',
+        slug: '/analytics'
       },
       items: [
         {
