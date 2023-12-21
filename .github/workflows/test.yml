@@ -1,0 +1,41 @@
+# This is a workflow for ensuring tests pass with the configured git submodules.
+# It does not attempt to update the repos/branches specified in any submodules.
+---
+name: Test
+
+on:
+  # Allow running this workflow manually from the Actions tab
+  workflow_dispatch:
+  pull_request:
+  push:
+    branches:
+      - main
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  doc-checks:
+    name: Test documentation website
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repo
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+        with:
+          submodules: true
+
+      - name: Set up Node
+        uses: actions/setup-node@b39b52d1213e96004bfcb1c61a8a6fa8ab84f3e8 # v4.0.1
+        with:
+          node-version: '*'
+          cache: 'npm'
+          cache-dependency-path: site/package-lock.json
+
+      - name: Install local website package
+        working-directory: ./site
+        run: npm ci
+
+      - name: Ensure website builds
+        working-directory: ./site
+        run: npm run build
