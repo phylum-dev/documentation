@@ -40,9 +40,16 @@ const config = {
           // Make this a "Docs-only" site
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
-          // TODO: Remove this to remove the "edit this page" links?
-          // TODO: Use a function here instead, to account for the git submodules?
-          editUrl: 'https://github.com/phylum-dev/documentation/tree/main/site/',
+          // Use an `EditUrlFunction` here instead of a string, to account for git submodules
+          // Ref: https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-docs#editUrl
+          editUrl: ({ docPath }) => {
+            const cli_prefix = "cli";
+            if (docPath.startsWith(cli_prefix)) {
+              const true_doc_path = docPath.substring(cli_prefix.length + 1);
+              return `https://github.com/phylum-dev/cli/edit/main/docs/${true_doc_path}`;
+            }
+            return `https://github.com/phylum-dev/documentation/edit/main/docs/${docPath}`;
+          },
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
         },
