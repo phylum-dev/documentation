@@ -1,21 +1,54 @@
+# Workflow for updating the documentation website
 ---
-name: Sync `docs` directory to ReadMe
+name: Update Documentation
+
+# Documentation updates can happen in different ways; allow only one at a time
+concurrency: release
 
 on:
+  # Allow running this workflow manually from the Actions tab
   workflow_dispatch:
   push:
     branches:
       - main
-  
+
 jobs:
   Update-Documentation:
     name: Update the documentation
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
     steps:
       - name: Checkout the repo
-        uses: actions/checkout@v3
-       
-      - name: Update using rdme
-        uses: readmeio/rdme@8.1.1
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
         with:
-          rdme: docs ./docs --key=${{ secrets.README_API }} --version=2-latest
+          submodules: true
+
+      - name: Configure git user
+        run: |
+          git config user.name 'phylum-bot'
+          git config user.email '69485888+phylum-bot@users.noreply.github.com'
+
+      - name: Set up Node
+        uses: actions/setup-node@b39b52d1213e96004bfcb1c61a8a6fa8ab84f3e8 # v4.0.1
+        with:
+          node-version: '*'
+          cache: 'npm'
+          cache-dependency-path: site/package-lock.json
+
+      - name: Install local website package
+        working-directory: ./site
+        run: npm ci
+
+      - name: Build documentation website
+        working-directory: ./site
+        run: npm run build
+
+      - name: Deploy documentation website
+        working-directory: ./site
+        env:
+          GIT_USER: 'phylum-bot'
+          # This PAT is for the `phylum-bot` account and only has the `public_repo` scope to limit privileges.
+          GIT_PASS: ${{ secrets.GH_RELEASE_PAT }}
+        run: npm run deploy
