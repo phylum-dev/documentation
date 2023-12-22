@@ -22,11 +22,6 @@ jobs:
         with:
           submodules: true
 
-      - name: Configure git user
-        run: |
-          git config user.name 'phylum-bot'
-          git config user.email '69485888+phylum-bot@users.noreply.github.com'
-
       - name: Install local website package
         working-directory: ./site
         run: npm ci
@@ -40,4 +35,6 @@ jobs:
         env:
           GIT_USER: 'phylum-bot'
           GIT_PASS: ${{ secrets.GH_RELEASE_PAT }}
+          GIT_USER_NAME: 'phylum-bot'
+          GIT_USER_EMAIL: '69485888+phylum-bot@users.noreply.github.com'
         run: npm run deploy
