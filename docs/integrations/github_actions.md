@@ -1,8 +1,3 @@
----
-title: GitHub Actions Integration
-category: 62cdf6722c2c1602a4b69643
-hidden: false
----
 # GitHub Actions Integration
 
 ## Overview
@@ -34,7 +29,7 @@ Using the slim image tags is possible by altering your workflow to use the image
 GitHub Action. That is possible with either [container jobs](#container-jobs) or [container steps](#container-steps).
 
 [container_action]: https://docs.github.com/en/actions/creating-actions/creating-a-docker-container-action
-[lockfile_generation]: https://docs.phylum.io/docs/lockfile_generation
+[lockfile_generation]: ../cli/lockfile_generation.md
 
 ### Container Jobs
 

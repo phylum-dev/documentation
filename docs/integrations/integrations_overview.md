@@ -1,9 +1,4 @@
----
-title: Integrations Overview
-category: 62cdf6722c2c1602a4b69643
-hidden: false
----
-# Integrations
+# Integrations Overview
 
 Phylum is the software supply chain security company and is eager to provide
 integrations across the diverse set of environments and ecosystems used by developers.
@@ -33,19 +28,19 @@ Other integrations include:
 | Netskope | [Documentation][netskope_docs] |
 | Sumo Logic | [Documentation][sumologic_docs] |
 
-[github_app_docs]: https://docs.phylum.io/docs/github_app
+[github_app_docs]: ../integrations/github_app.md
 [github_marketplace]: https://github.com/marketplace/phylum-io
-[github_action_docs]: https://docs.phylum.io/docs/github_actions
-[gitlab_docs]: https://docs.phylum.io/docs/gitlab_ci
-[azure_docs]: https://docs.phylum.io/docs/azure_pipelines
-[bb_pipelines_docs]: https://docs.phylum.io/docs/bitbucket_pipelines
-[precommit_docs]: https://docs.phylum.io/docs/git_precommit
-[dazz_docs]: https://docs.phylum.io/docs/dazz
-[sophos_docs]: https://docs.phylum.io/docs/sophos
-[tines_docs]: https://docs.phylum.io/docs/tines
-[netskope_docs]: https://docs.phylum.io/docs/netskope
-[snyk_docs]: https://docs.phylum.io/docs/snyk
-[sumologic_docs]: https://docs.phylum.io/docs/sumo_logic
+[github_action_docs]: ../integrations/github_actions.md
+[gitlab_docs]: ../integrations/gitlab_ci.md
+[azure_docs]: ../integrations/azure_pipelines.md
+[bb_pipelines_docs]: ../integrations/bitbucket_pipelines.md
+[precommit_docs]: ../integrations/git_precommit.md
+[dazz_docs]: ../integrations/dazz.md
+[sophos_docs]: ../integrations/sophos.md
+[tines_docs]: ../integrations/tines.md
+[netskope_docs]: ../integrations/netskope.md
+[snyk_docs]: ../integrations/snyk.md
+[sumologic_docs]: ../integrations/sumo_logic.md
 [circleci_orb_registry]: https://circleci.com/developer/orbs/orb/phylum-dev/phylum
 
 ## Future Integrations
@@ -58,4 +53,4 @@ Please let us know what you need by either creating a [GitHub issue][github_issu
 or sending a note through the general [Contact Us][support] options.
 
 [github_issue]: https://github.com/phylum-dev/phylum-ci/issues
-[support]: https://docs.phylum.io/docs/contact_us
+[support]: ../support/contact_us.md

@@ -1,8 +1,3 @@
----
-title: Bitbucket Pipelines Integration
-category: 62cdf6722c2c1602a4b69643
-hidden: false
----
 # Bitbucket Pipelines Integration
 
 ## Quickstart
@@ -44,8 +39,8 @@ the CI job will only fail if dependencies that have _completed analysis results_
 
 ## Prerequisites
 
-Bitbucket Cloud is supported for repositories hosted on <https://bitbucket.org/>. Bitbucket Data Center is not
-currently supported.
+Bitbucket Cloud is supported for repositories hosted on [https://bitbucket.org/](https://bitbucket.org/).
+Bitbucket Data Center is not currently supported.
 
 The Bitbucket Pipelines environment is primarily supported through the use of a Docker image. The pre-requisites
 for using this image are:
@@ -63,10 +58,10 @@ for using this image are:
 
 [docker_image]: https://hub.docker.com/r/phylumio/phylum-ci/tags
 [bb_tokens]: https://developer.atlassian.com/cloud/bitbucket/rest/intro/#access-tokens
-[phylum_tokens]: https://docs.phylum.io/docs/api-keys
+[phylum_tokens]: ../knowledge_base/api-keys.md
 [phylum_contact]: https://phylum.io/contact-us/
 [app_register]: https://app.phylum.io/register
-[phylum_register]: https://docs.phylum.io/docs/phylum_auth_register
+[phylum_register]: ../cli/commands/phylum_auth_register.md
 
 ## Configure `bitbucket-pipelines.yml`
 
@@ -233,7 +228,7 @@ Here are examples of using the slim image tags:
 
 See the Docker [image option][image_option] and [build environment][docker_builds] documentation for more information.
 
-[lockfile_generation]: https://docs.phylum.io/docs/lockfile_generation
+[lockfile_generation]: ../cli/lockfile_generation.md
 [image_option]: https://support.atlassian.com/bitbucket-cloud/docs/docker-image-options/
 [docker_builds]: https://support.atlassian.com/bitbucket-cloud/docs/use-docker-images-as-build-environments/
 
@@ -286,7 +281,7 @@ view the [script options output][script_options] for the latest release.
     # they can be named differently and may or may not contain strict dependencies.
     # In these cases it is best to specify an explicit path, either with the `--depfile`
     # option or in a `.phylum_project` file. The easiest way to do that is with the
-    # Phylum CLI, using the `phylum init` command (https://docs.phylum.io/docs/phylum_init)
+    # Phylum CLI, using `phylum init` command (docs.phylum.io/cli/commands/phylum_init)
     # and committing the generated `.phylum_project` file.
     - phylum-ci --depfile requirements-prod.txt
 

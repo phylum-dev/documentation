@@ -1,14 +1,10 @@
----
-title: Defend Your Workstation
-category: 6255e67693d5200013b1fa40
-hidden: false
----
+# Defend Your Workstation
 
 [Developers are the new high-value targets](https://blog.phylum.io/developers-are-the-new-high-value-targets/). Phylum can defend developers where they work!
 
-In addition to [integrations offered](https://docs.phylum.io/docs/integrations_overview) to protect applications and CI pipelines, Phylum offers a solution to defend developer workstations.
+In addition to [integrations offered](../integrations/integrations_overview.md) to protect applications and CI pipelines, Phylum offers a solution to defend developer workstations.
 
-# Overview
+## Overview
 
 Phylum uses a two-pronged approach to protect your system during package installation: package pre-check and an installation sandbox.
 
@@ -23,9 +19,9 @@ An additional layer of protection is provided with an installation sandbox. This
 ## Prerequisites
 
 * [Create a Phylum account](https://app.phylum.io/)
-* Install the [Phylum CLI tool](https://docs.phylum.io/docs/quickstart)
+* Install the [Phylum CLI tool](../cli/quickstart.md)
   * Allow the default ecosystem extension(s) you plan to use
-* [Login to your account with the CLI tool](https://docs.phylum.io/docs/phylum_auth_login)
+* [Login to your account with the CLI tool](../cli/commands/phylum_auth_login.md)
 
 ## Walkthrough
 
@@ -96,17 +92,17 @@ up to date in 122ms
 
 ## Supported Ecosystems
 
-Phylum provides support for a number of common package managers used in the [supported ecosystems](https://docs.phylum.io/docs/supported_lockfiles). These include `npm`, `yarn`, `pip`, `poetry`, `bundle`, `cargo` and more on the way! To get the current list, check the [official extensions](https://github.com/phylum-dev/cli/tree/main/extensions). The ecosystem extensions there are included by default when installing the Phylum CLI.
+Phylum provides support for a number of common package managers used in the [supported ecosystems](../cli/supported_lockfiles.md). These include `npm`, `yarn`, `pip`, `poetry`, `bundle`, `cargo` and more on the way! To get the current list, check the [official extensions](https://github.com/phylum-dev/cli/tree/main/extensions). The ecosystem extensions there are included by default when installing the Phylum CLI.
 
 Note: The pre-check feature is available for all listed ecosystem extensions, but the installation sandbox component is currently only supported for `npm`, `yarn`, and `pip`.
 
-Phylum may not currently provide an official ecosystem extension for a package manager that [is otherwise supported](https://docs.phylum.io/docs/supported_lockfiles). Please do one of the following to get that support:
+Phylum may not currently provide an official ecosystem extension for a package manager that [is otherwise supported](../cli/supported_lockfiles.md). Please do one of the following to get that support:
 
 * Check the [community extensions repository](https://github.com/phylum-dev/community-extensions)
   * Someone else may have already made the extension
-  * [Create your own extension](https://docs.phylum.io/docs/extension_quickstart) there
+  * [Create your own extension](../cli/extensions/extension_quickstart.md) there
 * [Create an issue](https://github.com/phylum-dev/cli/issues/new/choose) requesting the new extension
-* [Contact us](https://docs.phylum.io/docs/contact_us) with more nuanced requests
+* [Contact us](../support/contact_us.md) with more nuanced requests
 
 ## FAQ
 

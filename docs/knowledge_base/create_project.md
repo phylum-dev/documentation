@@ -1,14 +1,8 @@
----
-title: Phylum Project Creation
-category: 6255e67693d5200013b1fa41
-hidden: false
----
-
-# Overview
+# Phylum Project Creation
 
 Phylum projects are used to represent a software project; often a git repository. A Phylum project organizes the dependencies and findings for your software project. This page enumerates the ways a Phylum project can be created.
 
-> **NOTE:** Project creation does not trigger an analysis of the project. Instead, the [`phylum analyze`](https://docs.phylum.io/docs/phylum_analyze) command will trigger an analysis job and organize the results in the specified Phylum project.
+> **NOTE:** Project creation does not trigger an analysis of the project. Instead, the [`phylum analyze`](../cli/commands/phylum_analyze.md) command will trigger an analysis job and organize the results in the specified Phylum project.
 
 ## Walkthrough
 
@@ -16,10 +10,10 @@ Phylum projects are used to represent a software project; often a git repository
 
 ---
 
-**Via [`phylum init`](https://docs.phylum.io/docs/phylum_init) command:**
+#### Via [`phylum init`](../cli/commands/phylum_init.md) command
 
 1. Navigate to the directory of the relevant software project
-2. Use the [CLI tool](https://docs.phylum.io/docs/quickstart) to initialize a Phylum project, the interactive prompt will default to the name of the directory, or you may specify the desired project name
+2. Use the [CLI tool](../cli/quickstart.md) to initialize a Phylum project, the interactive prompt will default to the name of the directory, or you may specify the desired project name
 
 ```shellsession
 ❯ pwd
@@ -48,10 +42,10 @@ lockfiles:
 
 ---
 
-**Via [`phylum project`](https://docs.phylum.io/docs/phylum_project) command:**
+#### Via [`phylum project`](../cli/commands/phylum_project.md) command
 
 1. Navigate to the directory of the relevant software project
-2. Use the [CLI tool](https://docs.phylum.io/docs/quickstart) to create a new Phylum project
+2. Use the [CLI tool](../cli/quickstart.md) to create a new Phylum project
 
 Note: This will create a `.phylum_project` file in the current directory
 
@@ -82,10 +76,10 @@ phylum-ci
 
 ### GitHub App
 
-1. The [Phylum GitHub App](https://docs.phylum.io/docs/github_app) will automatically create a Phylum project when monitoring is activated for a given repository. The Phylum project will be assigned the same name as the repository.
+1. The [Phylum GitHub App](../integrations/github_app.md) will automatically create a Phylum project when monitoring is activated for a given repository. The Phylum project will be assigned the same name as the repository.
 
 ## FAQ
 
 ### Can Phylum projects be shared with other accounts?
 
-Yes! This feature is available to Pro users via [groups](https://docs.phylum.io/docs/groups).
+Yes! This feature is available to Pro users via [groups](../knowledge_base/groups.md).

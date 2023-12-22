@@ -1,8 +1,4 @@
----
-title: Threat Feed
-category: 6255e67693d5200013b1fa41
-hidden: false
----
+# Threat Feed
 
 The Phylum threat feed provides a curated view into malware being released across the open source ecosystems that we monitor. Packages that appear on this feed originate from our automated risk analysis platform, before being triaged and reviewed by a team of security researchers. This produces a timely, high signal feed of threats; [packages now attributed to North Korean state actors](https://blog.phylum.io/sophisticated-ongoing-attack-discovered-on-npm/) appeared on this threat feed before publication of our research article.
 
@@ -10,7 +6,7 @@ The Phylum threat feed provides a curated view into malware being released acros
 
 ## Quickstart
 
-1. Obtain an [API key](https://docs.phylum.io/docs/api-keys) and set it as follows:
+1. Obtain an [API key](../knowledge_base/api-keys.md) and set it as follows:
 
     ```bash
     PHYLUM_API=p0_...

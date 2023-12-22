@@ -1,8 +1,3 @@
----
-title: GitLab CI Integration
-category: 62cdf6722c2c1602a4b69643
-hidden: false
----
 # GitLab CI Integration
 
 ## Overview
@@ -26,9 +21,8 @@ the CI job will only fail if dependencies that have _completed analysis results_
 ## Prerequisites
 
 The GitLab CI environment is primarily supported through the use of a Docker image. GitLab [SaaS subscriptions][gl_saas]
-hosted on <https://gitlab.com> are supported. [Self-managed subscriptions][self_managed] are supported for
-"on-premises" installs which still have access to the internet. Self-hosted "offline" (e.g., air-gapped networks)
-installs of GitLab may work but have not been confirmed.
+hosted on [https://gitlab.com](https://gitlab.com) are supported. [Self-managed subscriptions][self_managed] are
+supported for "on-premises" installs which still have access to the internet. Self-hosted "offline" (e.g., air-gapped networks) installs of GitLab may work but have not been confirmed.
 
 The pre-requisites for using this image are:
 
@@ -48,10 +42,10 @@ The pre-requisites for using this image are:
 [self_managed]: https://docs.gitlab.com/ee/subscriptions/self_managed/
 [docker_image]: https://hub.docker.com/r/phylumio/phylum-ci/tags
 [gitlab_tokens]: https://docs.gitlab.com/ee/security/token_overview.html
-[phylum_tokens]: https://docs.phylum.io/docs/api-keys
+[phylum_tokens]: ../knowledge_base/api-keys.md
 [phylum_contact]: https://phylum.io/contact-us/
 [app_register]: https://app.phylum.io/register
-[phylum_register]: https://docs.phylum.io/docs/phylum_auth_register
+[phylum_register]: ../cli/commands/phylum_auth_register.md
 
 ## Configure `.gitlab-ci.yml`
 
@@ -189,7 +183,7 @@ Here are examples of using the slim image tags:
   image: phylumio/phylum-ci:0.36.0-CLIv5.7.1-slim
 ```
 
-[lockfile_generation]: https://docs.phylum.io/docs/lockfile_generation
+[lockfile_generation]: ../cli/lockfile_generation.md
 
 ### Variables
 
@@ -241,7 +235,7 @@ Values for the `GITLAB_TOKEN` and `PHYLUM_API_KEY` variables can come from a [CI
     GITLAB_TOKEN: $GITLAB_TOKEN_VARIABLE_OR_SECRET_HERE
 
     # Contact Phylum (phylum.io/contact-us) or register (app.phylum.io/register) to gain
-    # access. See also `phylum auth register` (docs.phylum.io/docs/phylum_auth_register)
+    # access. See also `phylum auth register` (docs.phylum.io/cli/commands/phylum_auth_register)
     # command documentation. Consider using a bot or group account for this token.
     PHYLUM_API_KEY: $PHYLUM_TOKEN_VARIABLE_OR_SECRET_HERE
 ```
@@ -278,7 +272,7 @@ view the [script options output][script_options] for the latest release.
     # they can be named differently and may or may not contain strict dependencies.
     # In these cases it is best to specify an explicit path, either with the `--depfile`
     # option or in a `.phylum_project` file. The easiest way to do that is with the
-    # Phylum CLI, using the `phylum init` command (https://docs.phylum.io/docs/phylum_init)
+    # Phylum CLI, using the `phylum init` command (docs.phylum.io/cli/commands/phylum_init)
     # and committing the generated `.phylum_project` file.
     - phylum-ci --depfile requirements-prod.txt
 

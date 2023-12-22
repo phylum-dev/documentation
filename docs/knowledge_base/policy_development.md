@@ -1,8 +1,4 @@
----
-title: Policy Development
-category: 6255e67693d5200013b1fa41
-hidden: false
----
+# Policy Development
 
 ## Creating a local policy development environment
 
@@ -10,11 +6,13 @@ It is recommended to set up a local development environment for a better policy 
 
 ### Download the OPA CLI
 
-Follow the instructions at <https://www.openpolicyagent.org/docs/latest/#1-download-opa> to download a copy of the OPA command line tool and run `opa version` to ensure it is working.
+Follow the instructions at [www.openpolicyagent.org](https://www.openpolicyagent.org/docs/latest/#1-download-opa) to
+download a copy of the OPA command line tool and run `opa version` to ensure it is working.
 
 ### Download the policy SDK
 
-Download the policy SDK from <https://api.phylum.io/api/v0/data/jobs/policy/sdk.zip> and extract it.
+Download the policy SDK from [the Phylum API endpoint](https://api.phylum.io/api/v0/data/jobs/policy/sdk.zip) and
+extract it.
 
 ### Download input data
 
@@ -24,7 +22,7 @@ token=$(phylum auth token -b)
 curl -H "Authorization: Bearer ${token}" "https://api.phylum.io/api/v0/data/jobs/${job}/policy/input" -fo input.json
 ```
 
-Note: You can obtain a Job ID by using the [`phylum history`](https://docs.phylum.io/docs/phylum_history) command from the Phylum CLI.
+Note: You can obtain a Job ID by using the [`phylum history`](../cli/commands/phylum_history.md) command from the Phylum CLI.
 
 ## Evaluating policies locally
 
