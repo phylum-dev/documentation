@@ -1,4 +1,4 @@
 [submodule "ext/cli"]
 	path = ext/cli
 	url = ../cli.git
-	branch = new_docs_site
+	update = none

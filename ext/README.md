@@ -21,19 +21,27 @@ cd docs
 ln -s ../ext/cli/docs cli
 ```
 
-## Editing external repositories
+After the initial inclusion and submodule update, updates from the command line
+should be disabled. That will help to ensure documentation builds are made from
+releases of external repositories and not accidentally updated to a more current
+commit that does not reflect the current state of the world. To do this, update
+the `.gitmodules` config to include an `update = none` entry in the new
+submodule.
+
+## Updating external repositories
 
 Editing content directly from within the `ext` directory is not recommended. It
 is expected that changes to the content in git submodules will be made in the
 source repository instead. Updates from those remote repositories can be brought
-in with this command:
+in with this workflow:
 
 ```sh
-git submodule update --remote
-
-# If there are changes meant to be included for other consumers of this repo:
-git add ext/
-git commit -m "update submodules"
+# Example for updating the `cli` repo to the `v6.0.1` tag
+git -C ext/cli checkout v6.0.1
+# Ensure changes are included for other consumers of this repo:
+git add ext/cli
+git commit -m "Update cli submodule to v6.0.1 tag"
+# Push the changes and create a PR
 ```
 
 ## References
@@ -44,3 +52,4 @@ by reading the following resources:
 * ["Submodules" Chapter of Git Book](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
 * [`git submodule` command reference](https://git-scm.com/docs/git-submodule)
 * [`.gitmodules` property reference](https://git-scm.com/docs/gitmodules)
+* [submodule workflow example](https://git-scm.com/docs/gitsubmodules#_workflow_for_a_third_party_library)
