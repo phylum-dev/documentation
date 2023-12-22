@@ -1,4 +1,3 @@
 [submodule "ext/cli"]
 	path = ext/cli
 	url = ../cli.git
-	update = none

@@ -21,13 +21,6 @@ cd docs
 ln -s ../ext/cli/docs cli
 ```
 
-After the initial inclusion and submodule update, updates from the command line
-should be disabled. That will help to ensure documentation builds are made from
-releases of external repositories and not accidentally updated to a more current
-commit that does not reflect the current state of the world. To do this, update
-the `.gitmodules` config to include an `update = none` entry in the new
-submodule.
-
 ## Updating external repositories
 
 Editing content directly from within the `ext` directory is not recommended. It
