@@ -167,12 +167,11 @@ const config = {
   markdown: {
     format: 'detect',
     mermaid: true,
-    // TODO: Progressively turn off MDXv1 compatibility
-    //       https://docusaurus.io/docs/migration/v3#turn-off-mdx-v1-compat
+    // Ref: https://docusaurus.io/docs/migration/v3#turn-off-mdx-v1-compat
     mdx1Compat: {
       comments: true,
-      admonitions: true,
-      headingIds: true,
+      admonitions: false,
+      headingIds: false,
     },
   },
 

@@ -16,9 +16,6 @@ jobs:
   Update-Documentation:
     name: Update the documentation
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        shell: bash
     steps:
       - name: Checkout the repo
         uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
@@ -29,13 +26,6 @@ jobs:
         run: |
           git config user.name 'phylum-bot'
           git config user.email '69485888+phylum-bot@users.noreply.github.com'
-
-      - name: Set up Node
-        uses: actions/setup-node@b39b52d1213e96004bfcb1c61a8a6fa8ab84f3e8 # v4.0.1
-        with:
-          node-version: '*'
-          cache: 'npm'
-          cache-dependency-path: site/package-lock.json
 
       - name: Install local website package
         working-directory: ./site
@@ -49,6 +39,5 @@ jobs:
         working-directory: ./site
         env:
           GIT_USER: 'phylum-bot'
-          # This PAT is for the `phylum-bot` account and only has the `public_repo` scope to limit privileges.
           GIT_PASS: ${{ secrets.GH_RELEASE_PAT }}
         run: npm run deploy
