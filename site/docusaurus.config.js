@@ -12,7 +12,7 @@ const config = {
   tagline: 'The software supply chain security company',
   favicon: 'img/favicon.ico',
 
-  url: 'https://docs-stg.phylum.io',
+  url: 'https://docs.phylum.io',
   baseUrl: '/',
   trailingSlash: false,
 
@@ -70,7 +70,7 @@ const config = {
         respectPrefersColorScheme: true,
       },
       announcementBar: {
-        content: 'Welcome to the new Phylum CLI documentation!',
+        content: 'Welcome to the new Phylum documentation!',
         textColor: '#fff',
         backgroundColor: '#3480eb',
       },
