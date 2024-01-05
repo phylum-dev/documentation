@@ -44,8 +44,6 @@ jobs:
         run: git -C "ext/${REPO_NAME}" checkout "${TAG_NAME}"
 
       - name: Commit changes
-        id: commit
-        continue-on-error: true
         run: |
           git config user.name 'phylum-bot'
           git config user.email '69485888+phylum-bot@users.noreply.github.com'
@@ -54,13 +52,12 @@ jobs:
           git push --force origin "HEAD:update-${REPO_NAME}-submodule"
 
       - name: Create Pull Request
-        if: ${{ steps.commit.outcome == 'success' }}
         uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea # v7.0.1
         with:
           github-token: ${{ secrets.GH_RELEASE_PAT }}
           script: |
-            var repo = process.env.REPO_NAME;
-            var tag = process.env.TAG_NAME;
+            const repo = process.env.REPO_NAME;
+            const tag = process.env.TAG_NAME;
             const response = await github.rest.pulls.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
