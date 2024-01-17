@@ -12,7 +12,7 @@ This is the source repository for all documentation common to the Phylum platfor
 The rendered form of the documentation can be viewed at the <https://docs.phylum.io> main page.
 
 [CoC]: https://github.com/phylum-dev/documentation/blob/main/CODE_OF_CONDUCT.md
-[discord_invite]: https://discord.gg/c9QnknWxm3
+[discord_invite]: https://discord.gg/Fe6pr5eW6p
 
 ## License
 
