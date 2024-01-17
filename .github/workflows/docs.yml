@@ -21,6 +21,9 @@ jobs:
         uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
         with:
           submodules: true
+          # Full history needed to show correct last update time/author
+          # Ref: https://github.com/facebook/docusaurus/issues/2798
+          fetch-depth: 0
 
       - name: Install local website package
         working-directory: ./site
