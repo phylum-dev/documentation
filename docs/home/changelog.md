@@ -1,5 +1,10 @@
 # Changelog
 
+## 2023 Weeks 49-52
+### New
+- UI: Added an email invitation system when attempting to add an unknown user to a group
+- Extension: Added a Snyk import [extension](https://github.com/phylum-dev/community-extensions/tree/main/snyk-import)
+
 ## 2023 Weeks 43-48
 ### New
 - Notifications: Added email and webhook [notification](../knowledge_base/notifications.md) feature that triggers on [continuous monitoring](../knowledge_base/continuous_monitoring.md) events
