@@ -10,4 +10,4 @@ A software [package](https://en.wikipedia.org/wiki/Library_(computing)) from out
 
 ## Examples
 
-In May 2022, a security researcher noticed that the NPM package `foreach` was controlled by a single maintainer, whose email domain had expired. The researcher [bought the domain and thus gained control of `foreach`](https://www.theregister.com/2022/05/10/security_npm_email/), as above. Further, since 36,826 other NPM projects used `foreach` as a dependency, the researcher could have inserted malware into `foreach` and into 38,826 other projects through `foreach`.
+In May 2022, a security researcher noticed that the NPM package `foreach` was controlled by a single maintainer, whose email domain had expired. The researcher [bought the domain and thus gained control of `foreach`](https://www.theregister.com/2022/05/10/security_npm_email/), as above. Further, since 36,826 other NPM projects used `foreach` as a dependency, the researcher could have inserted malware into `foreach` and transitively affected 36,826 other projects.

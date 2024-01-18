@@ -10,4 +10,4 @@ Because this file is blindly passed to your machine's Python interpreter upon in
 
 ## Examples
 
-One of the most prolifically distributed pieces of malware discovered so far in PyPI, the W4SP Stealer malware resulted in the publishing over 100 separate packages containing W4SP. The attackers often used the `setup.py` file as the first stage of an extremely complicated attack chain.
+One of the most prolifically distributed pieces of malware discovered so far in PyPI, the W4SP Stealer, resulted in publishing over 100 separate packages containing W4SP. The attackers often used the `setup.py` file as the first stage of an extremely complicated attack chain.

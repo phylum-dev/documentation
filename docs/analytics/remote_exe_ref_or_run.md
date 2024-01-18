@@ -10,4 +10,4 @@ Executables on their own are not inherently dangerous. In fact, most software ru
 
 ## Examples
 
-In August of 2022, researchers discovered a dozen malicious packages on the PyPI repository attempting a typosquatting attack. If installed, these packages would grab a an executable payload from a malicious URL, save it to disk, and then execute the file--all from within the `setup.py`. In one observed case the executable would then recruit the host machine into a DDoS campaign against a Russian Counter-Strike server.
+In August of 2022, researchers discovered a dozen malicious packages on the PyPI repository attempting a typosquatting attack. If installed, these packages would grab an executable payload from a malicious URL, save it to disk, and then execute the file--all from within the `setup.py`. In one observed case the executable would then recruit the host machine into a DDoS campaign against a Russian Counter-Strike server.
