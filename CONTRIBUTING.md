@@ -101,7 +101,11 @@ Releases happen automatically, every time there is a push to the `main` branch.
 
 ## Tips
 
-This section will be populated as the repository grows and lessons are learned.
+### Page changes
+
+If an existing published URI changes (e.g., `/analytics/original_name` --> `/analytics/new_name`), for whatever reason,
+ensure a redirect is added to ensure existing links in wild don't break. Currently, this is done by updating the
+Docusaurus `plugin-client-redirects` plugin configuration in the larger `site/docusaurus.config.js` configuration file.
 
 ## Contact
 
