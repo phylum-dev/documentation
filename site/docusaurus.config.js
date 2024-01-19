@@ -175,13 +175,13 @@ const config = {
     },
   },
 
-  // This plugin is needed due to interactions between docusaurus and webpack not
-  // handling symlinks correctly. Without it, the site won't build due to failures
-  // in following the symlinks in `docs` to their git submodules. References:
-  // https://github.com/facebook/docusaurus/issues/3272#issuecomment-876374383
-  // https://github.com/facebook/docusaurus/issues/6257
-  // https://docusaurus.io/docs/api/plugin-methods
   plugins: [
+    // This plugin is needed due to interactions between docusaurus and webpack not
+    // handling symlinks correctly. Without it, the site won't build due to failures
+    // in following the symlinks in `docs` to their git submodules. References:
+    // https://github.com/facebook/docusaurus/issues/3272#issuecomment-876374383
+    // https://github.com/facebook/docusaurus/issues/6257
+    // https://docusaurus.io/docs/api/plugin-methods
     async function (context, options) {
       return {
         name: 'webpack-configuration-plugin',
@@ -194,6 +194,65 @@ const config = {
         }
       };
     },
+
+    // This plugin ensures existing links don't break by adding client side redirect entries
+    // Ref: https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-client-redirects
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        // Add unique redirect entries here
+        redirects: [
+          {
+            from: '/docs/welcome',
+            to: '/',
+          },
+          {
+            from: '/docs/analyzing-dependencies',
+            to: '/cli/analyzing_dependencies',
+          },
+          {
+            from: '/docs/executes_code_at_remote_url_rule',
+            to: '/analytics/executes_code_at_remote_url',
+          },
+          // TODO: Enable this redirect once the page exists
+          //       https://github.com/phylum-dev/documentation/issues/83
+          // {
+          //   from: '/docs/cargo_build_file_rule',
+          //   to: '/analytics/cargo_build_file',
+          // },
+          // TODO: Enable this redirect once the page exists
+          //       https://github.com/phylum-dev/documentation/issues/86
+          // {
+          //   from: '/docs/nuget_install_scripts_rule',
+          //   to: '/analytics/nuget_install_scripts',
+          // },
+        ],
+
+        // This function seeks to account for the bulk of the changes made during the
+        // switch from Readme.com to Docusaurus SSG output hosted on GitHub Pages.
+        // It redirects from the old flat "/docs/X" namespace to the new path-based namespaces.
+        createRedirects(existingPath) {
+          // Ensure paths with the same starting elements are listed with the longest matching paths first
+          const newPathElements = [
+            '/analytics/',
+            '/cli/commands/',
+            '/cli/extensions/',
+            '/cli/',
+            '/home/',
+            '/integrations/',
+            '/knowledge_base/',
+            '/support/',
+          ];
+          for (const newPathElement of newPathElements) {
+            if (existingPath.includes(newPathElement)) {
+              return existingPath.replace(newPathElement, '/docs/');
+            }
+          }
+          // Returning a falsy value means no redirect(s) created
+          return undefined;
+        },
+      },
+    ],
   ],
 };
 
