@@ -16,7 +16,7 @@ For example, the process of adding the `phylum-dev/cli` repository's docs was:
 
 ```sh
 git submodule add ../cli.git ext/cli
-git submodule update --remote
+git submodule update --remote ext/cli
 cd docs
 ln -s ../ext/cli/docs cli
 ```
@@ -29,11 +29,15 @@ source repository instead. Updates from those remote repositories can be brought
 in with this workflow:
 
 ```sh
-# Example for updating the `cli` repo to the `v6.0.1` tag
-git -C ext/cli checkout v6.0.1
+# Example for updating the `cli` repo to the `v6.1.0` tag
+#
+# Ensure only the desired submodule is updated, to get it's latest tags
+git submodule update --remote ext/cli
+# Checkout the new tag
+git -C ext/cli checkout v6.1.0
 # Ensure changes are included for other consumers of this repo:
 git add ext/cli
-git commit -m "Update cli submodule to v6.0.1 tag"
+git commit -m "Update cli submodule to v6.1.0 tag"
 # Push the changes and create a PR
 ```
 
