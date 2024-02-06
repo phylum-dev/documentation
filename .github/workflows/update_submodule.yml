@@ -41,10 +41,11 @@ jobs:
         uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
         with:
           submodules: true
-          fetch-tags: true
 
       - name: Update submodule
-        run: git -C "ext/${REPO_NAME}" checkout "${TAG_NAME}"
+        run: |
+          git -C "ext/${REPO_NAME}" fetch origin "${TAG_NAME}"
+          git -C "ext/${REPO_NAME}" checkout "${TAG_NAME}"
 
       - name: Commit changes
         run: |
