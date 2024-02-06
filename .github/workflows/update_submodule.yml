@@ -44,7 +44,7 @@ jobs:
 
       - name: Update submodule
         run: |
-          git submodule update --remote "ext/${REPO_NAME}"
+          git -C "ext/${REPO_NAME}" fetch --all --tags
           git -C "ext/${REPO_NAME}" checkout "${TAG_NAME}"
 
       - name: Commit changes
