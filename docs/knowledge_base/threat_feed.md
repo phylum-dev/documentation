@@ -138,7 +138,9 @@ For rules, the details included will depend on the type of rule. For example, th
 
 Request:
 
-`curl https://threats.phylum.io/pypi/adrmdr/0.1.0 -H "Authorization: Bearer $PHYLUM_API"`
+```bash
+curl https://threats.phylum.io/pypi/adrmdr/0.1.0 -H "Authorization: Bearer $PHYLUM_API"
+```
 
 Response:
 
