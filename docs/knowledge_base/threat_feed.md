@@ -132,7 +132,7 @@ For vulnerabilities:
 - `severity`: The severity level of the vulnerability.
 - `recommendation`: Recommendations for addressing the vulnerability.
 
-For rules, the details included will depend on the type of rule. For example, the `Compiled Binaries Rule` will include a list of the binary files and their paths within the package. The `Cargo Build File Rule` will simply contain a Boolean value of `true` indicating that a `build.rs` file is present in the package.
+For rules, the details included will depend on the type of rule. For example, the `Compiled Binaries Rule` will include a list of the binary files and their paths within the package. The `Cargo Build File Rule` will simply contain a Boolean value of `true` indicating that a build script (e.g., `build.rs`) is present in the package.
 
 ### Usage Example
 
