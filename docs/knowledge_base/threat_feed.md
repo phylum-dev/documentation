@@ -104,7 +104,7 @@ The threat feed API provides a package lookup endpoint that details information 
 
 ### Endpoint
 
-`GET /<ecosystem>/<name>/<version>`
+`GET https://threats.phylum.io/<ecosystem>/<name>/<version>`
 
 ### Parameters
 
