@@ -97,3 +97,73 @@ For example, if you want to limit the items per page to 3 since July 19, 2023 yo
 ```text
 https://threats.phylum.io/?per_page=3&since=2023-07-19
 ```
+
+## Package Lookup Endpoint
+
+The threat feed API provides a package lookup endpoint that details information about a specific package, including its malware status, risk scores, and a list of identified issues. This endpoint is designed to fetch information based on a combination of ecosystem, package name, and version.
+
+### Endpoint
+
+`GET https://threats.phylum.io/<ecosystem>/<name>/<version>`
+
+### Parameters
+
+- `ecosystem`: The package ecosystem (one of: `pypi`, `npm`, `maven`, `rubygems`, `nuget`, `golang`, or `cargo`).
+- `name`: The name of the package.
+- `version`: The version of the package.
+
+### Response Structure
+
+The response is a JSON object containing the following keys:
+
+- `code`: The HTTP status code.
+- `malware`: A boolean indicating if the package has been triaged as malware.
+- `riskScores`: An object containing risk scores for each of the 5 Phylum risk domains associated with the package.
+- `issues`: An object listing all identified issues and vulnerabilities related to the package. The details included with each issue will depend on the nature of the issue.
+
+#### Issues Object
+
+Each entry in the `issues` object is keyed by the issue type (e.g., vulnerability identifier, rule name) and contains an object with the following details:
+
+For vulnerabilities:
+
+- `title`: The title of the vulnerability.
+- `overview`: A brief overview of the vulnerability.
+- `severity`: The severity level of the vulnerability.
+- `recommendation`: Recommendations for addressing the vulnerability.
+
+For rules, the details included will depend on the type of rule. For example, the `Compiled Binaries Rule` will include a list of the binary files and their paths within the package. The `Cargo Build File Rule` will simply contain a Boolean value of `true` indicating that a build script (e.g., `build.rs`) is present in the package.
+
+### Usage Example
+
+Request:
+
+```bash
+curl https://threats.phylum.io/pypi/adrmdr/0.1.0 -H "Authorization: Bearer $PHYLUM_API"
+```
+
+Response:
+
+```json
+{
+  "code": 200,
+  "issues": {
+    "Detect Python Obfuscation Rule": [
+      {
+        "file": "adrmdr/adrmdr.py",
+        "type": "Hyperion"
+      }
+    ],
+    "Triaged Malware Rule": true
+  },
+  "malware": true,
+  "riskScores": {
+    "author": 1.0,
+    "engineering": 1.0,
+    "license": 1.0,
+    "malicious_code": 0.01,
+    "total": 0.05,
+    "vulnerability": 1.0
+  }
+}
+```
