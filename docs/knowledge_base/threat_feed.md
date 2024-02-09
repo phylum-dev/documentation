@@ -117,7 +117,7 @@ The threat feed API provides a package lookup endpoint that details information 
 The response is a JSON object containing the following keys:
 
 - `code`: The HTTP status code.
-- `malware`: A boolean indicating if the package is has been triaged as malware.
+- `malware`: A boolean indicating if the package has been triaged as malware.
 - `riskScores`: An object containing risk scores for each of the 5 Phylum risk domains associated with the package.
 - `issues`: An object listing all identified issues and vulnerabilities related to the package. The details included with each issue will depend on the nature of the issue.
 
