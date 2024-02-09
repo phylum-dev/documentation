@@ -108,7 +108,7 @@ The threat feed API provides a package lookup endpoint that details information 
 
 ### Parameters
 
-- `ecosystem`: The package ecosystem (one of: pypi, npm, maven, rubygems, nuget, golang, cargo).
+- `ecosystem`: The package ecosystem (one of: `pypi`, `npm`, `maven`, `rubygems`, `nuget`, `golang`, or `cargo`).
 - `name`: The name of the package.
 - `version`: The version of the package.
 
