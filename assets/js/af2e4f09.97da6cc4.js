@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunksite=self.webpackChunksite||[]).push([[720],{2084:e=>{e.exports=JSON.parse('{"title":"Command Line Tool","slug":"/cli/commands","permalink":"/cli/commands","navigation":{"previous":{"title":"Alternate Installation Methods","permalink":"/cli/alternate_install"},"next":{"title":"phylum","permalink":"/cli/commands/phylum"}}}')}}]);
