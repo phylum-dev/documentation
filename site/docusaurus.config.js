@@ -49,6 +49,11 @@ const config = {
               const true_doc_path = docPath.substring(cli_prefix.length + 1);
               return `https://github.com/phylum-dev/cli/edit/main/docs/${true_doc_path}`;
             }
+            const phylum_ci_prefix = "phylum-ci";
+            if (docPath.startsWith(phylum_ci_prefix)) {
+              const true_doc_path = docPath.substring(phylum_ci_prefix.length + 1);
+              return `https://github.com/phylum-dev/phylum-ci/edit/main/docs/integrations/${true_doc_path}`;
+            }
             return `https://github.com/phylum-dev/documentation/edit/main/docs/${docPath}`;
           },
           showLastUpdateAuthor: true,
@@ -214,6 +219,26 @@ const config = {
           {
             from: '/docs/executes_code_at_remote_url_rule',
             to: '/analytics/executes_code_at_remote_url',
+          },
+          {
+            from: '/integrations/azure_pipelines',
+            to: '/phylum-ci/azure_pipelines',
+          },
+          {
+            from: '/integrations/bitbucket_pipelines',
+            to: '/phylum-ci/bitbucket_pipelines',
+          },
+          {
+            from: '/integrations/git_precommit',
+            to: '/phylum-ci/git_precommit',
+          },
+          {
+            from: '/integrations/github_actions',
+            to: '/phylum-ci/github_actions',
+          },
+          {
+            from: '/integrations/gitlab_ci',
+            to: '/phylum-ci/gitlab_ci',
           },
           // TODO: Enable this redirect once the page exists
           //       https://github.com/phylum-dev/documentation/issues/83

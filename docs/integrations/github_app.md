@@ -138,4 +138,4 @@ Yes! If your account is linked to multiple GitHub App installtions, they will be
 
 It is not currently possible to monitor and analyze dependency manifest files. The GitHub App is limited to lockfiles
 only. If you still want to analyze manifest files, consider using the
-[Phylum GitHub Actions Integration](../integrations/github_actions.md) instead.
+[Phylum GitHub Actions Integration](../phylum-ci/github_actions.md) instead.

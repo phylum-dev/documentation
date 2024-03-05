@@ -1,3 +1,6 @@
 [submodule "ext/cli"]
 	path = ext/cli
 	url = ../cli.git
+[submodule "ext/phylum-ci"]
+	path = ext/phylum-ci
+	url = ../phylum-ci.git

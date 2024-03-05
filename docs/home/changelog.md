@@ -70,7 +70,7 @@
 
 ## 2023 Weeks 7-12
 ### New
-- Integrations: A Bitbucket Cloud [integration](../integrations/bitbucket_pipelines.md) was created
+- Integrations: A Bitbucket Cloud [integration](../phylum-ci/bitbucket_pipelines.md) was created
 
 ### Improved
 - CLI: `v4.7.0` was [released](https://github.com/phylum-dev/cli/releases/tag/v4.7.0) including automatic lockfile detection
