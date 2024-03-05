@@ -30,11 +30,11 @@ Other integrations include:
 
 [github_app_docs]: ../integrations/github_app.md
 [github_marketplace]: https://github.com/marketplace/phylum-io
-[github_action_docs]: ../integrations/github_actions.md
-[gitlab_docs]: ../integrations/gitlab_ci.md
-[azure_docs]: ../integrations/azure_pipelines.md
-[bb_pipelines_docs]: ../integrations/bitbucket_pipelines.md
-[precommit_docs]: ../integrations/git_precommit.md
+[github_action_docs]: ../phylum-ci/github_actions.md
+[gitlab_docs]: ../phylum-ci/gitlab_ci.md
+[azure_docs]: ../phylum-ci/azure_pipelines.md
+[bb_pipelines_docs]: ../phylum-ci/bitbucket_pipelines.md
+[precommit_docs]: ../phylum-ci/git_precommit.md
 [dazz_docs]: ../integrations/dazz.md
 [sophos_docs]: ../integrations/sophos.md
 [tines_docs]: ../integrations/tines.md
