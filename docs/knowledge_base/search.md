@@ -16,6 +16,6 @@ The search bar in the project details view can be used to filter display results
 | `tag:` <br> `t:` | [Issue tag] prefix | `tag:H_` <br> `t:CV, _M` | Display all policy violations with `High` severity <br> Display policy violations for `Critical Vulnerabilities` or `Malicious Code` | Display policy violations using the issue tag prefix syntax |
 | | [Issue tag] id | `CM0038` | Display policy violations with the `CM0038` issue tag | Display policy violations with the specified issue tag id |
 | | CVE ID | `CVE-2020-14343` | Display policy violations for `CVE-2020-14343` | Display policy violations with the specified CVE ID |
-| | | `CA0001 \| CM0038` | Display policy violations with either the `CA0001` or `CM0038` tag | Apply multiple filters using the `\|` delimiter |
+| | | `CA0001 \| CM0038 \| CVE-2020-14343` | Display policy violations with either the `CA0001` or `CM0038` tag or `CVE-2020-14343` | Apply multiple filters using the `\|` delimiter |
 
 [Issue tag]:https://docs.phylum.io/knowledge_base/issue_tags
