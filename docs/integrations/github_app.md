@@ -124,6 +124,20 @@ The results will be visible in the `Project` menu view for the selected project 
 
 ![GitHub app on-demand analysis results](../../assets/gh_app_on-demand_analysis.png)
 
+### Audit Mode
+
+Enabling audit mode for an installation of the Phylum GitHub app temporarily disables pull request protection. This can be useful to minimize disruption in cases where developers are working on repositories at the same time as Phylum is being configured.
+
+![GitHub app audit mode button](../../assets/gh_app_audit_mode.png)
+
+When audit mode is enabled, Phylum still analyzes pull requests and results are still visible in the Phylum UI. However:
+
+- No comments are added to pull requests.
+- The commit check status for policy violations changes from failed to neutral, allowing the PR to be merged.
+- A message about audit mode being enabled is appended to the commit check details for commits that would have otherwise failed.
+
+![GitHub check result details showing a neutral result because of audit mode](../../assets/gh_app_check_details_audit_neutral.png)
+
 ## FAQ
 
 ### I activated monitoring, but it didn't run a scan. How do I get analysis results?
