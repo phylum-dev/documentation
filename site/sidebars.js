@@ -98,6 +98,7 @@ const sidebars = {
         'knowledge_base/issue_tags',
         'knowledge_base/notifications',
         'knowledge_base/transfer_group_ownership',
+        'knowledge_base/search',
         {
           type: 'category',
           label: 'Policy',

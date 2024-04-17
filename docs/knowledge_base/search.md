@@ -9,8 +9,8 @@ The search bar in the project details view can be used to filter display results
 
 | Filter | Value | Example | Result | Description |
 | --- | --- | --- | --- | --- |
-| `CVSS:` | number | `CVSS:10.0` | Display policy violations with a CVSS score of 10.0 | Display policy violations with the exact specified CVSS score |
-| `CVSS:` | number-number | `CVSS:9.0-10.0` | Display policy violations with a score falling between 9.0 and 10.0 | Display policy violations with a CVSS score in the specified range |
+| `CVSS:` | number | `CVSS:10` | Display policy violations with a CVSS score of 10.0 | Display policy violations with the exact specified CVSS score |
+| `CVSS:` | number-number | `CVSS:8.5-10` | Display policy violations with a score falling between 8.5 and 10.0 | Display policy violations with a CVSS score in the specified range |
 | `domain:` <br> `d:`| A, author, auth <br> E, engineering, eng <br> L, license,lic <br> M, malicious, mal  <br> V, vulnerability, vuln | `domain:M` <br> `d:mal,auth` | Display policy violations in the `Malicous Code` domain <br> Display policy violations in either the `Malicious Code` or `Author Risk` domains | Display policy violations of the specified domain |
 | `severity:`  <br> `s:` | C, critical <br> H, high <br> M, medium <br> L, low | `severity:C` <br> `s:critical,high` | Display violations with a `Critical` severity <br> Display violations with either a `Critical` or `High` severity | Display policy violations of the specified severity |
 | `tag:` <br> `t:` | [Issue tag] prefix | `tag:H_` <br> `t:CV, _M` | Display all policy violations with `High` severity <br> Display policy violations for `Critical Vulnerabilities` or `Malicious Code` | Display policy violations using the issue tag prefix syntax |
