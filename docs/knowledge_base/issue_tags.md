@@ -48,7 +48,7 @@ Phylum uses tags to uniquely identify issues raised by the system. These tags ca
 | .M0031 | [Suspicious Python Setup Commands](../analytics/suspicious_setup_commands.md) | Package contains unusual commands in `setup.py` |
 | HM0032 | [Exec on Remote URL](../analytics/executes_code_at_remote_url.md) | Package executes code from a remote URL |
 | HM0036 | [Webhook Exfil](../analytics/webhook_exfil.md) | Package exfiltrates data through a webhook |
-| HM0037 | Malware Bazaar Check | Package contains a file whose hash is in Malware Bazaar |
+| CM0037 | Malware Bazaar Check | Package contains a file whose hash is in Malware Bazaar |
 | CM0038 | Triaged Malware Rule (via [threat feed](../knowledge_base/threat_feed.md)) | Manually reviewed and confirmed to contain malware |
 | CM0039 | Depends On Malware Rule | Package has dependency found in triaged malware table |
 | IM0040 | Decodes Hardcoded Base64 Strings | Package decodes hardcoded Base64 strings |
