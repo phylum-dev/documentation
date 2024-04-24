@@ -44,7 +44,7 @@ Monitoring can be activated or paused by selecting the toggle for a given reposi
 >
 > ![GitHub app settings - PRO](../../assets/gh_app_settings_pro.png)
 
-For every update to the default branch or a pull request for a monitored repository, the GitHub app will automatically run check the dependencies in [supported lockfiles](../cli/supported_lockfiles.md).
+For every update to the default branch or a pull request for a monitored repository, the GitHub app will automatically check the dependencies in [supported lockfiles](../cli/supported_lockfiles.md).
 
 #### Default Branch
 
