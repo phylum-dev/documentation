@@ -53,7 +53,7 @@ Phylum uses tags to uniquely identify issues raised by the system. These tags ca
 | CM0039 | Depends On Malware Rule | Package has dependency found in triaged malware table |
 | IM0040 | Decodes Hardcoded Base64 Strings | Package decodes hardcoded Base64 strings |
 | IM0041 | High Entropy Blobs | Package contains high entropy blobs |
-| IM0042 | Nuget Install Scripts Rule | Package contains scripts that will run on install |
+| IM0042 | [Nuget Install Scripts Rule](../analytics/nuget_install_scripts.md) | Package contains scripts that will run on install |
 | IM0043 | Cargo Build File Rule | Package contains build.rs file that will run on build and compile |
 | IM0044 | [Rubygems Install Hooks Rule](../analytics/ruby_install_hooks.md) | Package contains Ruby pre or post install hooks |
 | CM0045 | [npm Security Holding Package](../analytics/npm_security_holding.md) | Package removed by npm as a security holding package |
