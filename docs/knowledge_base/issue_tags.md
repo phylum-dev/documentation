@@ -55,7 +55,7 @@ Phylum uses tags to uniquely identify issues raised by the system. These tags ca
 | IM0041 | High Entropy Blobs | Package contains high entropy blobs |
 | IM0042 | Nuget Install Scripts Rule | Package contains scripts that will run on install |
 | IM0043 | Cargo Build File Rule | Package contains build.rs file that will run on build and compile |
-| IM0044 | Rubygems Install Hooks Rule | Package contains Ruby pre or post install hooks |
+| IM0044 | [Rubygems Install Hooks Rule](../analytics/ruby_install_hooks.md) | Package contains Ruby pre or post install hooks |
 | CM0045 | [npm Security Holding Package](../analytics/npm_security_holding.md) | Package removed by npm as a security holding package |
 | CE0046 | [Deprecated Package](../analytics/deprecated_package.md) | Package has been deprecated |
 | IM0047 | [Python Build Hook](../analytics/python_build_hook.md) | Package contains Python build hook files |
