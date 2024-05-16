@@ -50,7 +50,7 @@ Phylum uses tags to uniquely identify issues raised by the system. These tags ca
 | HM0036 | [Webhook Exfil](../analytics/webhook_exfil.md) | Package exfiltrates data through a webhook |
 | CM0037 | [Malware Bazaar Check](../analytics/malware_bazaar_check.md) | Package contains a file whose hash is in Malware Bazaar |
 | CM0038 | Triaged Malware (via [threat feed](../knowledge_base/threat_feed.md)) | Manually reviewed and confirmed to contain malware |
-| CM0039 | [Depends On Malware Rule](../analytics/depends_on_malware.md) | Package has dependency found in triaged malware table |
+| CM0039 | [Depends On Malware](../analytics/depends_on_malware.md) | Package has dependency found in triaged malware table |
 | IM0040 | [Decodes Hardcoded Base64 Strings](../analytics/base64_decoding.md) | Package decodes hardcoded Base64 strings |
 | IM0041 | [High Entropy Blobs](../analytics/high_entropy_blobs.md) | Package contains high entropy blobs |
 | IM0042 | [Nuget Install Scripts Rule](../analytics/nuget_install_scripts.md) | Package contains scripts that will run on install |
