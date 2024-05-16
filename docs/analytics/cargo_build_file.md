@@ -8,6 +8,6 @@ In the Rust ecosystem, `build.rs` files play a crucial role in the package manag
 
 Despite their utility, `build.rs` files can pose security risks similar to those in other programming ecosystems that allow execution of arbitrary code during package installation. If a Rust crate (package) containing a malicious `build.rs` script is used, it can execute unauthorized actions, potentially compromising the user's system or data. It is therefore critical for developers to review and trust the source of any crate that includes a build script.
 
-## Example
+## Examples
 
 In August 2023, Phylum's automated risk detection identified a potential malware campaign leveraging the `build.rs` file in Rust packages. The scheme began with the release of several harmless, typosquatted packages which were later updated to include a mechanism for sending system information to a controlled Telegram channel. This early stage was crucial for uncovering the threat before it evolved into more harmful activities. For more detailed insights on this campaign, refer to [Phylum's blog post](https://blog.phylum.io/rust-malware-staged-on-crates-io/).
