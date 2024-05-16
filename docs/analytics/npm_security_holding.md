@@ -1,4 +1,4 @@
-# npm Security Holding
+# NPM Security Holding
 
 ## Description
 
