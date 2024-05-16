@@ -240,18 +240,14 @@ const config = {
             from: '/integrations/gitlab_ci',
             to: '/phylum-ci/gitlab_ci',
           },
-          // TODO: Enable this redirect once the page exists
-          //       https://github.com/phylum-dev/documentation/issues/83
-          // {
-          //   from: '/docs/cargo_build_file_rule',
-          //   to: '/analytics/cargo_build_file',
-          // },
-          // TODO: Enable this redirect once the page exists
-          //       https://github.com/phylum-dev/documentation/issues/86
-          // {
-          //   from: '/docs/nuget_install_scripts_rule',
-          //   to: '/analytics/nuget_install_scripts',
-          // },
+          {
+            from: '/docs/cargo_build_file_rule',
+            to: '/analytics/cargo_build_file',
+          },
+          {
+            from: '/docs/nuget_install_scripts_rule',
+            to: '/analytics/nuget_install_scripts',
+          },
         ],
 
         // This function seeks to account for the bulk of the changes made during the
