@@ -48,14 +48,15 @@ Phylum uses tags to uniquely identify issues raised by the system. These tags ca
 | .M0031 | [Suspicious Python Setup Commands](../analytics/suspicious_setup_commands.md) | Package contains unusual commands in `setup.py` |
 | HM0032 | [Exec on Remote URL](../analytics/executes_code_at_remote_url.md) | Package executes code from a remote URL |
 | HM0036 | [Webhook Exfil](../analytics/webhook_exfil.md) | Package exfiltrates data through a webhook |
-| CM0037 | Malware Bazaar Check | Package contains a file whose hash is in Malware Bazaar |
-| CM0038 | Triaged Malware Rule (via [threat feed](../knowledge_base/threat_feed.md)) | Manually reviewed and confirmed to contain malware |
-| CM0039 | Depends On Malware Rule | Package has dependency found in triaged malware table |
-| IM0040 | Decodes Hardcoded Base64 Strings | Package decodes hardcoded Base64 strings |
-| IM0041 | High Entropy Blobs | Package contains high entropy blobs |
-| IM0042 | Nuget Install Scripts Rule | Package contains scripts that will run on install |
-| IM0043 | Cargo Build File Rule | Package contains build.rs file that will run on build and compile |
-| IM0044 | Rubygems Install Hooks Rule | Package contains Ruby pre or post install hooks |
-| CM0045 | npm Security Holding Package | Package removed by npm as a security holding package |
-| CE0046 | Deprecated Package | Package has been deprecated |
+| CM0037 | [Malware Bazaar Check](../analytics/malware_bazaar_check.md) | Package contains a file whose hash is in Malware Bazaar |
+| CM0038 | Triaged Malware (via [threat feed](../knowledge_base/threat_feed.md)) | Manually reviewed and confirmed to contain malware |
+| CM0039 | [Depends On Malware](../analytics/depends_on_malware.md) | Package has dependency found in triaged malware table |
+| IM0040 | [Decodes Hardcoded Base64 Strings](../analytics/base64_decoding.md) | Package decodes hardcoded Base64 strings |
+| IM0041 | [High Entropy Blobs](../analytics/high_entropy_blobs.md) | Package contains high entropy blobs |
+| IM0042 | [Nuget Install Scripts](../analytics/nuget_install_scripts.md) | Package contains scripts that will run on install |
+| IM0043 | [Cargo Build File](../analytics/cargo_build_file.md) | Package contains `build.rs` file that will run on build and compile |
+| IM0044 | [Rubygems Install Hooks](../analytics/ruby_install_hooks.md) | Package contains Ruby pre or post install hooks |
+| CM0045 | [npm Security Holding Package](../analytics/npm_security_holding.md) | Package removed by npm as a security holding package |
+| CE0046 | [Deprecated Package](../analytics/deprecated_package.md) | Package has been deprecated |
+| IM0047 | [Python Build Hook](../analytics/python_build_hook.md) | Package contains Python build hook files |
 | HM0099 | [Basic Javascript Obfuscation](../analytics/obfuscated_javascript.md) | Package contains obfuscated Javascript |
