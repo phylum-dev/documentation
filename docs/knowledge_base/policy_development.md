@@ -26,11 +26,10 @@ Note: You can obtain a Job ID by using the [`phylum history`](../cli/commands/ph
 
 ## Evaluating policies locally
 
-A policy can be evaluated using `opa eval --data phylum.rego --data <YOUR POLICY>.rego --data constants.json --input input.json --schema schema --format pretty data.phylum.job`.
+A policy can be evaluated using `opa eval --data <YOUR POLICY>.rego --data constants.json --input input.json --schema schema --format pretty data.policy.v1`.
 
 | Input | Description | Provider |
 | --- | --- | --- |
-| `phylum.rego` | defines rules for jobs, dependencies, and issues | Phylum |
 | `<YOUR POLICY>.rego` | policy you want to test | User |
 | `constants.json` | constants that can be used in your custom policy | Phylum |
 | `input.json` | input data to evaluate, generally from a Phylum job response | User |
@@ -41,8 +40,7 @@ If everything is working, you will receive JSON output from `opa` that looks lik
 
 ```json
 {
-  "dependencies": [],
-  "errors": []
+    "deny": []
 }
 ```
 
@@ -56,30 +54,39 @@ Open Policy Agent has documentation on [policy testing](https://www.openpolicyag
 # example_test.rego
 # This is a test for the default.rego which blocks high/critical severity issues.
 
-package policy
+package policy.v1
 
 import data.phylum.level
-import future.keywords.if
+import rego.v1
 
 test_block_high if {
-    # Mock input
-    check := issue with data.issue as {
+    issue := {
+        "id": "abc",
         "tag": "tag",
         "severity": level.HIGH
     }
-    # Evaluate if the set contains the expected result
-    check == {"risk level cannot exceed medium"}
+
+    # Evaluate policy with mock input
+    check := deny with data.issues as [issue]
+
+    # Assert that the set contains the expected issue
+    check == {issue}
 }
 
 test_allow_medium if {
-    # Mock input
-    check := issue with data.issue as {
+    issue := {
+        "id": "abc",
         "tag": "tag",
         "severity": level.MEDIUM
     }
-    # Evaluate if the set is empty
+
+    # Evaluate policy with mock input
+    check := deny with data.issues as [issue]
+
+    # Assert that the set is empty
     check == set()
 }
+
 ```
 
 This test requires `constants.json` from the Phylum SDK. The test can be executed against the Phylum `default.rego` policy using `opa test constants.json default.rego example_test.rego`.
