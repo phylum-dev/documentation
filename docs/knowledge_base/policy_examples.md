@@ -11,39 +11,34 @@ The most common reason to block a job is because one of the dependencies has a k
 The following policy shows ways to block using an `issue` rule based on a per-domain threshold.
 
 ```rego
-package policy
+package policy.v1
 
 import data.phylum.domain
 import data.phylum.level
-import future.keywords.contains
-import future.keywords.if
-import future.keywords.in
+import rego.v1
 
 # METADATA
-# scope: rule
-# schemas:
-#   - data.issue: schema.issue
-issue contains "risk level cannot exceed medium" if {
-  data.issue.domain in {domain.AUTHOR, domain.ENGINEERING, domain.VULNERABILITY}
-  data.issue.severity > level.MEDIUM
+# title: risk level cannot exceed medium
+deny contains issue if {
+    some issue in data.issues
+    issue.domain in {domain.AUTHOR, domain.ENGINEERING, domain.VULNERABILITY}
+    issue.severity > level.MEDIUM
 }
 
 # METADATA
-# scope: rule
-# schemas:
-#   - data.issue: schema.issue
-issue contains "malicious risk level cannot exceed low" if {
-  data.issue.domain == domain.MALICIOUS
-  data.issue.severity > level.LOW
+# title: malicious risk level cannot exceed low
+deny contains issue if {
+    some issue in data.issues
+    issue.domain == domain.MALICIOUS
+    issue.severity > level.LOW
 }
 
 # METADATA
-# scope: rule
-# schemas:
-#   - data.issue: schema.issue
-issue contains "license risk level cannot exceed high" if {
-  data.issue.domain == domain.LICENSE
-  data.issue.severity > level.HIGH
+# title: license risk level cannot exceed high
+deny contains issue if {
+    some issue in data.issues
+    issue.domain == domain.LICENSE
+    issue.severity > level.HIGH
 }
 ```
 
@@ -51,17 +46,11 @@ Given the following input:
 
 ```json
 {
-    "dependencies": [{
-        "ecosystem": "pypi",
-        "id": "07a3feb6-d6fb-523a-88f0-9896b86e6f93",
-        "issues": [{
-            "domain": "malicious",
-            "severity": 4,
-            "tag": "CM0004"
-        }],
-        "issues_complete": true,
-        "name": "example-package",
-        "version": "1.0.0"
+    "issues": [{
+        "id": "b8ad4443-d875-427b-9eda-b4b2fb1d6212",
+        "domain": "malicious",
+        "severity": 4,
+        "tag": "CM0004"
     }]
 }
 ```
@@ -70,19 +59,12 @@ When the policy fails, the output will look something like this:
 
 ```json
 {
-  "dependencies": [
-    {
-      "errors": [],
-      "id": "07a3feb6-d6fb-523a-88f0-9896b86e6f93",
-      "issues": [
-        {
-          "reason": "malicious risk level cannot exceed low",
-          "tag": "CM0004"
-        }
-      ]
-    }
-  ],
-  "errors": []
+    "deny": [{
+        "id": "b8ad4443-d875-427b-9eda-b4b2fb1d6212",
+        "domain": "malicious",
+        "severity": 4,
+        "tag": "CM0004"
+    }]
 }
 ```
 
@@ -97,15 +79,13 @@ The following policy blocks packages belonging to a namespace.
 ```rego
 package policy
 
-import future.keywords.contains
-import future.keywords.if
+import rego.v1
 
 # METADATA
-# scope: rule
-# schemas:
-#   - data.dependency: schema.dependency
-dependency contains "AGPL licensed software is not allowed." if {
-        regex.match("(?i)\\bAGPL\\b", data.dependency.license)
+# title: AGPL licensed software is not allowed.
+deny contains dependency if {
+    some dependency in data.dependencies
+    regex.match("(?i)\\bAGPL\\b", dependency.license)
 }
 ```
 
@@ -129,16 +109,15 @@ When the policy fails, the output will look something like this:
 
 ```json
 {
-  "dependencies": [
-    {
-      "errors": [
-        "AGPL licensed software is not allowed."
-      ],
-      "id": "4cc36d79-b8ce-5b7d-89c1-6f6a31f59819",
-      "issues": []
-    }
-  ],
-  "errors": []
+  "deny": [{
+        "ecosystem": "npm",
+        "id": "4cc36d79-b8ce-5b7d-89c1-6f6a31f59819",
+        "issues": [],
+        "issues_complete": true,
+        "license": "AGPL-3.0",
+        "name": "example-package",
+        "version": "1.0.0"
+    }]
 }
 ```
 
@@ -154,17 +133,13 @@ The following policy blocks any job that introduces an NPM dependency. Only one 
 package policy
 
 import data.phylum.ecosystem
-import future.keywords.contains
-import future.keywords.if
-import future.keywords.in
+import rego.v1
 
 # METADATA
-# scope: rule
-# schemas:
-#   - data.job: schema.job
-job contains "This project must not have NPM dependencies." if {
-        some deps in input.dependencies
-        deps.ecosystem == ecosystem.NPM
+# title: This project must not have NPM dependencies.
+deny contains data.job if {
+    some dependency in data.dependencies
+    dependency.ecosystem == ecosystem.NPM
 }
 ```
 
@@ -172,14 +147,21 @@ Given the following input:
 
 ```json
 {
-    "dependencies": [{
-        "ecosystem": "npm",
-        "id": "4cc36d79-b8ce-5b7d-89c1-6f6a31f59819",
-        "issues": [],
-        "issues_complete": true,
-        "name": "example-package",
-        "version": "1.0.0"
-    }]
+    "job": {
+        "dependencies": [{
+            "ecosystem": "npm",
+            "id": "4cc36d79-b8ce-5b7d-89c1-6f6a31f59819",
+            "issues": [],
+            "issues_complete": true,
+            "name": "example-package",
+            "version": "1.0.0"
+        }],
+        "id": "bb30c3c1-442c-4d67-8ff2-36e87fddf0e7",
+        "project": {
+            "id": "22d4c95f-5f3f-43c0-92cd-7ca94e50d2bc",
+            "name": "example project"
+        }
+    }
 }
 ```
 
@@ -187,10 +169,21 @@ When the policy fails, the output will look something like this:
 
 ```json
 {
-  "dependencies": [],
-  "errors": [
-    "This project must not have NPM dependencies."
-  ]
+    "deny": [{
+        "dependencies": [{
+            "ecosystem": "npm",
+            "id": "4cc36d79-b8ce-5b7d-89c1-6f6a31f59819",
+            "issues": [],
+            "issues_complete": true,
+            "name": "example-package",
+            "version": "1.0.0"
+        }],
+        "id": "bb30c3c1-442c-4d67-8ff2-36e87fddf0e7",
+        "project": {
+            "id": "22d4c95f-5f3f-43c0-92cd-7ca94e50d2bc",
+            "name": "example project"
+        }
+    }]
 }
 ```
 
