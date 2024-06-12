@@ -75,6 +75,7 @@ const sidebars = {
         'phylum-ci/github_actions',
         'integrations/github_app',
         'phylum-ci/gitlab_ci',
+        'phylum-ci/jenkins',
         'integrations/netskope',
         'integrations/snyk',
         'integrations/sophos',

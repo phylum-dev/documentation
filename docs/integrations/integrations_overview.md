@@ -14,6 +14,7 @@ The current Continuous Integration (CI) platforms/environments supported are:
 | GitLab CI | [Documentation][gitlab_docs] |
 | Azure Pipelines | [Documentation][azure_docs] |
 | Bitbucket Pipelines | [Documentation][bb_pipelines_docs] |
+| Jenkins Pipelines | [Documentation][jenkins_docs] |
 | CircleCI Orb | [Orb Registry][circleci_orb_registry] |
 
 Other integrations include:
@@ -34,6 +35,7 @@ Other integrations include:
 [gitlab_docs]: ../phylum-ci/gitlab_ci.md
 [azure_docs]: ../phylum-ci/azure_pipelines.md
 [bb_pipelines_docs]: ../phylum-ci/bitbucket_pipelines.md
+[jenkins_docs]: ../phylum-ci/jenkins.md
 [precommit_docs]: ../phylum-ci/git_precommit.md
 [dazz_docs]: ../integrations/dazz.md
 [sophos_docs]: ../integrations/sophos.md
