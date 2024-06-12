@@ -75,11 +75,11 @@ const config = {
         disableSwitch: false,
         respectPrefersColorScheme: true,
       },
-      announcementBar: {
-        content: 'Welcome to the new Phylum documentation!',
-        textColor: '#fff',
-        backgroundColor: '#3480eb',
-      },
+      // announcementBar: {
+      //   content: 'Welcome to the new Phylum documentation!',
+      //   textColor: '#fff',
+      //   backgroundColor: '#3480eb',
+      // },
       navbar: {
         title: 'Phylum Docs',
         logo: {
