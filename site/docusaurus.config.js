@@ -75,6 +75,7 @@ const config = {
         disableSwitch: false,
         respectPrefersColorScheme: true,
       },
+      /* To add a temporary site announcement bar, uncomment the following lines and change the content */
       // announcementBar: {
       //   content: 'Welcome to the new Phylum documentation!',
       //   textColor: '#fff',
