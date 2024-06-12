@@ -151,6 +151,7 @@ const config = {
         // When there are aliases, use the name of the first one in the list containing the entry you actually use.
         additionalLanguages: [
           'bash',
+          'groovy',
           'javascript',
           'json',
           'python',
