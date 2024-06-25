@@ -8,15 +8,15 @@ The Phylum threat feed provides a curated view into malware being released acros
 
 1. Obtain an [API key](../knowledge_base/api-keys.md) and set it as follows:
 
-    ```bash
-    PHYLUM_API=p0_...
-    ```
+   ```bash
+   PHYLUM_API=p0_...
+   ```
 
 2. Use your API key to retrieve the latest packages in the threat feed:
 
-    ```bash
-    curl https://threats.phylum.io -H "Authorization: Bearer $PHYLUM_API"
-    ```
+   ```bash
+   curl https://threats.phylum.io -H "Authorization: Bearer $PHYLUM_API"
+   ```
 
 ## API Response
 
@@ -86,11 +86,11 @@ Below is an example API response from the threat feed. The top-level keys are:
 
 The threat feed API provides several parameters for interacting with the feed itself:
 
-| Parameter | Description |
-| --- | --- |
-| `page` | Specifies the page of the feed to retrieve. |
-| `per_page` | Specifies the number of items per page. The default is `25` and the upper limit is `50`. |
-| `since` | Fetches items added to the feed since the given date. Must be in the form of `YYYY-MM-DD`, e.g. `2023-06-18`. |
+| Parameter  | Description                                                                                                   |
+| ---------- | ------------------------------------------------------------------------------------------------------------- |
+| `page`     | Specifies the page of the feed to retrieve.                                                                   |
+| `per_page` | Specifies the number of items per page. The default is `25` and the upper limit is `50`.                      |
+| `since`    | Fetches items added to the feed since the given date. Must be in the form of `YYYY-MM-DD`, e.g. `2023-06-18`. |
 
 For example, if you want to limit the items per page to 3 since July 19, 2023 you would perform a `GET` request to:
 
@@ -116,6 +116,9 @@ The threat feed API provides a package lookup endpoint that details information 
 
 The response is a JSON object containing the following keys:
 
+- `name`: The name of the package.
+- `version`: The version of the package.
+- `ecosystem`: The ecosystem to which the package was published.
 - `code`: The HTTP status code.
 - `malware`: A boolean indicating if the package has been triaged as malware.
 - `riskScores`: An object containing risk scores for each of the 5 Phylum risk domains associated with the package.
@@ -147,6 +150,7 @@ Response:
 ```json
 {
   "code": 200,
+  "ecosystem": "pypi",
   "issues": {
     "Detect Python Obfuscation Rule": [
       {
@@ -157,6 +161,7 @@ Response:
     "Triaged Malware Rule": true
   },
   "malware": true,
+  "name": "adrmdr",
   "riskScores": {
     "author": 1.0,
     "engineering": 1.0,
@@ -164,6 +169,116 @@ Response:
     "malicious_code": 0.01,
     "total": 0.05,
     "vulnerability": 1.0
-  }
+  },
+  "version": "0.1.0"
+}
+```
+
+## Batch Package Lookup Endpoint
+
+The threat feed API also provides a batch package lookup endpoint. The response is the same as that from the single package endpoint but you'll receive a json payload for each package submitted in the bulk query.
+
+### Endpoint
+
+`POST https://threats.phylum.io/batch`
+
+### Request Body
+
+The request body is expected to be a JSON array of packages, where each package is represented by a list containing the `ecosystem`, `name`, and `version`. For example:
+
+```json
+[
+  ["npm", "lodash", "4.17.21"],
+  ["pypi", "requests", "2.32.3"],
+  ["cargo", "serde", "1.0.203"]
+]
+```
+
+### Parameters
+
+- `ecosystem`: The package ecosystem (one of: `pypi`, `npm`, `maven`, `rubygems`, `nuget`, `golang`, or `cargo`).
+- `name`: The name of the package.
+- `version`: The version of the package.
+
+### Response Structure
+
+The response is a JSON object containing the following keys:
+
+- `code`: The HTTP status code.
+- `processing_time`: Time in seconds, the query took.
+- `results`: A list containing the results of each individual package query. Each item in this list corresponds to the response format of the individual package lookup endpoint, providing detailed information about the queried package, including its risk scores and issues.
+
+### Notes
+
+There is a limit of 1,000 packages per batch request. For queries near this upper limit, the processing time may range from 30 to 60 seconds.
+
+### Usage Example
+
+Request:
+
+```bash
+curl -X POST -H "Content-Type: application/json" -d '[
+["npm", "lodash", "4.17.21"],
+["pypi", "requests", "2.32.3"],
+["cargo", "serde", "1.0.203"]
+]' http://localhost:3000/batch -H "Authorization: Bearer $PHYLUM_API"
+```
+
+Response:
+
+```json
+{
+  "code": 200,
+  "processing_time": "0.7s",
+  "results": [
+    {
+      "code": 200,
+      "ecosystem": "npm",
+      "issues": {},
+      "malware": false,
+      "name": "lodash",
+      "riskScores": {
+        "author": 1.0,
+        "engineering": 1.0,
+        "license": 0.8,
+        "malicious_code": 1.0,
+        "total": 0.95,
+        "vulnerability": 1.0
+      },
+      "version": "4.17.21"
+    },
+    {
+      "code": 200,
+      "ecosystem": "pypi",
+      "issues": {},
+      "malware": false,
+      "name": "requests",
+      "riskScores": {
+        "author": 1.0,
+        "engineering": 1.0,
+        "license": 1.0,
+        "malicious_code": 1.0,
+        "total": 1.0,
+        "vulnerability": 1.0
+      },
+      "version": "2.32.3"
+    },
+    {
+      "code": 200,
+      "ecosystem": "cargo",
+      "issues": {},
+      "malware": false,
+      "name": "serde",
+      "riskScores": {
+        "author": 1.0,
+        "engineering": 1.0,
+        "license": 1.0,
+        "malicious_code": 0.8,
+        "total": 0.95,
+        "vulnerability": 1.0
+      },
+      "version": "1.0.203"
+    }
+  ]
 }
 ```
