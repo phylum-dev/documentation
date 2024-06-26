@@ -221,7 +221,7 @@ curl -X POST -H "Content-Type: application/json" -d '[
 ["npm", "lodash", "4.17.21"],
 ["pypi", "requests", "2.32.3"],
 ["cargo", "serde", "1.0.203"]
-]' http://localhost:3000/batch -H "Authorization: Bearer $PHYLUM_API"
+]' https://threats.phylum.io/batch -H "Authorization: Bearer $PHYLUM_API"
 ```
 
 Response:
