@@ -77,7 +77,7 @@ You may also block on a dependency-level characteristic using a `dependency` rul
 The following policy blocks packages belonging to a namespace.
 
 ```rego
-package policy
+package policy.v1
 
 import rego.v1
 
@@ -130,7 +130,7 @@ If a policy wants to block a job for a reason that is not related to a specific 
 The following policy blocks any job that introduces an NPM dependency. Only one error is generated, even if hundreds of dependencies have been added.
 
 ```rego
-package policy
+package policy.v1
 
 import data.phylum.ecosystem
 import rego.v1
