@@ -18,7 +18,7 @@ Snyk`.
 ![Setup with empty group](../../assets/snyk_setup_empty_group.png)
 ![Setup with existing group](../../assets/snyk_setup_existing_group.png)
 
-To import projects from Snyk Phylum needs a Snyk API key. This key is not only
+To import projects from Snyk, Phylum needs a Snyk API key. This key is not only
 used for authentication, but also decides which Snyk projects should be
 imported. All projects accessible to the API key will be imported, so creating a
 Snyk service account with the desired access permissions is recommended.
