@@ -25,6 +25,7 @@ Snyk service account with the desired access permissions is recommended.
 
 Instructions on setting up a service account can be found in Snyk's
 documentation:
+
 https://docs.snyk.io/enterprise-configuration/service-accounts#how-to-set-up-a-group-or-organization-service-account
 
 ![Token entry](../../assets/snyk_setup_token.png)
