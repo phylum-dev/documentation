@@ -1,38 +1,70 @@
-# Snyk Integration
+# Snyk Import
 
 ## Overview
 
-Snyk provides information around third party software vulnerabilities. By installing the Phylum/Snyk integration, users can augment Snyk data with Phylum's real-time software supply chain attack identification capabilities.
+Snyk provides information around third party software vulnerabilities. Phylum's
+Snyk integration allows users of both products to automatically import Snyk
+projects into Phylum and keep them up to date.
 
-## Installing
-The Phylum integration for Snyk can be installed [here](https://snyk.phylum.io).
+## Setup
 
-![Install The App](../../assets/snyk_install.png)
+Snyk connections are always associated with one specific group. In most cases it
+makes sense to create a dedicated group for Snyk, but importing it into any
+group is possible.
 
-You will need to be authenticated with Snyk and will be prompted to do so if you are not already logged in.
+Setup for a new connection is done on the group page by selecting `Import From >
+Snyk`.
 
-![Authenticate With Snyk](../../assets/snyk_auth.png)
+![Setup with empty group](../../assets/snyk_setup_empty_group.png)
+![Setup with existing group](../../assets/snyk_setup_existing_group.png)
 
-Once you have authenticated, you will need to accept the permissions required to run the Phylum application. These permissions will grant Phylum access to your projects and dependencies list.
+To import projects from Snyk Phylum needs a Snyk API key. This key is not only
+used for authentication, but also decides which Snyk projects should be
+imported. All projects accessible to the API key will be imported, so creating a
+Snyk service account with the desired access permissions is recommended.
 
-![Accept permissions and scopes](../../assets/snyk_ask_scopes.png)
+Instructions on setting up a service account can be found in Snyk's
+documentation:
+https://docs.snyk.io/enterprise-configuration/service-accounts#how-to-set-up-a-group-or-organization-service-account
 
-## Listing Projects
-After installing the Phylum integration for Snyk, you can now list your Snyk projects by clicking the "List Projects" button.
+![Token entry](../../assets/snyk_setup_token.png)
 
-![Listing Snyk Projects](../../assets/snyk_list_projects.png)
+## Updates
 
-Once you've installed the application, you will need to link your Snyk account to Phylum by clicking on the `Enable` button in the interface.
+An import of all Snyk projects is automatically performed after initial setup.
+Once setup, existing connections are re-imported once a day.
 
-![Enable with Phylum](../../assets/snyk_enable.png)
+Imports run asynchronous, so it might take a while to finish and projects will
+not necessarily all show up at the same time. Phylum will show a message if an
+import is not completed yet:
 
-If you aren't already authenticated with Phylum, you will be prompted to do so now.
+![Import in progress](../../assets/snyk_import_in_progress.png)
 
-![Phylum Authenticate](../../assets/snyk_phylum_auth.png)
+Manual imports can be started at any time if the daily update is not sufficient.
+This can be done by pressing the `Refresh Imports` button.
 
-## Analyzing Results
-Phylum analyzes software packages as they are published into the open source ecosystem. In addition to providing information around software vulnerabilities and licenses, we can also provide information around real-time threats stemming from your software supply chain.
+![Manual import](../../assets/snyk_manual_import.png)
 
-By clicking on a project you can view additional supply chain attack information related to your project dependencies.
+## Snyk Token Updates
 
-![Anaylze Supply Chain Attacks](../../assets/snyk_supply_chain_attacks.png)
+Phylum will notify you if the associated token is revoked or invalidated:
+
+![Invalid token](../../assets/snyk_invalid_token.png)
+
+In this case, the token can be updated by just pressing the red `Update Token`
+button.
+
+![Invalid token update](../../assets/snyk_invalid_token_update.png)
+
+If the token is still valid, a manual change can be performed by selecting
+`Manage Access > Update Token`.
+
+![Valid token update](../../assets/snyk_manage_access.png)
+
+## Deletion
+
+Snyk connections can be deleted by selecting `Manage Access > Revoke Connection`
+in any group with a Snyk connection. This will only stop future updates of the
+connection and will not delete projects that are already imported.
+
+![Revoke connection](../../assets/snyk_manage_access.png)
