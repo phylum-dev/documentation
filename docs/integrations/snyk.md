@@ -35,9 +35,9 @@ https://docs.snyk.io/enterprise-configuration/service-accounts#how-to-set-up-a-g
 An import of all Snyk projects is automatically performed after initial setup.
 Once setup, existing connections are re-imported once a day.
 
-Imports run asynchronous, so it might take a while to finish and projects will
+Imports run asynchronously, so it might take a while to finish and projects will
 not necessarily all show up at the same time. Phylum will show a message if an
-import is not completed yet:
+import is not completed yet.
 
 ![Import in progress](../../assets/snyk_import_in_progress.png)
 
@@ -48,7 +48,7 @@ This can be done by pressing the `Refresh Imports` button.
 
 ## Snyk Token Updates
 
-Phylum will notify you if the associated token is revoked or invalidated:
+Phylum will notify you if the associated token is revoked or invalidated.
 
 ![Invalid token](../../assets/snyk_invalid_token.png)
 
