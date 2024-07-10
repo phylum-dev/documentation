@@ -57,8 +57,8 @@ button.
 
 ![Invalid token update](../../assets/snyk_invalid_token_update.png)
 
-If the token is still valid, a manual change can be performed by selecting
-`Manage Access > Update Token`.
+If you want to change a valid token, a manual change can be performed by
+selecting `Manage Access > Update Token`.
 
 ![Valid token update](../../assets/snyk_manage_access.png)
 
