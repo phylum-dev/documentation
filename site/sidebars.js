@@ -132,6 +132,18 @@ const sidebars = {
         }
       ],
     },
+    {
+      type: 'category',
+      label: 'Package Firewall',
+      link: {
+        type: 'doc',
+        id: 'package_firewall/about',
+      },
+      items: [
+        'package_firewall/pypi',
+        'package_firewall/npm',
+      ],
+    },
     'knowledge_base/threat_feed',
     'support/security',
     'support/contact_us',
