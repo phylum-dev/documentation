@@ -54,7 +54,7 @@ ERROR: No matching distribution found for <malicious>
 ### Poetry
 
 With Poetry, the source URL can be configured per-project in the
-`pyproject.toml` by using the following command from within the project
+`pyproject.toml` file by using the following commands from within the project
 directory:
 
 ```sh
