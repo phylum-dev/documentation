@@ -23,7 +23,7 @@ Phylum uses tags to uniquely identify issues raised by the system. These tags ca
 | CM0001 | [IP Detection](../analytics/ip_identification.md) | Package contains suspicious IP addresses |
 | CM0003 | Landing Binary | Package is using living off the land binaries in a known malicious way |
 | .M0004 | Landing Binary | Package uses suspicious executables |
-| IL0005 | License | Commercial license risk detected |
+| IL0005 | [License](../analytics/license_commercial_risk.md) | Non-commercial use risk detected |
 | IM0006 | [NPM Hooks](../analytics/npm_hooks.md) | Package uses install hooks to ask for donations |
 | CM0007 | [NPM Hooks](../analytics/npm_hooks.md) | Package executes shell commands in installation hooks |
 | IM0007 | [NPM Hooks](../analytics/npm_hooks.md) | Package runs the software immediately after installation |
@@ -59,4 +59,5 @@ Phylum uses tags to uniquely identify issues raised by the system. These tags ca
 | CM0045 | [npm Security Holding Package](../analytics/npm_security_holding.md) | Package removed by npm as a security holding package |
 | CE0046 | [Deprecated Package](../analytics/deprecated_package.md) | Package has been deprecated |
 | IM0047 | [Python Build Hook](../analytics/python_build_hook.md) | Package contains Python build hook files |
+| IL0050 | [License](../analytics/license_source_code_distribution.md) | License requires source code distribution |
 | HM0099 | [Basic Javascript Obfuscation](../analytics/obfuscated_javascript.md) | Package contains obfuscated Javascript |
