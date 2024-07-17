@@ -18,10 +18,11 @@ evaluate all packages against the group's policy. To do this, just replace
 `<PHYLUM_GROUP>` with the desired group name. The supplied API key **must** have
 access to this group.
 
-If Phylum's default policy is sufficient, you can remove all instances of
+If Phylum's default [policy] is sufficient, you can remove all instances of
 `<PHYLUM_GROUP>`.
 
 [API Keys documentation]: ../knowledge_base/api-keys.md#generate-an-api-key
+[policy]: ../knowledge_base/policy.md
 
 ### pip
 
