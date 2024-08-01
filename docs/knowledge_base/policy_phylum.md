@@ -17,5 +17,5 @@ https://github.com/user-attachments/assets/67a17c27-c389-4f89-aafc-d8fda16a3542
 
 
 
-Curated subset of the Phylum policies will be automatically active on newly created groups and personal projects to insure Phylum analysis captures all significant vulnerabilities and issues from the get-go. 
+A curated subset of the Phylum policies will be automatically active on newly created groups and personal projects to ensure Phylum surfaces potential risks in your projects.
 
