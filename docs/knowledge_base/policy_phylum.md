@@ -1,6 +1,6 @@
 # Phylum Policies
 
-Out of the box, projects and groups have access to about two dozen of policy regos authored by Phylum. 
+Out of the box, Phylum provides roughly two dozen pre-defined policies that allow users to specify what their organization's acceptable use policies are for open source packages
 
 To explore these in the web UI:
 
