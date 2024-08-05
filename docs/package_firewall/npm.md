@@ -29,6 +29,7 @@ If Phylum's default [policy] is sufficient, you can remove all instances of
 Custom NPM registries can be configured with npm:
 
 ```sh
+npm config set replace-registry-host never
 npm config set registry https://<PHYLUM_GROUP>:<PHYLUM_API_KEY>@npm.phylum.io/
 ```
 
