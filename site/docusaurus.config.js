@@ -250,6 +250,10 @@ const config = {
             from: '/docs/nuget_install_scripts_rule',
             to: '/analytics/nuget_install_scripts',
           },
+          {
+            from: '/docs/trivial_package',
+            to: '/analytics/minimal_code',
+          },
         ],
 
         // This function seeks to account for the bulk of the changes made during the
