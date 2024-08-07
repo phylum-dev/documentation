@@ -99,21 +99,7 @@ const sidebars = {
         'knowledge_base/issue_tags',
         'knowledge_base/notifications',
         'knowledge_base/transfer_group_ownership',
-        'knowledge_base/search',
-        {
-          type: 'category',
-          label: 'Policy',
-          link: {
-            type: 'doc',
-            id: 'knowledge_base/policy',
-          },
-          items: [
-            'knowledge_base/policy_basics',
-            'knowledge_base/policy_development',
-            'knowledge_base/policy_examples',
-            'knowledge_base/policy_apply',
-          ],
-        },
+        'knowledge_base/search'
       ]
     },
     {
@@ -142,6 +128,19 @@ const sidebars = {
       items: [
         'package_firewall/pypi',
         'package_firewall/npm',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Policy',
+      link: {
+        type: 'doc',
+        id: 'knowledge_base/policy',
+      },
+      items: [
+        'knowledge_base/policy_usage',
+        'knowledge_base/policy_management',
+        'knowledge_base/policy_development',
       ],
     },
     'knowledge_base/threat_feed',
