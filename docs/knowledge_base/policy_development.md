@@ -1,4 +1,6 @@
-# Policy Basics
+# Policy Development
+
+## Policy Basics
 
 This is a basic policy using an `issue` rule to block any HIGH/CRITICAL issues.
 
@@ -22,13 +24,11 @@ deny contains issue if {
 
 The `title` and `description` from the initial metadata comments are displayed in the Phylum UI and are highly recommended.
 
-The `package policy.v1` line must be present. This is how OPA finds the policy's rules.
+The `package policy.v1` line must be present. This is how [Open Policy Agent](https://www.openpolicyagent.org/) (OPA) finds the policy's rules.
 
-The `deny` rule will contain the specified issue when the `if` statement is `true`. `OPA` iterates through the job input data evaluating the expression against the severity level of every issue in the job.
+The `deny` rule will contain the specified issue when the `if` statement is `true`. OPA iterates through the job input data evaluating the expression against the severity level of every issue in the job.
 
 The `title` field from the metadata comment above the rule will be associated with the failure in the output from Phylum.
-
-# Policy Development
 
 ## Creating a local policy development environment
 
@@ -56,7 +56,7 @@ Note: You can obtain a Job ID by using the [`phylum history`](../cli/commands/ph
 
 ## Evaluating policies locally
 
-A policy can be evaluated using `opa eval --data <YOUR POLICY>.rego --data constants.json --input input.json --schema schema --format pretty data.policy.v1`.
+A policy can be evaluated using ` eval --data <YOUR POLICY>.rego --data constants.json --input input.json --schema schema --format pretty data.policy.v1`.
 
 | Input | Description | Provider |
 | --- | --- | --- |
@@ -66,7 +66,7 @@ A policy can be evaluated using `opa eval --data <YOUR POLICY>.rego --data const
 | `schema` | location of the schema files | Phylum |
 | `data.phylum.job` | entry point | Static value |
 
-If everything is working, you will receive JSON output from `opa` that looks like this:
+If everything is working, you will receive JSON output from `` that looks like this:
 
 ```json
 {
@@ -119,7 +119,7 @@ test_allow_medium if {
 
 ```
 
-This test requires `constants.json` from the Phylum SDK. The test can be executed against the Phylum `default.rego` policy using `opa test constants.json default.rego example_test.rego`.
+This test requires `constants.json` from the Phylum SDK. The test can be executed against the Phylum `default.rego` policy using ` test constants.json default.rego example_test.rego`.
 
 ## Evaluating policies using the Phylum API
 
@@ -139,13 +139,13 @@ Issues and dependencies that have been suppressed via project preferences are vi
 
 Dependencies that are ignored via the `ignored_packages` parameter are filtered out before applying the policy and will not be visible in the policy input or output.
 
-# Policy Examples
+## Policy Examples
 
 The policy transforms your threat model into a description of why the job is being blocked. There are multiple ways to define why a job should be blocked.
 
-The `METADATA` block contains `OPA` [Annotations](https://www.openpolicyagent.org/docs/latest/annotations/) which correlate to the schema and can be used for type checking.
+The `METADATA` block contains OPA [Annotations](https://www.openpolicyagent.org/docs/latest/annotations/) which correlate to the schema and can be used for type checking.
 
-## Blocking an issue
+### Blocking an issue
 
 The most common reason to block a job is because one of the dependencies has a known issue within one of Phylum's risk domains.
 
@@ -211,7 +211,7 @@ When the policy fails, the output will look something like this:
 
 When Phylum sees this output from the policy, it will block the job and generate a report naming the package and describing the issue.
 
-## Blocking a dependency
+### Blocking a dependency
 
 You may also block on a dependency-level characteristic using a `dependency` rule.
 
@@ -264,5 +264,3 @@ When the policy fails, the output will look something like this:
 ```
 
 When Phylum sees this output from the policy, it will block the job and generate a report naming the package and providing this message in the output.
-
-
