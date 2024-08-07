@@ -216,6 +216,7 @@ When Phylum sees this output from the policy, it will block the job and generate
 You may also block on a dependency-level characteristic using a `dependency` rule.
 
 The following policy blocks packages belonging to a namespace.
+Note: This is just an example, there is already a [policy](https://github.com/phylum-dev/policy/blob/main/copyleft_license.rego) for blocking copyleft licenses.
 
 ```rego
 package policy.v1
