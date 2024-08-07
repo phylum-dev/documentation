@@ -56,7 +56,7 @@ Note: You can obtain a Job ID by using the [`phylum history`](../cli/commands/ph
 
 ## Evaluating policies locally
 
-A policy can be evaluated using ` eval --data <YOUR POLICY>.rego --data constants.json --input input.json --schema schema --format pretty data.policy.v1`.
+A policy can be evaluated using `opa eval --data <YOUR POLICY>.rego --data constants.json --input input.json --schema schema --format pretty data.policy.v1`.
 
 | Input | Description | Provider |
 | --- | --- | --- |
@@ -66,7 +66,7 @@ A policy can be evaluated using ` eval --data <YOUR POLICY>.rego --data constant
 | `schema` | location of the schema files | Phylum |
 | `data.phylum.job` | entry point | Static value |
 
-If everything is working, you will receive JSON output from `` that looks like this:
+If everything is working, you will receive JSON output from `opa` that looks like this:
 
 ```json
 {
@@ -119,7 +119,7 @@ test_allow_medium if {
 
 ```
 
-This test requires `constants.json` from the Phylum SDK. The test can be executed against the Phylum `default.rego` policy using ` test constants.json default.rego example_test.rego`.
+This test requires `constants.json` from the Phylum SDK. The test can be executed against the Phylum `default.rego` policy using `opa test constants.json default.rego example_test.rego`.
 
 ## Evaluating policies using the Phylum API
 
