@@ -4,7 +4,7 @@ The Phylum policy framework allows you to overlay your threat model and block pa
 ## Group Policy
 Policies applied at the group level will be inherited by all projects belonging to the group. Only a group administrator can add, remove, enable, and disable group policies.
 
-Group administrators may activate/deactivate project policies by selecting the `Policy` tab in the Group detail view. Use the toggles to activate or deactivate a policy from applying to all of the projects in that group.
+Group administrators may activate/deactivate group policies by selecting the `Policy` tab in the Group detail view. Use the toggles to activate or deactivate a policy from applying to all of the projects in that group.
 
 ![Group policy tab](../../assets/group_policy_tab.png)
 
