@@ -135,7 +135,7 @@ If the endpoint is called with no body, the project's saved policy will be used.
 
 If policy evaluation is successful, the result will contain both the policy output as well as a generated report in Markdown format.
 
-Issues and dependencies that have been suppressed via project preferences are visible in the policy input, but rejections related to those issues or dependencies will not be included in the Markdown report.
+Issues that have been suppressed via project preferences are visible to the policy, but the related rejections will not be included in the Markdown report.
 
 Dependencies that are ignored via the `ignored_packages` parameter are filtered out before applying the policy and will not be visible in the policy input or output.
 
