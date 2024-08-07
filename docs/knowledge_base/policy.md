@@ -1,11 +1,8 @@
 # Policy
 
-Phylum's custom policy support allows you to take control over the allow/block decision for dependencies being added to a Phylum project.
+Phylum uses a policy framework implemented with [Open Policy Agent] to evaluate dependencies and provide tailored results. A default set of Phylum-provided policies will be applied to all newly created groups/projects. Phylum PRO users may customize their resultant policy by toggling policies on/off in the Phylum UI.
 
-## How it works
+Phylum PRO users may also develop custom policies using the rego query language and apply those policies to their groups/projects.
 
-When a developer introduces dependency changes, either in a pull request when using one of the source control server integrations or when using Phylum's CLI extensions, a simple policy is applied to determine whether or not that change should be allowed. This policy is implemented using [Open Policy Agent].
-
-Phylum PRO users may specify custom policies for their projects, automating their threat model for risk decisions.
 
 [Open Policy Agent]: https://www.openpolicyagent.org/
