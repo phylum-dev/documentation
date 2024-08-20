@@ -112,5 +112,5 @@ location searched: `phylum` index
 required by package `testing v0.1.0 (/tmp/testing)`
 ```
 
-If a verison range is accepted by the manifest, the package manager will
+If a version range is accepted by the manifest, the package manager will
 automatically attempt to use a version that passes Phylum's policy.

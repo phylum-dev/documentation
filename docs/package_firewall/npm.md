@@ -58,5 +58,5 @@ npm error notarget In most cases you or one of your dependencies are requesting
 npm error notarget a package version that doesn't exist.
 ```
 
-If a verison range is accepted by the manifest, the package manager will
+If a version range is accepted by the manifest, the package manager will
 automatically attempt to use a version that passes Phylum's policy.
