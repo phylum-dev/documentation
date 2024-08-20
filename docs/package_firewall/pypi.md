@@ -52,7 +52,7 @@ ERROR: No matching distribution found for <malicious>
 ```
 
 If a verison range is accepted by the manifest, the package manager will
-automatically attempt using a version that passes Phylum's policy.
+automatically attempt to use a version that passes Phylum's policy.
 
 ### Poetry
 
@@ -76,4 +76,4 @@ Could not find a matching version of package <malicious>
 ```
 
 If a verison range is accepted by the manifest, the package manager will
-automatically attempt using a version that passes Phylum's policy.
+automatically attempt to use a version that passes Phylum's policy.

@@ -32,7 +32,7 @@ the registry available to all projects.
 
 ```toml
 [registries]
-phylum = { index = "sparse+https://cargo.staging.phylum.io/" }
+phylum = { index = "sparse+https://cargo.phylum.io/" }
 ```
 
 This makes the Phylum registry available to all Cargo projects, however by
@@ -75,7 +75,7 @@ your authentication details to the [`.cargo/credentials.toml` file].
 The Phylum group and API key first need to be converted to base 64:
 
 ```text
-printf "<PHYLUM_GROU>:<PHYLUM_API_KEY>" | base64
+printf "<PHYLUM_GROUP>:<PHYLUM_API_KEY>" | base64
 ```
 
 > ⚠️ **WARNING** ⚠️
@@ -113,4 +113,4 @@ required by package `testing v0.1.0 (/tmp/testing)`
 ```
 
 If a verison range is accepted by the manifest, the package manager will
-automatically attempt using a version that passes Phylum's policy.
+automatically attempt to use a version that passes Phylum's policy.

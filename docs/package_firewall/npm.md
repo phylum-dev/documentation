@@ -59,4 +59,4 @@ npm error notarget a package version that doesn't exist.
 ```
 
 If a verison range is accepted by the manifest, the package manager will
-automatically attempt using a version that passes Phylum's policy.
+automatically attempt to use a version that passes Phylum's policy.
