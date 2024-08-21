@@ -57,3 +57,6 @@ npm error notarget No matching version found for <malicious>@<version>.
 npm error notarget In most cases you or one of your dependencies are requesting
 npm error notarget a package version that doesn't exist.
 ```
+
+If a version range is accepted by the manifest, the package manager will
+automatically attempt to use a version that passes Phylum's policy.

@@ -12,6 +12,8 @@ are hosted:
 | --------- | ------------------------------ |
 | [PyPI]    | https://pypi.phylum.io/simple/ |
 | [NPM]     | https://npm.phylum.io/         |
+| [Cargo]   | https://cargo.phylum.io/       |
 
 [PyPI]: ./pypi.md
 [NPM]: ./npm.md
+[Cargo]: ./cargo.md

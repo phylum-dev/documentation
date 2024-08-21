@@ -51,6 +51,9 @@ ERROR: Could not find a version that satisfies the requirement <malicious> (from
 ERROR: No matching distribution found for <malicious>
 ```
 
+If a version range is accepted by the manifest, the package manager will
+automatically attempt to use a version that passes Phylum's policy.
+
 ### Poetry
 
 With Poetry, the source URL can be configured per-project in the
@@ -71,3 +74,6 @@ A blocked package will show up in `poetry` as missing:
 ```text
 Could not find a matching version of package <malicious>
 ```
+
+If a version range is accepted by the manifest, the package manager will
+automatically attempt to use a version that passes Phylum's policy.
