@@ -128,6 +128,7 @@ const sidebars = {
       items: [
         'package_firewall/pypi',
         'package_firewall/npm',
+        'package_firewall/cargo',
       ],
     },
     {

@@ -37,11 +37,11 @@ phylum = { index = "sparse+https://cargo.phylum.io/" }
 
 This makes the Phylum registry available to all Cargo projects, however by
 default Cargo will still use the official registry. To ensure all requests go
-through Phylum, you'll have to override the crates.io registry in the
-[`.cargo/config.toml` file]. This can be a project's cargo config if you do not
+through Phylum, you'll have to override the [crates.io] registry in the
+[`.cargo/config.toml` file]. This can be a project's Cargo config if you do not
 wish to globally run every install through Phylum.
 
-The easiest way to enable Phylum is by replacing the crates.io source with
+The easiest way to enable Phylum is by replacing the [crates.io] source with
 Phylum's registry. This has the advantage of creating `Cargo.toml` and
 `Cargo.lock` files that are identical to the ones created for the official
 registry.
@@ -51,7 +51,7 @@ registry.
 replace-with = "phylum"
 ```
 
-Since replacing the cargo source prevents you from using the official registry,
+Since replacing the Cargo source prevents you from using the official registry,
 this is unsuitable if certain packages should still be installable without going
 through Phylum. In this case you can just set Phylum to be the default registry
 instead:
@@ -72,7 +72,7 @@ global-credential-providers = ["cargo:token"]
 Once the file-based `cargo:token` credential provider is configured, you can add
 your authentication details to the [`.cargo/credentials.toml` file].
 
-The Phylum group and API key first need to be converted to base 64:
+The Phylum group and API key first need to be converted to Base64:
 
 ```text
 printf "<PHYLUM_GROUP>:<PHYLUM_API_KEY>" | base64
@@ -82,8 +82,8 @@ printf "<PHYLUM_GROUP>:<PHYLUM_API_KEY>" | base64
 >
 > Do not accidentally save your token into your shell history.
 
-Once converted to base 64, you can add it as a basic authentication token to
-your credentials:
+Once converted to Base64, you can add it as a basic authentication token to your
+credentials:
 
 ```toml
 [registries.phylum]
@@ -114,3 +114,5 @@ required by package `testing v0.1.0 (/tmp/testing)`
 
 If a version range is accepted by the manifest, the package manager will
 automatically attempt to use a version that passes Phylum's policy.
+
+[crates.io]: https://crates.io
