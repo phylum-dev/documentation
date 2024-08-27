@@ -143,7 +143,7 @@ Dependencies that are ignored via the `ignored_packages` parameter are filtered 
 
 The policy transforms your threat model into a description of why the job is being blocked. There are multiple ways to define why a job should be blocked.
 
-The `METADATA` block contains OPA [Annotations](https://www.openpolicyagent.org/docs/latest/annotations/) which correlate to the schema and can be used for type checking.
+The `METADATA` block contains OPA [Annotations](https://www.openpolicyagent.org/docs/latest/policy-language/#annotations) which correlate to the schema and can be used for type checking.
 
 ### Blocking an issue
 
