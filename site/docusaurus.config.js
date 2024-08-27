@@ -129,10 +129,6 @@ const config = {
             href: 'https://github.com/phylum-dev',
           },
           {
-            label: 'YouTube',
-            href: 'https://www.youtube.com/@phylum_io',
-          },
-          {
             label: 'LinkedIn',
             href: 'https://www.linkedin.com/company/phylum-io',
           },
