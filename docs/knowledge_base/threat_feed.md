@@ -110,7 +110,7 @@ curl "https://threats.phylum.io/?cursor=84&per_page=10" -H "Authorization: Beare
 
 If additional rows exist, the response will include the next cursor in the `cursor` key:
 
-```
+```json
 {
   "cursor": 2722653,
   "packages": [
