@@ -29,7 +29,11 @@ Project Group: demo-group
 Select your project's lockfiles and manifests: ./requirements.txt
 
 ✅ Successfully created project configuration
+```
 
+Notice that the command created a [`.phylum_project` file](./phylum_project_files.md) in the working directory:
+
+```shellsession
 ❯ cat .phylum_project
 id: 49158d65-76aa-46f2-89f3-6a50419cfc3d
 name: a-phylum-demo
@@ -47,7 +51,7 @@ lockfiles:
 1. Navigate to the directory of the relevant software project
 2. Use the [CLI tool](../cli/quickstart.md) to create a new Phylum project
 
-Note: This will create a `.phylum_project` file in the current directory
+Note: This will create a [`.phylum_project` file](./phylum_project_files.md) in the current directory
 
 Example:
 
@@ -57,7 +61,7 @@ phylum project create sample
 
 ### Phylum-CI
 
-The [`phylum-ci` tool](https://pypi.org/project/phylum/) accepts a `--project` option to explicitly provide the name of a Phylum project to create and use to perform the analysis. You can also specify this option's value in the `.phylum_project` file. A project name provided as an input option will be preferred over an entry in the `.phylum_project` file.
+The [`phylum-ci` tool](https://pypi.org/project/phylum/) accepts a `--project` option to explicitly provide the name of a Phylum project to create and use to perform the analysis. You can also specify this option's value in the [`.phylum_project` file](./phylum_project_files.md). A project name provided as an input option will be preferred over an entry in the `.phylum_project` file.
 
 When no project name is provided through options or project file, a project name will be provided by detecting the git repository name. The goal is a unique and deterministic project name for each git repository submitted by the same Phylum user account.
 
