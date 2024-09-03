@@ -108,7 +108,7 @@ The threat feed supports cursor based pagination. By providing the `cursor` para
 curl "https://threats.phylum.io/?cursor=84&per_page=10" -H "Authorization: Bearer $PHYLUM_API"
 ```
 
-If additional rows exist, the response will include the next cursor in the `cursor` key:
+If additional rows exist, the response will include the next cursor in the `cursor` key. The cursor value will be `null` when no additional rows exist.
 
 ```json
 {
@@ -139,3 +139,7 @@ If additional rows exist, the response will include the next cursor in the `curs
   ]
 }
 ```
+
+## Additional Query Options
+For cursor based data retrieval, you can provide the `per_page` query parameter. This will allow you to define how many
+rows will be returned. The default is `25` and the upper limit is `50`.
