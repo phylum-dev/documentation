@@ -140,7 +140,6 @@ If additional rows exist, the response will include the next cursor in the `curs
 }
 ```
 
-## Additional Query Options
 For cursor based data retrieval, you can provide the `per_page` query parameter. This will allow you to define how many
 rows will be returned. The default is `25` and the upper limit is `50`.
 
