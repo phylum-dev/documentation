@@ -2,11 +2,13 @@
 
 Phylum projects are used to represent a software project; often a git repository. A Phylum project organizes the dependencies and findings for your software project. This page enumerates the ways a Phylum project can be created.
 
-> **NOTE:** Project creation does not trigger an analysis of the project. Instead, the [`phylum analyze`](../cli/commands/phylum_analyze.md) command will trigger an analysis job and organize the results in the specified Phylum project.
-
 ## Walkthrough
 
 ### Phylum CLI
+
+> ⚠️ **INFO** ⚠️
+>
+> Project creation with the Phylum CLI does not trigger an analysis of the project. Instead, the [`phylum analyze`](../cli/commands/phylum_analyze.md) command will trigger an analysis job and organize the results in the specified Phylum project.
 
 ---
 
@@ -81,6 +83,15 @@ phylum-ci
 ### GitHub App
 
 1. The [Phylum GitHub App](../integrations/github_app.md) will automatically create a Phylum project when monitoring is activated for a given repository. The Phylum project will be assigned the same name as the repository.
+
+### Phylum Web App
+
+The [Phylum web app](https://app.phylum.io/) allows for project creation from the `Projects` tab of the main page:
+
+1. Click the `New Project` button
+2. Provide a project name
+3. Optionally provide a default label, a group, and lockfiles
+4. Click the `Create` button
 
 ## FAQ
 
