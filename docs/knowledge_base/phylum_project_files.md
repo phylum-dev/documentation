@@ -1,6 +1,6 @@
 # Phylum Project Files
 
-The `.phylum_project` file is a configuration file containing information about, you guessed it, the Phylum project at that level of the filesystem hierarchy. There is usually a single `.phylum_project` file for a given repository, located at the root of the repository. It is also possible to have multiple `.phylum_project` files within a repository. This may be desirable for monorepos.
+The `.phylum_project` file is a configuration file containing information about the Phylum project at that level of the filesystem hierarchy. There is usually a single `.phylum_project` file for a given repository, located at the root of the repository. It is also possible to have multiple `.phylum_project` files within a repository. This may be desirable for monorepos.
 
 ## Background
 
@@ -39,7 +39,7 @@ It is possible to "preview" the list of dependency files automatically recognize
 
 > 💡 **TIP** 💡
 >
-> To get the same list of dependency files that would be seen when running the `phylum init` command but without potentially overwriting the file, temporarily rename existing `.phylum_project` files.
+> To get the same list of dependency files that would be seen when running the `phylum init` command, but without potentially overwriting the file, temporarily rename existing `.phylum_project` files.
 
 [ignore_rules]: https://docs.rs/ignore/latest/ignore/struct.WalkBuilder.html#ignore-rules
 [phylum_status]: ../cli/commands/phylum_status.md

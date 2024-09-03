@@ -1,10 +1,11 @@
 # Dependency File Exclusion
 
-Analyzing dependencies with Phylum is possible with one of three primary solutions:
+Analyzing dependencies with Phylum is possible with one of four primary solutions:
 
 * The [Phylum CLI][cli]
 * The [`phylum-ci` tool][phylum_pypi], usually in the form of [integrations]
-* The [Phylum GitHub App][gh_app]
+* The [Phylum GitHub app][gh_app]
+* The [Phylum web app][phylum_ui]
 
 Each of these solutions take dependency files (lockfiles and manifests) as input to produce analysis outputs. This page describes the methods in place to allow for excluding dependency files so they won't be included in the analysis.
 
@@ -21,6 +22,7 @@ Whatever the reason, Phylum seeks to provide exclusion methods.
 [phylum_pypi]: https://pypi.org/project/phylum/
 [integrations]: ../integrations/integrations_overview.md
 [gh_app]: ../integrations/github_app.md
+[phylum_ui]: https://app.phylum.io
 [lockfile_gen]: ../cli/lockfile_generation.md
 
 ## Phylum CLI
@@ -75,7 +77,11 @@ There are slight variations in how to format these commands for each environment
 
 ## GitHub App
 
-The [Phylum GitHub App][gh_app] does not currently offer a flexible method for identifying dependency file exclusions. It does account for the existence of [a `.phylum_project` file][phylum_project_file]. The downside of this approach is that it is an allowlist, with no current mechanism for specifying exclusions. Every file to be included in analysis has to be listed in the `.phylum_project` file in order to ensure those not listed are not included.
+The [Phylum GitHub app][gh_app] does not currently offer a flexible method for identifying dependency file exclusions. It does account for the existence of [a `.phylum_project` file][phylum_project_file]. The downside of this approach is that it is an allowlist, with no current mechanism for specifying exclusions. Every file to be included in analysis has to be listed in the `.phylum_project` file in order to ensure those not listed are not included.
+
+## Phylum Web App
+
+The [Phylum web app][phylum_ui] can be used to specify individual lockfiles (it does not handle manifests) to analyze. Lockfile selection is a manual process so excluding files means simply not selecting them.
 
 ## Examples
 
