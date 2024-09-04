@@ -7,7 +7,7 @@ Phylum for Cargo is based on Cargo's sparse [Registry Index API].
 ## Configuration
 
 All configuration options will require a Phylum API key, since Phylum
-authentication. You can find out how to generate one in our
+requires authentication. You can find out how to generate one in our
 [API Keys documentation].
 
 In the following examples, all API keys will be represented as
