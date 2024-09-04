@@ -1,13 +1,13 @@
-# NPM Package Firewall
+# NPM Package Manager
 
-The NPM package firewall is based on NPM's [Public Registry API].
+Phylum for NPM is based on NPM's [Public Registry API].
 
 [Public Registry API]: https://github.com/npm/registry/blob/main/docs/REGISTRY-API.md
 
 ## Configuration
 
-All configuration options will require a Phylum API key, since Phylum's package
-firewall requires authentication. You can find out how to generate one in our
+All configuration options will require a Phylum API key, since Phylum
+requires authentication. You can find out how to generate one in our
 [API Keys documentation].
 
 In the following examples, all API keys will be represented as
