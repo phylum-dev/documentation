@@ -1,13 +1,13 @@
-# Cargo Package Firewall
+# Cargo Package Manager
 
-The Cargo package firewall is based on Cargo's sparse [Registry Index API].
+Phylum for Cargo is based on Cargo's sparse [Registry Index API].
 
 [Registry Index API]: https://doc.rust-lang.org/cargo/reference/registry-index.html
 
 ## Configuration
 
-All configuration options will require a Phylum API key, since Phylum's package
-firewall requires authentication. You can find out how to generate one in our
+All configuration options will require a Phylum API key, since Phylum
+authentication. You can find out how to generate one in our
 [API Keys documentation].
 
 In the following examples, all API keys will be represented as
@@ -24,7 +24,7 @@ If Phylum's default [policy] is sufficient, you can remove all instances of
 [API Keys documentation]: ../knowledge_base/api-keys.md#generate-an-api-key
 [policy]: ../knowledge_base/policy.md
 
-### cargo
+### Cargo
 
 To use Phylum's Cargo registry, it first needs to be added to a
 [`.cargo/config.toml` file]. On UNIX you can use `~/.cargo/config.toml` to make
