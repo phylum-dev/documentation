@@ -9,7 +9,7 @@ The current Continuous Integration (CI) platforms/environments supported are:
 
 | Platform/Environment | Information Link |
 | -------------------- | ---------------- |
-| GitHub App | [Documentation][github_app_docs] <br /> [GitHub Marketplace][github_marketplace] |
+| GitHub App | [Documentation][github_app_docs] <br> [GitHub Marketplace][github_marketplace] |
 | GitHub Actions | [Documentation][github_action_docs] |
 | GitLab CI | [Documentation][gitlab_docs] |
 | Azure Pipelines | [Documentation][azure_docs] |
