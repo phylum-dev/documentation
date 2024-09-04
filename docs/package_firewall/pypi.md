@@ -1,13 +1,13 @@
-# PyPI Package Firewall
+# PyPI Package Manager
 
-The PyPI package firewall is based on Python's [Simple repository API].
+Phylum for PyPI is based on Python's [Simple repository API].
 
 [Simple repository API]: https://packaging.python.org/en/latest/specifications/simple-repository-api/
 
 ## Configuration
 
-All configuration options will require a Phylum API key, since Phylum's package
-firewall requires authentication. You can find out how to generate one in our
+All configuration options will require a Phylum API key, since Phylum
+requires authentication. You can find out how to generate one in our
 [API Keys documentation].
 
 In the following examples, all API keys will be represented as
