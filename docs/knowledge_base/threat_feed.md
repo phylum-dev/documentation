@@ -18,6 +18,8 @@ The Phylum threat feed provides a curated view into malware being released acros
     curl https://threats.phylum.io -H "Authorization: Bearer $PHYLUM_API"
     ```
 
+If you prefer [cursor based pagination](#cursor-based-pagination), the threat feed also supports this.
+
 ## API Response
 
 - `has_next` - `true` if there is another page available in the feed
@@ -96,4 +98,51 @@ For example, if you want to limit the items per page to 3 since July 19, 2023 yo
 
 ```text
 https://threats.phylum.io/?per_page=3&since=2023-07-19
+```
+
+## Cursor Based Pagination
+
+The threat feed supports cursor based pagination. By providing the `cursor` parameter you can iterate through the data in a guaranteed order. For example:
+
+```bash
+curl "https://threats.phylum.io/?cursor=84" -H "Authorization: Bearer $PHYLUM_API"
+```
+
+If additional rows exist, the response will include the next cursor in the `cursor` key. The cursor value will be `null` when no additional rows exist.
+
+```json
+{
+  "cursor": 2722653,
+  "packages": [
+    {
+      "created": "Wed, 28 Aug 2024 22:24:28 GMT",
+      "ecosystem": "npm",
+      "hashes": null,
+      "indicators": {
+        "npm_security_holding_rule": true,
+        "triaged_malware_rule": true
+      },
+      "name": "@hishprorg/sequi-perspiciatis",
+      "version": "0.0.1-security"
+    },
+    {
+      "created": "Wed, 28 Aug 2024 23:29:13 GMT",
+      "ecosystem": "npm",
+      "hashes": null,
+      "indicators": {
+        "npm_security_holding_rule": true,
+        "triaged_malware_rule": true
+      },
+      "name": "@hishprorg/necessitatibus-minus-quos",
+      "version": "0.0.1-security"
+    }
+  ]
+}
+```
+
+For cursor based data retrieval, you can provide the `per_page` query parameter. This will allow you to define how many
+rows will be returned. The default is `25` and the upper limit is `50`.
+
+```bash
+curl "https://threats.phylum.io/?cursor=84&per_page=10" -H "Authorization: Bearer $PHYLUM_API"
 ```

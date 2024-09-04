@@ -2,11 +2,13 @@
 
 Phylum projects are used to represent a software project; often a git repository. A Phylum project organizes the dependencies and findings for your software project. This page enumerates the ways a Phylum project can be created.
 
-> **NOTE:** Project creation does not trigger an analysis of the project. Instead, the [`phylum analyze`](../cli/commands/phylum_analyze.md) command will trigger an analysis job and organize the results in the specified Phylum project.
-
 ## Walkthrough
 
 ### Phylum CLI
+
+> ⚠️ **INFO** ⚠️
+>
+> Project creation with the Phylum CLI does not trigger an analysis of the project. Instead, the [`phylum analyze`](../cli/commands/phylum_analyze.md) command will trigger an analysis job and organize the results in the specified Phylum project.
 
 ---
 
@@ -29,7 +31,11 @@ Project Group: demo-group
 Select your project's lockfiles and manifests: ./requirements.txt
 
 ✅ Successfully created project configuration
+```
 
+Notice that the command created a [`.phylum_project` file](./phylum_project_files.md) in the working directory:
+
+```shellsession
 ❯ cat .phylum_project
 id: 49158d65-76aa-46f2-89f3-6a50419cfc3d
 name: a-phylum-demo
@@ -47,7 +53,7 @@ lockfiles:
 1. Navigate to the directory of the relevant software project
 2. Use the [CLI tool](../cli/quickstart.md) to create a new Phylum project
 
-Note: This will create a `.phylum_project` file in the current directory
+Note: This will create a [`.phylum_project` file](./phylum_project_files.md) in the current directory
 
 Example:
 
@@ -57,7 +63,7 @@ phylum project create sample
 
 ### Phylum-CI
 
-The [`phylum-ci` tool](https://pypi.org/project/phylum/) accepts a `--project` option to explicitly provide the name of a Phylum project to create and use to perform the analysis. You can also specify this option's value in the `.phylum_project` file. A project name provided as an input option will be preferred over an entry in the `.phylum_project` file.
+The [`phylum-ci` tool](https://pypi.org/project/phylum/) accepts a `--project` option to explicitly provide the name of a Phylum project to create and use to perform the analysis. You can also specify this option's value in the [`.phylum_project` file](./phylum_project_files.md). A project name provided as an input option will be preferred over an entry in the `.phylum_project` file.
 
 When no project name is provided through options or project file, a project name will be provided by detecting the git repository name. The goal is a unique and deterministic project name for each git repository submitted by the same Phylum user account.
 
@@ -77,6 +83,15 @@ phylum-ci
 ### GitHub App
 
 1. The [Phylum GitHub App](../integrations/github_app.md) will automatically create a Phylum project when monitoring is activated for a given repository. The Phylum project will be assigned the same name as the repository.
+
+### Phylum Web App
+
+The [Phylum web app](https://app.phylum.io/) allows for project creation from the `Projects` tab of the main page:
+
+1. Click the `New Project` button
+2. Provide a project name
+3. Optionally provide a default label, a group, and lockfiles
+4. Click the `Create` button
 
 ## FAQ
 

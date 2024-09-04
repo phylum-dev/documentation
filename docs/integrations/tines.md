@@ -17,7 +17,7 @@ Name your new credential `Phylum` and populate the fields as follows:
 | URL | `https://login.phylum.io/realms/phylum/protocol/openid-connect/token` |
 | Content type | Form |
 | Method | post |
-| Builder | `{` <br />`"client_id": "phylum_cli",` <br />`"grant_type": "refresh_token",` <br />`"refresh_token": "<YourPhylumRefreshToken>"` <br />`}` |
+| Builder | `{` <br>`"client_id": "phylum_cli",` <br>`"grant_type": "refresh_token",` <br>`"refresh_token": "<YourPhylumRefreshToken>"` <br>`}` |
 | Headers | `Content-Type: application/x-www-form-urlencoded`  |
 | Location of token from response | `REGEX_REPLACE( JSONPATH(phylum,"$.body.access_token"), "[\[\]\"]", "")` |
 | Domains | `*.phylum.io` |
