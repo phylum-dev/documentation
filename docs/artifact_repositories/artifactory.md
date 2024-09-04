@@ -11,7 +11,7 @@ registry (e.g., PyPI, npm, etc.) while ensuring that packages that enter your
 organization’s Artifactory adhere to the policy you have defined regarding the
 acceptable use of open source libraries/packages.
 
-## Create a New Remote Registry
+## Create a New Remote Repository
 
 1. Create a remote repository for Phylum. Navigate to `Repositories > Administration`
    and click the green `Create a Repository` button in the top right and select `Remote`.
@@ -19,7 +19,7 @@ acceptable use of open source libraries/packages.
    ![Artifactory_create_repo](../../assets/artifactory_create_repo.png)
 
 2. Select the appropriate package repository to which you would like to apply the
-   policy. Phylum currently supports the ecosystems listed [here](./about.md#supported-ecosystems).
+   policy. [Phylum supported ecosystems](./about.md#supported-ecosystems).
 
    ![Artifactory_select_ecosystem](../../assets/artifactory_select_ecosystem.png)
 
@@ -28,8 +28,8 @@ acceptable use of open source libraries/packages.
    previously defined your policy.
 5. In the `Password/Access Token` field, enter an API key with permission to
    access this group.
-6. In the `Registry URL` field, enter the Phylum registry
-   [URL](./about.md#supported-ecosystems) for the ecosystem you are configuring.
+6. In the `URL` field, enter the Phylum registry [URL](./about.md#supported-ecosystems)
+   for the ecosystem you are configuring.
 7. Under the `Advanced` tab, click the checkbox next to `Lenient Host Authentication`.
    This will ensure that redirects (e.g., `HTTP 301`) are allowed and that requests
    to the repository succeed.
@@ -43,8 +43,8 @@ giving you a single host to use in your configuration. This makes the
 decision-making process for pulling a package from your local or remote artifacts
 opaque to the end user.
 
-Once you have created a remote registry for Phylum, you should update your virtual
-registry to use it.
+Once you have created a remote repository for Phylum, you should update your virtual
+repository to use it.
 
 1. Under `Repositories > Administration` locate your virtual repository. Click on
    the virtual repository you want to update.
