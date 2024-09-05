@@ -36,8 +36,6 @@ Instructions for configuring Phylum for Artifact Repositories:
 | PyPI | [Documentation][PyPI] |
 | NPM | [Documentation][NPM] |
 | Cargo | [Documentation][Cargo] |
-
-
 [Artifactory]: ./artifactory.md
 [PyPI]: ./pypi.md
 [NPM]: ./npm.md
