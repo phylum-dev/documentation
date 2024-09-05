@@ -19,7 +19,7 @@ acceptable use of open source libraries/packages.
    ![Artifactory_create_repo](../../assets/artifactory_create_repo.png)
 
 2. Select the appropriate package repository to which you would like to apply the
-   policy. [Phylum supported ecosystems](./about.md#supported-ecosystems).
+   policy. See current [Phylum supported ecosystems here](./about.md#supported-ecosystems).
 
    ![Artifactory_select_ecosystem](../../assets/artifactory_select_ecosystem.png)
 
