@@ -26,8 +26,8 @@ acceptable use of open source libraries/packages.
 3. Provide a name for your remote repository in the `Repository Key` field.
 4. In the `User Name` field enter the name of the Phylum group where you
    previously defined your policy.
-5. In the `Password/Access Token` field, enter an API key with permission to
-   access this group.
+5. In the `Password/Access Token` field, enter a [Phylum API key](../knowledge_base/api-keys.md)
+   with permission to access this group.
 6. In the `URL` field, enter the [Phylum registry URL](./about.md#supported-ecosystems)
    for the ecosystem you are configuring.
 7. Under the `Advanced` tab, click the checkbox next to `Lenient Host Authentication`.
