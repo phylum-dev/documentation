@@ -28,7 +28,7 @@ acceptable use of open source libraries/packages.
    previously defined your policy.
 5. In the `Password/Access Token` field, enter an API key with permission to
    access this group.
-6. In the `URL` field, enter the Phylum registry [URL](./about.md#supported-ecosystems)
+6. In the `URL` field, enter the [Phylum registry URL](./about.md#supported-ecosystems)
    for the ecosystem you are configuring.
 7. Under the `Advanced` tab, click the checkbox next to `Lenient Host Authentication`.
    This will ensure that redirects (e.g., `HTTP 301`) are allowed and that requests
