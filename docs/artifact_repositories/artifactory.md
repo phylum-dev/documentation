@@ -60,6 +60,8 @@ repository to use it.
    the checkbox next to its name and clicking the green arrows pointing to the left.
 
    ![Artifactory_select_repo_2](../../assets/artifactory_select_repo_2.png)
+   
+   ---
 
    ![Artifactory_select_repo_3](../../assets/artifactory_select_repo_3.png)
 
