@@ -1,6 +1,6 @@
 # Artifactory
 
-Artifactory can handle both local and remote repositories. Local registries can
+Artifactory can handle both local and remote repositories. Local repositories can
 store and serve your internal packages; whereas, remote repositories will pull
 packages from an external (sometimes third-party) source. PyPI in the Python
 ecosystem would be an example of a remote repository in the context of your
