@@ -26,7 +26,7 @@ If Phylum's default [policy] is sufficient, you can remove all instances of
 
 ### pip
 
-The easiest way to install a package using the PyPI package firewall is using
+The easiest way to install a package using Phylum for PyPI is using
 pip's `--index-url` option:
 
 ```sh
