@@ -37,7 +37,6 @@ acceptable use of open source libraries/packages.
    ![Artifactory_lenient_host_auth](../../assets/artifactory_lenient_host_auth.png)
 
 ## Update Virtual Repository
-   
 Virtual repositories in Artifactory overlay all your local and remote repositories,
 giving you a single host to use in your configuration. This makes the
 decision-making process for pulling a package from your local or remote artifacts
