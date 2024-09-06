@@ -73,4 +73,3 @@ repository to use it.
 5. Save your settings using the green `Save` button at the bottom right of the screen.
 
    ![Artifactory_select_repo_5](../../assets/artifactory_select_repo_5.png)
- 
