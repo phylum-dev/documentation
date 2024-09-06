@@ -54,7 +54,7 @@ ERROR: No matching distribution found for <malicious>
 If a version range is accepted by the manifest, the package manager will
 automatically attempt to use a version that passes Phylum's policy.
 
-### Poetry
+### poetry
 
 With Poetry, the source URL can be configured per-project in the
 `pyproject.toml` file by using the following commands from within the project
