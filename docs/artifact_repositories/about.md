@@ -13,11 +13,11 @@ package or version that violates the policy.
 The following table shows the supported registries and the URLs under which they
 are hosted:
 
-| Ecosystem | URL                            |
-| --------- | ------------------------------ |
-| PyPI      | https://pypi.phylum.io/simple/ |
-| NPM       | https://npm.phylum.io/         |
-| Cargo     | https://cargo.phylum.io/       |
+| Ecosystem | URL |
+| --------- | --- |
+| PyPI | <https://pypi.phylum.io/simple/> |
+| NPM | <https://npm.phylum.io/> |
+| Cargo | <https://cargo.phylum.io/> |
 
 ## Configuration
 
@@ -32,7 +32,7 @@ Instructions for configuring Phylum for artifact repositories and package manage
 ### Package Managers
 
 | Ecosystem | Information Link |
-| --------------- | ---------------- |
+| --------- | ---------------- |
 | PyPI | [Documentation][PyPI] |
 | NPM | [Documentation][NPM] |
 | Cargo | [Documentation][Cargo] |
