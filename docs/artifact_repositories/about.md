@@ -1,11 +1,11 @@
 # Artifact Repositories
 
-Phylum for Artifact Repositories allows users to configure their artifact
+Phylum for artifact repositories allows users to configure their artifact
 repositories and/or package managers to block untrusted packages.
 
 ## How It Works
 Instead of pointing your system to the primary ecosystem registry, configure
-it to point to Phylum. Set your Phylum policy and Phylum will block any
+it to point to Phylum. [Set your Phylum policy](../knowledge_base/policy.md) and Phylum will block any
 package or version that violates the policy.
 
 ## Supported Ecosystems
@@ -21,7 +21,7 @@ are hosted:
 
 ## Configuration
 
-Instructions for configuring Phylum for Artifact Repositories:
+Instructions for configuring Phylum for artifact repositories and package managers:
 
 ### Artifact Repositories
 
@@ -31,11 +31,12 @@ Instructions for configuring Phylum for Artifact Repositories:
 
 ### Package Managers
 
-| Package Manager | Information Link |
+| Ecosystem | Information Link |
 | --------------- | ---------------- |
 | PyPI | [Documentation][PyPI] |
 | NPM | [Documentation][NPM] |
 | Cargo | [Documentation][Cargo] |
+
 [Artifactory]: ./artifactory.md
 [PyPI]: ./pypi.md
 [NPM]: ./npm.md
