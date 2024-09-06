@@ -24,7 +24,7 @@ If Phylum's default [policy] is sufficient, you can remove all instances of
 [API Keys documentation]: ../knowledge_base/api-keys.md#generate-an-api-key
 [policy]: ../knowledge_base/policy.md
 
-### Cargo
+### cargo
 
 To use Phylum's Cargo registry, it first needs to be added to a
 [`.cargo/config.toml` file]. On UNIX you can use `~/.cargo/config.toml` to make
