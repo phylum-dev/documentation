@@ -1,13 +1,13 @@
-# Cargo Package Manager
+# Phylum Cargo Registry
 
-Phylum for Cargo is based on Cargo's sparse [Registry Index API].
+The Phylum Cargo registry is based on Cargo's sparse [Registry Index API].
 
 [Registry Index API]: https://doc.rust-lang.org/cargo/reference/registry-index.html
 
 ## Configuration
 
-All configuration options will require a Phylum API key, since Phylum
-requires authentication. You can find out how to generate one in our
+All configuration options will require a Phylum API key, since Phylum requires
+authentication. You can find out how to generate one in our
 [API Keys documentation].
 
 In the following examples, all API keys will be represented as
@@ -24,9 +24,9 @@ If Phylum's default [policy] is sufficient, you can remove all instances of
 [API Keys documentation]: ../knowledge_base/api-keys.md#generate-an-api-key
 [policy]: ../knowledge_base/policy.md
 
-### cargo
+### `cargo`
 
-To use Phylum's Cargo registry, it first needs to be added to a
+To use the Phylum Cargo registry, it first needs to be added to a
 [`.cargo/config.toml` file]. On UNIX you can use `~/.cargo/config.toml` to make
 the registry available to all projects.
 
@@ -93,7 +93,7 @@ token = "Basic <BASE64_OUTPUT>"
 [`.cargo/config.toml` file]: https://doc.rust-lang.org/cargo/reference/config.html
 [`.cargo/credentials.toml` file]: https://doc.rust-lang.org/nightly/cargo/reference/config.html#credentials
 
-A blocked package will show up in `cargo` as missing:
+A blocked package will show up in `cargo` output as missing:
 
 ```text
     Updating `phylum` index
