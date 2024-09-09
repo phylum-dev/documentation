@@ -255,7 +255,13 @@ const config = {
         // This function seeks to account for the bulk of the changes made during the
         // switch from Readme.com to Docusaurus SSG output hosted on GitHub Pages.
         // It redirects from the old flat "/docs/X" namespace to the new path-based namespaces.
+        // It is also used to account for bulk changes since then.
         createRedirects(existingPath) {
+          // Account for the bulk change from "package_firewall" to "artifact_repositories"
+          if (existingPath.includes('/artifact_repositories/')) {
+            return existingPath.replace('/artifact_repositories/', '/package_firewall/');
+          }
+
           // Ensure paths with the same starting elements are listed with the longest matching paths first
           const newPathElements = [
             '/analytics/',

@@ -1,13 +1,13 @@
-# NPM Package Firewall
+# Phylum NPM Registry
 
-The NPM package firewall is based on NPM's [Public Registry API].
+The Phylum NPM registry is based on NPM's [Public Registry API].
 
 [Public Registry API]: https://github.com/npm/registry/blob/main/docs/REGISTRY-API.md
 
 ## Configuration
 
-All configuration options will require a Phylum API key, since Phylum's package
-firewall requires authentication. You can find out how to generate one in our
+All configuration options will require a Phylum API key, since Phylum requires
+authentication. You can find out how to generate one in our
 [API Keys documentation].
 
 In the following examples, all API keys will be represented as
@@ -24,9 +24,9 @@ If Phylum's default [policy] is sufficient, you can remove all instances of
 [API Keys documentation]: ../knowledge_base/api-keys.md#generate-an-api-key
 [policy]: ../knowledge_base/policy.md
 
-### npm
+### `npm`
 
-Custom NPM registries can be configured with npm:
+Custom NPM registries can be configured with `npm`:
 
 ```sh
 npm config set replace-registry-host never
@@ -37,7 +37,7 @@ npm config set registry https://<PHYLUM_GROUP>:<PHYLUM_API_KEY>@npm.phylum.io/
 >
 > Do not accidentally save your token into your shell history.
 
-A blocked package will show up in `npm` as missing:
+A blocked package will show up in `npm` output as missing:
 
 ```text
 npm error code E404

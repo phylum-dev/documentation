@@ -55,7 +55,7 @@ The first of these methods to yield dependency file will be used and no further 
 
 An `--exclude` option exists to filter the list of dependency files detected (methods 2 and 3) when they aren't specified explicitly by argument (method 1). This option takes [gitignore-style exclusion patterns][gitignore_patterns] and can be specified multiple times. The `EXCLUDE` patterns should be specified in quotes to prevent shell globbing. The patterns are applied relative to the current `phylum-ci` working directory.
 
-There are the various ways exclusions can be provided, shown here with the `phylum-ci` tool used locally:
+There are various ways exclusions can be provided, shown here with the `phylum-ci` tool used locally:
 
 ```sh
 ## Specify a single gitignore-style exclusion pattern

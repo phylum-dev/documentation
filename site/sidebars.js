@@ -122,15 +122,16 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'Package Firewall',
+      label: 'Artifact Repositories',
       link: {
         type: 'doc',
-        id: 'package_firewall/about',
+        id: 'artifact_repositories/about',
       },
       items: [
-        'package_firewall/pypi',
-        'package_firewall/npm',
-        'package_firewall/cargo',
+        'artifact_repositories/artifactory',
+        'artifact_repositories/pypi',
+        'artifact_repositories/npm',
+        'artifact_repositories/cargo',
       ],
     },
     {
