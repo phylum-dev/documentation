@@ -158,7 +158,7 @@ When audit mode is enabled, Phylum still analyzes pull requests and results are 
 >
 > There are more FAQs in the [Phylum Knowledge Base][phylum_kb_faq].
 
-[phylum_kb_faq]: https://docs.phylum.io/knowledge_base/faq
+[phylum_kb_faq]: ../knowledge_base/faq.md
 
 ### I activated monitoring, but it didn't run a scan. How do I get analysis results?
 
