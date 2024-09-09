@@ -146,13 +146,19 @@ Enabling audit mode for an installation of the Phylum GitHub app temporarily dis
 
 When audit mode is enabled, Phylum still analyzes pull requests and results are still visible in the Phylum UI. However:
 
-- No comments are added to pull requests.
-- The commit check status for policy violations changes from failed to neutral, allowing the PR to be merged.
-- A message about audit mode being enabled is appended to the commit check details for commits that would have otherwise failed.
+* No comments are added to pull requests.
+* The commit check status for policy violations changes from failed to neutral, allowing the PR to be merged.
+* A message about audit mode being enabled is appended to the commit check details for commits that would have otherwise failed.
 
 ![GitHub check result details showing a neutral result because of audit mode](../../assets/gh_app_check_details_audit_neutral.png)
 
 ## FAQ
+
+> 💡 **INFO** 💡
+>
+> There are more FAQs in the [Phylum Knowledge Base][phylum_kb_faq].
+
+[phylum_kb_faq]: https://docs.phylum.io/knowledge_base/faq
 
 ### I activated monitoring, but it didn't run a scan. How do I get analysis results?
 
