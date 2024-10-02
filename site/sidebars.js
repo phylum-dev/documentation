@@ -132,6 +132,7 @@ const sidebars = {
         'artifact_repositories/pypi',
         'artifact_repositories/npm',
         'artifact_repositories/cargo',
+        'artifact_repositories/api',
       ],
     },
     {
