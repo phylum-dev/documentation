@@ -9,7 +9,7 @@ through a repository proxy fails analysis.
 
 To setup a new webhook, you can use the following curl command:
 
-```
+```sh
 # Phylum group used with the registry proxy.
 export PHYLUM_GROUP=…
 # https://docs.phylum.io/knowledge_base/api-keys#generate-an-api-key
@@ -39,7 +39,7 @@ of the sha256 hmac of the response body.
 
 If a webhook is no longer in use, it should be deleted:
 
-```
+```sh
 # Phylum group used with the registry proxy.
 export PHYLUM_GROUP=…
 # https://docs.phylum.io/knowledge_base/api-keys#generate-an-api-key
