@@ -39,6 +39,12 @@ registries:
 | NPM | [Documentation][NPM] |
 | Cargo | [Documentation][Cargo] |
 
+### Notification API
+
+Phylum supports sending out notifications whenever a package fails analysis. To
+receive those notifications, you can [setup webhooks].
+
+[setup webhooks]: ./api.md#webhooks
 [Artifactory]: ./artifactory.md
 [PyPI]: ./pypi.md
 [NPM]: ./npm.md
