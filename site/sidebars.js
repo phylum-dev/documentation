@@ -130,6 +130,7 @@ const sidebars = {
       items: [
         'artifact_repositories/artifactory',
         'artifact_repositories/cargo',
+        'artifact_repositories/maven',
         'artifact_repositories/npm',
         'artifact_repositories/pypi',
         'artifact_repositories/rubygems',
