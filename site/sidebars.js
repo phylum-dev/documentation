@@ -132,7 +132,7 @@ const sidebars = {
         'artifact_repositories/cargo',
         'artifact_repositories/npm',
         'artifact_repositories/pypi',
-        'artifact_repositories/ruby',
+        'artifact_repositories/rubygems',
         'artifact_repositories/api',
       ],
     },
