@@ -14,11 +14,13 @@ Phylum will block any package or version that violates the policy.
 The following table shows the supported ecosystem registries and the custom
 Phylum registry URLs under which they are hosted:
 
-| Ecosystem | Phylum Registry URL |
-| --------- | ------------------- |
-| PyPI | <https://pypi.phylum.io/simple/> |
-| NPM | <https://npm.phylum.io/> |
-| Cargo | <https://cargo.phylum.io/> |
+| Ecosystem | Phylum Registry URL              |
+| --------- | -------------------------------- |
+| Cargo     | <https://cargo.phylum.io/>       |
+| Maven     | <https://maven.phylum.io/>       |
+| NPM       | <https://npm.phylum.io/>         |
+| PyPI      | <https://pypi.phylum.io/simple/> |
+| RubyGems  | <https://cargo.phylum.io/>       |
 
 ## Configuration
 
@@ -33,11 +35,13 @@ registries:
 
 ### Package Registries
 
-| Ecosystem | Information Link |
-| --------- | ---------------- |
-| PyPI | [Documentation][PyPI] |
-| NPM | [Documentation][NPM] |
-| Cargo | [Documentation][Cargo] |
+| Ecosystem | Information Link          |
+| --------- | ------------------------- |
+| Cargo     | [Documentation][Cargo]    |
+| Maven     | [Documentation][Maven]    |
+| NPM       | [Documentation][NPM]      |
+| PyPI      | [Documentation][PyPI]     |
+| RubyGems  | [Documentation][RubyGems] |
 
 ### Notification API
 
@@ -46,6 +50,8 @@ receive those notifications, you can [setup webhooks].
 
 [setup webhooks]: ./api.md#webhooks
 [Artifactory]: ./artifactory.md
-[PyPI]: ./pypi.md
-[NPM]: ./npm.md
 [Cargo]: ./cargo.md
+[Maven]: ./maven.md
+[NPM]: ./npm.md
+[PyPI]: ./pypi.md
+[RubyGems]: ./rubygems.md
