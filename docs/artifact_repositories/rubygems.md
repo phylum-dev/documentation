@@ -35,7 +35,7 @@ bundle config set --global mirror.https://rubygems.org https://rubygems.phylum.i
 bundle config set --global mirror.https://rubygems.org.fallback_timeout 9999
 ```
 
-After setting up the mirror, you also need to provide phylum's group and API key
+After setting up the mirror, you also need to provide Phylum's group and API key
 for authorization:
 
 ```sh
