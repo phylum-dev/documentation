@@ -19,7 +19,7 @@ Phylum registry URLs under which they are hosted:
 | Cargo     | <https://cargo.phylum.io/>       |
 | NPM       | <https://npm.phylum.io/>         |
 | PyPI      | <https://pypi.phylum.io/simple/> |
-| RubyGems  | <https://cargo.phylum.io/>       |
+| RubyGems  | <https://rubygems.phylum.io/>    |
 
 ## Configuration
 
