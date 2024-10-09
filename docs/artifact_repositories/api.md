@@ -26,6 +26,10 @@ curl \
     "https://aviary.phylum.io/webhooks"
 ```
 
+> ⚠️ **WARNING** ⚠️
+>
+> Do not accidentally save your token into your shell history.
+
 Once a webhook is registered, policy violations will be sent to it in the same
 format as the [package check endpoint].
 
@@ -53,5 +57,29 @@ curl \
     --user "$PHYLUM_GROUP:$PHYLUM_API_KEY" \
     "https://aviary.phylum.io/webhooks/$WEBHOOK_URL"
 ```
+
+> ⚠️ **WARNING** ⚠️
+>
+> Do not accidentally save your token into your shell history.
+
+### Retreiving configured Webhooks
+
+To get a list with all configured webhook URLs for a group, you can send a `GET`
+request to the `/webhooks` endpoint:
+
+```sh
+# Phylum group used with the registry proxy.
+export PHYLUM_GROUP=…
+# https://docs.phylum.io/knowledge_base/api-keys#generate-an-api-key
+export PHYLUM_API_KEY=…
+
+curl \
+    --user "$PHYLUM_GROUP:$PHYLUM_API_KEY" \
+    "https://aviary.phylum.io/webhooks"
+```
+
+> ⚠️ **WARNING** ⚠️
+>
+> Do not accidentally save your token into your shell history.
 
 [package check endpoint]: https://api.phylum.io/api/v0/swagger/index.html#/Organizations/organizations_group_packages_check
