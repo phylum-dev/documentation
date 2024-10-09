@@ -62,7 +62,7 @@ curl \
 >
 > Do not accidentally save your token into your shell history.
 
-### Retreiving configured Webhooks
+### Retrieving configured Webhooks
 
 To get a list with all configured webhook URLs for a group, you can send a `GET`
 request to the `/webhooks` endpoint:
