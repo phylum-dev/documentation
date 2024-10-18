@@ -72,7 +72,7 @@ global-credential-providers = ["cargo:token"]
 Once the file-based `cargo:token` credential provider is configured, you can add
 your authentication details to the [`.cargo/credentials.toml` file].
 
-The Phylum group and API key first need to be converted to Base64:
+The Phylum org, group, and API key first need to be converted to Base64:
 
 ```text
 printf "<PHYLUM_ORG>/<PHYLUM_GROUP>:<PHYLUM_API_KEY>" | base64
