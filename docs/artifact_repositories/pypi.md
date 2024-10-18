@@ -15,11 +15,11 @@ In the following examples, all API keys will be represented as
 
 Additionally, if the default policy is not sufficient, a group can be passed to
 evaluate all packages against the group's policy. To do this, just replace
-`<PHYLUM_GROUP>` with the desired group name. The supplied API key **must** have
-access to this group.
+`<PHYLUM_ORG>` and `<PHYLUM_GROUP>` with the desired org and group name. The
+supplied API key **must** have access to this group.
 
-If Phylum's default [policy] is sufficient, you can remove all instances of
-`<PHYLUM_GROUP>`.
+If Phylum's default [policy] is sufficient, you can omit the username from the
+authentication details.
 
 [API Keys documentation]: ../knowledge_base/api-keys.md#generate-an-api-key
 [policy]: ../knowledge_base/policy.md
@@ -30,14 +30,14 @@ The easiest way to install a package using the Phylum PyPI registry is using
 `pip`'s `--index-url` option:
 
 ```sh
-pip install --index-url https://<PHYLUM_GROUP>:<PHYLUM_API_KEY>@pypi.phylum.io/simple/ <requirement specifier>
+pip install --index-url https://<PHYLUM_ORG>%2F<PHYLUM_GROUP>:<PHYLUM_API_KEY>@pypi.phylum.io/simple/ <requirement specifier>
 ```
 
 To make this permanent for all `pip` invocations, you can add it to the `pip`
 configuration:
 
 ```sh
-pip config set global.index-url https://<PHYLUM_GROUP>:<PHYLUM_API_KEY>@pypi.phylum.io/simple/
+pip config set global.index-url https://<PHYLUM_ORG>%2F<PHYLUM_GROUP>:<PHYLUM_API_KEY>@pypi.phylum.io/simple/
 ```
 
 > ⚠️ **WARNING** ⚠️
@@ -62,7 +62,7 @@ directory:
 
 ```sh
 poetry source add phylum https://pypi.phylum.io/simple/
-poetry config http-basic.phylum "<PHYLUM_GROUP>" "<PHYLUM_API_KEY>"
+poetry config http-basic.phylum "<PHYLUM_ORG>%2F<PHYLUM_GROUP>" "<PHYLUM_API_KEY>"
 ```
 
 > ⚠️ **WARNING** ⚠️
