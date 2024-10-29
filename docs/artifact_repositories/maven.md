@@ -82,7 +82,7 @@ A blocked package will show up in `mvn` output as missing:
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal on project demo: Could not collect dependencies for project io.phylum:demo:jar:1.0-SNAPSHOT
 [ERROR] Failed to read artifact descriptor for commons-io:commons-io:jar:2.17.0
-[ERROR] 	Caused by: The following artifacts could not be resolved: commons-io:commons-io:pom:2.17.0 (absent): Could not transfer artifact commons-io:commons-io:pom:2.17.0 from/to phylum (https://maven.phylum.io): status code: 424, reason phrase: Failed Dependency (424)
+[ERROR]     Caused by: The following artifacts could not be resolved: commons-io:commons-io:pom:2.17.0 (absent): Could not transfer artifact commons-io:commons-io:pom:2.17.0 from/to phylum (https://maven.phylum.io): status code: 424, reason phrase: Failed Dependency (424)
 [ERROR]
 [ERROR] -> [Help 1]
 [ERROR]
