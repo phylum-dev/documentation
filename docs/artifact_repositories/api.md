@@ -9,11 +9,11 @@ Repository API. The full API is documented on [Swagger].
 
 The Artifact Repository API expects authentication in the basic auth format. The
 username is optional and provides context for which group should be used for the
-request. The group itself must either be the group name itself, for standalone
-groups, or the organization and group name combined using a `/`.
+request. The group must either be the group name itself, for standalone groups,
+or the organization and group name combined using a `/`.
 
-The following script will create a valid token for the org `phylum`, group
-`demo`, and with the token stored in `$PHYLUM_API_KEY`:
+The following script will create a valid authorization token for the org
+`phylum`, group `demo`, and with the token stored in `$PHYLUM_API_KEY`:
 
 ```sh
 echo "Basic $(printf \"phylum/demo:$PHYLUM_API_KEY\" | base64)"
