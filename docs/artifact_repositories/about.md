@@ -17,6 +17,7 @@ Phylum registry URLs under which they are hosted:
 | Ecosystem | Phylum Registry URL              |
 | --------- | -------------------------------- |
 | Cargo     | <https://cargo.phylum.io/>       |
+| Maven     | <https://maven.phylum.io/>       |
 | NPM       | <https://npm.phylum.io/>         |
 | PyPI      | <https://pypi.phylum.io/simple/> |
 | RubyGems  | <https://rubygems.phylum.io/>    |
@@ -37,6 +38,7 @@ registries:
 | Ecosystem | Information Link          |
 | --------- | ------------------------- |
 | Cargo     | [Documentation][Cargo]    |
+| Maven     | [Documentation][Maven]    |
 | NPM       | [Documentation][NPM]      |
 | PyPI      | [Documentation][PyPI]     |
 | RubyGems  | [Documentation][RubyGems] |
@@ -49,6 +51,7 @@ receive those notifications, you can [setup webhooks].
 [setup webhooks]: ./api.md#webhooks
 [Artifactory]: ./artifactory.md
 [Cargo]: ./cargo.md
+[Maven]: ./maven.md
 [NPM]: ./npm.md
 [PyPI]: ./pypi.md
 [RubyGems]: ./rubygems.md
