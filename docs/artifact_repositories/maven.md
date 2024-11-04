@@ -13,13 +13,13 @@ authentication. You can find out how to generate one in our
 In the following examples, all API keys will be represented as
 `<PHYLUM_API_KEY>`, so make sure to replace them with your generated key.
 
-Additionally, if the default [policy] is not sufficient, a group can be passed
-to evaluate all packages against the group's policy. To do this, just replace
-`<PHYLUM_GROUP>` with the desired group name. The supplied API key **must** have
-access to this group.
+Additionally, if the default policy is not sufficient, a group can be passed to
+evaluate all packages against the group's policy. To do this, just replace
+`<PHYLUM_ORG>` and `<PHYLUM_GROUP>` with the desired org and group name. The
+supplied API key **must** have access to this group.
 
-If Phylum's default [policy] is sufficient, you can remove all instances of
-`<PHYLUM_GROUP>`.
+If Phylum's default [policy] is sufficient, you can omit the username from the
+authentication details.
 
 [API Keys documentation]: ../knowledge_base/api-keys.md#generate-an-api-key
 [policy]: ../knowledge_base/policy.md
@@ -27,10 +27,10 @@ If Phylum's default [policy] is sufficient, you can remove all instances of
 ### `mvn`
 
 The Phylum authorization header expects a token in Base64, so you first need to
-convert your Phylum group and API key:
+convert your Phylum org, group, and API key:
 
 ```sh
-printf "<PHYLUM_GROUP>:<PHYLUM_API_KEY>" | base64
+printf "<PHYLUM_ORG>/<PHYLUM_GROUP>:<PHYLUM_API_KEY>" | base64
 ```
 
 > ⚠️ **WARNING** ⚠️
