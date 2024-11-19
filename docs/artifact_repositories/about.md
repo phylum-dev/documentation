@@ -14,13 +14,14 @@ Phylum will block any package or version that violates the policy.
 The following table shows the supported ecosystem registries and the custom
 Phylum registry URLs under which they are hosted:
 
-| Ecosystem | Phylum Registry URL              |
-| --------- | -------------------------------- |
-| Cargo     | <https://cargo.phylum.io/>       |
-| Maven     | <https://maven.phylum.io/>       |
-| NPM       | <https://npm.phylum.io/>         |
-| PyPI      | <https://pypi.phylum.io/simple/> |
-| RubyGems  | <https://rubygems.phylum.io/>    |
+| Ecosystem | Phylum Registry URL                     |
+| --------- | --------------------------------------- |
+| Cargo     | <https://cargo.phylum.io/>              |
+| Maven     | <https://maven.phylum.io/>              |
+| NPM       | <https://npm.phylum.io/>                |
+| NuGet     | <https://nuget.phylum.io/v3/index.json> |
+| PyPI      | <https://pypi.phylum.io/simple/>        |
+| RubyGems  | <https://rubygems.phylum.io/>           |
 
 ## Configuration
 
@@ -40,6 +41,7 @@ registries:
 | Cargo     | [Documentation][Cargo]    |
 | Maven     | [Documentation][Maven]    |
 | NPM       | [Documentation][NPM]      |
+| NuGet     | [Documentation][NuGet]    |
 | PyPI      | [Documentation][PyPI]     |
 | RubyGems  | [Documentation][RubyGems] |
 
@@ -53,5 +55,6 @@ receive those notifications, you can [setup webhooks].
 [Cargo]: ./cargo.md
 [Maven]: ./maven.md
 [NPM]: ./npm.md
+[NuGet]: ./nuget.md
 [PyPI]: ./pypi.md
 [RubyGems]: ./rubygems.md
