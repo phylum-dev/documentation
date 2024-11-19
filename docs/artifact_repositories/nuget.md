@@ -60,8 +60,6 @@ A blocked package will show up in `dotnet` output as missing:
 If a version range is accepted by the manifest, the package manager will
 automatically attempt to use a version that passes Phylum's policy.
 
-[crates.io]: https://crates.io
-
 ### `nuget`
 
 To use the Phylum NuGet registry, the original nuget.org registry first needs to
@@ -96,5 +94,3 @@ Package 'Example.Vulnerable 1.2.3' is not found in the following primary source(
 
 If a version range is accepted by the manifest, the package manager will
 automatically attempt to use a version that passes Phylum's policy.
-
-[crates.io]: https://crates.io
