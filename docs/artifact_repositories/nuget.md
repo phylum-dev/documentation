@@ -38,7 +38,7 @@ you're not running Windows, you'll also have to add the
 `--store-password-in-clear-text` flag.
 
 ```sh
-dotnet nuget add source http://localhost:8080/v3/index.json \
+dotnet nuget add source https://nuget.phylum.io/v3/index.json \
     --protocol-version 3 \
     --name Phylum \
     --valid-authentication-types basic \
