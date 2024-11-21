@@ -8,12 +8,13 @@ The Phylum platform monitors for new issues that impact dependencies in your pro
 
 [notifications]: ../knowledge_base/notifications.md
 
-### Current job
+### Current Job
 
-A project's current job is the latest job that has been submitted with the project's default label. The default label can be set "Preferences" tab of the project in the Phylum App or [with the Phylum CLI][project_update].
+A project's current job is the latest job that has been submitted with the project's default label. The default label can be set from the "Preferences" tab of the project in the [Phylum UI][phylum_ui] or [with the Phylum CLI][project_update].
 
 If no default label has been set, the project's current job will be the latest job submitted, regardless of label.
 
+[phylum_ui]: https://app.phylum.io
 [project_update]: https://docs.phylum.io/cli/commands/phylum_project_update
 
 ## How to Activate
