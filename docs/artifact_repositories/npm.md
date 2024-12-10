@@ -100,16 +100,6 @@ A blocked package will show up in `yarn` output as missing:
     at async /home/chris/.cache/node/corepack/v1/yarn/4.5.3/yarn.js:402:488
 
 ➤ Errors happened when preparing the environment required to run this command.
-
-TODO: OR MAYBE THIS?
-
-➤ YN0027: malicious@unknown can't be resolved to a satisfying range
-➤ YN0035: Package not found
-➤ YN0035:   Response Code: 404 (Not Found)
-➤ YN0035:   Request Method: GET
-➤ YN0035:   Request URL: https://npm.phylum.io/malicious
-
-➤ Errors happened when preparing the environment required to run this command.
 ```
 
 Alternatively, if only a specific version is affected:
