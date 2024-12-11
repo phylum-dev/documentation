@@ -24,9 +24,9 @@ authentication details.
 [API Keys documentation]: ../knowledge_base/api-keys.md#generate-an-api-key
 [policy]: ../knowledge_base/policy.md
 
-### `npm`
+### `npm` and `pnpm`
 
-Custom NPM registries can be configured with `npm`:
+Both `npm` and `pnpm` allow setting custom NPM registries using `npm`:
 
 ```sh
 npm config set replace-registry-host never
@@ -58,5 +58,56 @@ npm error notarget In most cases you or one of your dependencies are requesting
 npm error notarget a package version that doesn't exist.
 ```
 
+If you're using `pnpm`, the output will look like this:
+
+```text
+ ERR_PNPM_NO_VERSIONS  No versions available for malicious. The package may be unpublished.
+
+This error happened while installing a direct dependency of /tmp/testing
+```
+
 If a version range is accepted by the manifest, the package manager will
 automatically attempt to use a version that passes Phylum's policy.
+
+### `yarn`
+
+Custom NPM registries can be configured with `yarn`:
+
+```sh
+yarn config set -H npmRegistryServer "https://npm.phylum.io/"
+yarn config set -H npmAuthIdent "<PHYLUM_ORG>/<PHYLUM_GROUP:<PHYLUM_API_KEY>"
+yarn config set -H npmAlwaysAuth true
+```
+
+> ⚠️ **WARNING** ⚠️
+>
+> Do not accidentally save your token into your shell history.
+
+A blocked package will show up in `yarn` output as missing:
+
+```text
+➤ YN0027: malicious@unknown can't be resolved to a satisfying range
+➤ YN0001: TypeError: Cannot read properties of undefined (reading 'dist')
+    at Fv.getCandidates (/home/chris/.cache/node/corepack/v1/yarn/4.5.3/yarn.js:688:7154)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Pg.getCandidates (/home/chris/.cache/node/corepack/v1/yarn/4.5.3/yarn.js:141:1271)
+    at async uH (/home/chris/.cache/node/corepack/v1/yarn/4.5.3/yarn.js:401:9441)
+    at async /home/chris/.cache/node/corepack/v1/yarn/4.5.3/yarn.js:401:8776
+    at async C (/home/chris/.cache/node/corepack/v1/yarn/4.5.3/yarn.js:401:7127)
+    at async T2 (/home/chris/.cache/node/corepack/v1/yarn/4.5.3/yarn.js:401:8456)
+    at async /home/chris/.cache/node/corepack/v1/yarn/4.5.3/yarn.js:402:531
+    at async Promise.all (index 0)
+    at async /home/chris/.cache/node/corepack/v1/yarn/4.5.3/yarn.js:402:488
+
+➤ Errors happened when preparing the environment required to run this command.
+```
+
+Alternatively, if only a specific version is affected:
+
+```text
+➤ YN0000: · Yarn 4.5.3
+➤ YN0000: ┌ Resolution step
+➤ YN0082: │ malicious@npm:1.0.0: No candidates found
+➤ YN0000: └ Completed in 4s 398ms
+➤ YN0000: · Failed with errors in 4s 405ms
+```
