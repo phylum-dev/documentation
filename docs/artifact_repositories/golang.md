@@ -42,5 +42,11 @@ A blocked package will show up in `go` output as missing:
 go: github.com/malicious: no matching versions for query "upgrade"
 ```
 
+Alternatively, if a specific version was requested:
+
+```text
+go: github.com/malicious@v1.2.3: reading https://golang.phylum.io/github.com/malicious/@v/v1.2.3.info: 424 Failed Dependency
+```
+
 If a version range is accepted by the manifest, the package manager will
 automatically attempt to use a version that passes Phylum's policy.
