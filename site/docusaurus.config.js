@@ -26,6 +26,12 @@ const config = {
   onBrokenMarkdownLinks: 'throw',
   onDuplicateRoutes: 'throw',
 
+  future: {
+    // Enable all Docusaurus Faster features
+    // Ref: https://docusaurus.io/blog/releases/3.6#adoption-strategy
+    experimental_faster: true,
+  },
+
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -180,15 +186,19 @@ const config = {
   },
 
   plugins: [
-    // This plugin is needed due to interactions between docusaurus and webpack not
-    // handling symlinks correctly. Without it, the site won't build due to failures
-    // in following the symlinks in `docs` to their git submodules. References:
+    // This plugin is needed due to interactions between docusaurus and webpack/rspack
+    // not handling symlinks correctly. Without it, the site won't build due to failures
+    // in following the symlinks in `docs` to their git submodules. The "Docusaurus Faster"
+    // infrastructure (enabled in v3 with `experimental_faster` feature flag) uses rspack
+    // instead of webpack, but the lifecycle API plugin retains the `configureWebpack`
+    // name for now. References:
     // https://github.com/facebook/docusaurus/issues/3272#issuecomment-876374383
     // https://github.com/facebook/docusaurus/issues/6257
     // https://docusaurus.io/docs/api/plugin-methods
+    // https://docusaurus.io/docs/api/plugin-methods/lifecycle-apis#configureWebpack
     async function (context, options) {
       return {
-        name: 'webpack-configuration-plugin',
+        name: 'custom-pack-configuration-plugin',
         configureWebpack(config, isServer, utils, content) {
           return {
             resolve: {
