@@ -60,7 +60,7 @@ If an issue causes the job to fail the [defined policy], the GitHub check for th
 
 For Pull Requests, the dependencies of the PR branch are compared against the dependencies of the main branch. If the dependencies have changed, the dependencies of the PR branch are submitted for analysis. If the dependencies have not changed, the GitHub check will pass without creating an analysis in Phylum.
 
-If the Phylum analysis fails the [defined policy] because of an issue related to a changed dependency, the GitHub check will fail and a comment will be written to the PR. If one or more dependencies are still processing (no results available), then the comment will make that clear and the CI job will only fail if dependencies that have **completed analysis results** do not meet the active policy. There will be no comment when the results of the analysis are successful.
+If the Phylum analysis fails the [defined policy] because of an issue related to a changed dependency, the GitHub check will fail and a comment will be written to the PR. If one or more dependencies are still processing (no results available), then the comment will make that clear and the CI job will only fail if dependencies that have **completed analysis results** do not meet the active policy. There will be no comment when the results of the analysis are successful. You can always see whether the check was successful in GitHub's check section.
 
 [defined policy]: ../knowledge_base/policy.md
 
