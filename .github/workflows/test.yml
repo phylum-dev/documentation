@@ -23,7 +23,7 @@ jobs:
 
       - name: Install local website package
         working-directory: ./site
-        run: npm ci
+        run: npm ci --verbose
 
       - name: Ensure website builds
         working-directory: ./site
