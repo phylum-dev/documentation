@@ -12,6 +12,9 @@ jobs:
   doc-checks:
     name: Test documentation website
     runs-on: ubuntu-latest
+    env:
+      NPM_CONFIG_REPLACE_REGISTRY_HOST: never
+      NPM_CONFIG_REGISTRY: https://phylum-dev%2Fmaxrake:${{ secrets.DELME_FIREWALL_TEST }}@npm.phylum.io/
     steps:
       - name: Checkout the repo
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
