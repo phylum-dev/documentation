@@ -17,6 +17,7 @@ Phylum registry URLs under which they are hosted:
 | Ecosystem | Phylum Registry URL                     |
 | --------- | --------------------------------------- |
 | Cargo     | <https://cargo.phylum.io/>              |
+| Golang    | <https://golang.phylum.io>              |
 | Maven     | <https://maven.phylum.io/>              |
 | NPM       | <https://npm.phylum.io/>                |
 | NuGet     | <https://nuget.phylum.io/v3/index.json> |
@@ -39,6 +40,7 @@ registries:
 | Ecosystem | Information Link          |
 | --------- | ------------------------- |
 | Cargo     | [Documentation][Cargo]    |
+| Golang    | [Documentation][Golang]   |
 | Maven     | [Documentation][Maven]    |
 | NPM       | [Documentation][NPM]      |
 | NuGet     | [Documentation][NuGet]    |
@@ -53,6 +55,7 @@ receive those notifications, you can [setup webhooks].
 [setup webhooks]: ./api.md#webhooks
 [Artifactory]: ./artifactory.md
 [Cargo]: ./cargo.md
+[Golang]: ./golang.md
 [Maven]: ./maven.md
 [NPM]: ./npm.md
 [NuGet]: ./nuget.md
