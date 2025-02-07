@@ -61,3 +61,5 @@ Phylum uses tags to uniquely identify issues raised by the system. These tags ca
 | IM0047 | [Python Build Hook](../analytics/python_build_hook.md) | Package contains Python build hook files |
 | IL0050 | [License](../analytics/license_source_code_distribution.md) | License requires source code distribution |
 | HM0099 | [Basic Javascript Obfuscation](../analytics/obfuscated_javascript.md) | Package contains obfuscated Javascript |
+| IE1001 | Unmaintained | Package has been marked as unmaintained by RustSec |
+| CM1002 | Malware (via OSSF MAL) | Determined to be malware by contributors to the OpenSSF malicious packages project |
