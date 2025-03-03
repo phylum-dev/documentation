@@ -37,25 +37,15 @@ npm config set registry https://<PHYLUM_ORG>%2F<PHYLUM_GROUP>:<PHYLUM_API_KEY>@n
 >
 > Do not accidentally save your token into your shell history.
 
-A blocked package will show up in `npm` output as missing:
+A blocked package will show up in `npm` output as E403:
 
 ```text
-npm error code E404
-npm error 404 Not Found - GET http://:***@npm.phylum.io/<malicious>
-npm error 404
-npm error 404  '<malicious>@*' is not in this registry.
-npm error 404
-npm error 404 Note that you can also install from a
-npm error 404 tarball, folder, http url, or git url.
-```
-
-Alternatively, if only a specific version is affected:
-
-```text
-npm error code ETARGET
-npm error notarget No matching version found for <malicious>@<version>.
-npm error notarget In most cases you or one of your dependencies are requesting
-npm error notarget a package version that doesn't exist.
+npm error code E403
+npm error 403 Could not download <malicious>@<version> due to policy violations:
+npm error 403 Blocked by package firewall.
+npm error 403 In most cases, you or one of your dependencies are requesting
+npm error 403 a package version that is forbidden by your security policy, or
+npm error 403 on a server you do not have access to.
 ```
 
 If you're using `pnpm`, the output will look like this:
