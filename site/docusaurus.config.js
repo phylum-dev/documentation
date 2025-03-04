@@ -81,12 +81,12 @@ const config = {
         disableSwitch: false,
         respectPrefersColorScheme: true,
       },
-      /* To add a temporary site announcement bar, uncomment the following lines and change the content */
-      // announcementBar: {
-      //   content: 'Welcome to the new Phylum documentation!',
-      //   textColor: '#fff',
-      //   backgroundColor: '#3480eb',
-      // },
+      /* Add a temporary site announcement bar */
+      announcementBar: {
+        content: 'Phylum is now part of Veracode! Please bear with us during the transition.',
+        textColor: '#fff',
+        backgroundColor: '#3480eb',
+      },
       navbar: {
         title: 'Phylum Docs',
         logo: {
@@ -267,9 +267,9 @@ const config = {
         // It redirects from the old flat "/docs/X" namespace to the new path-based namespaces.
         // It is also used to account for bulk changes since then.
         createRedirects(existingPath) {
-          // Account for the bulk change from "package_firewall" to "artifact_repositories"
-          if (existingPath.includes('/artifact_repositories/')) {
-            return existingPath.replace('/artifact_repositories/', '/package_firewall/');
+          // Account for the bulk change from "artifact_repositories" back to "package_firewall"
+          if (existingPath.includes('/package_firewall/')) {
+            return existingPath.replace('/package_firewall/', '/artifact_repositories/');
           }
 
           // Ensure paths with the same starting elements are listed with the longest matching paths first
@@ -288,6 +288,7 @@ const config = {
               return existingPath.replace(newPathElement, '/docs/');
             }
           }
+
           // Returning a falsy value means no redirect(s) created
           return undefined;
         },
