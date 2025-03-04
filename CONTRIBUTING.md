@@ -65,7 +65,18 @@ Here's how to set up the Phylum `documentation` repository for local development
     git clone git@github.com:phylum-dev/documentation.git
     ```
 
-2. Create a branch for local development:
+2. Initialize and pull the git submodules
+
+    ```sh
+    ## Populate submodules initially
+    git submodule update --init --recursive
+
+    ## Update submodules during development
+    git fetch --all
+    git pull --recurse-submodules
+    ```
+
+3. Create a branch for local development:
 
     ```sh
     git checkout -b <name-of-your-branch>
@@ -73,7 +84,7 @@ Here's how to set up the Phylum `documentation` repository for local development
 
     Now you can make your changes locally.
 
-3. Commit your changes and push your branch to GitHub:
+4. Commit your changes and push your branch to GitHub:
 
     ```sh
     git add .
@@ -81,7 +92,7 @@ Here's how to set up the Phylum `documentation` repository for local development
     git push --set-upstream origin <name-of-your-branch>
     ```
 
-4. Submit a pull request (PR) through the GitHub website
+5. Submit a pull request (PR) through the GitHub website
 
 ## Release Process
 

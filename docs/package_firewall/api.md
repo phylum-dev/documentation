@@ -1,13 +1,13 @@
 # API
 
-This section provides additional instructions for usage of Phylum's Artifact
-Repository API. The full API is documented on [Swagger].
+This section provides additional instructions for usage of Phylum's Package
+Firewall API. The full API is documented on [Swagger].
 
-[Swagger]: https://swagger.phylum.io/?urls.primaryName=Artifact+Repository+API
+[Swagger]: https://swagger.phylum.io/?urls.primaryName=Package+Firewall+API
 
 ## Authentication
 
-The Artifact Repository API expects authentication in the basic auth format. The
+The Package Firewall API expects authentication in the basic auth format. The
 username is optional and provides context for which group should be used for the
 request. The group must either be the group name itself, for standalone groups,
 or the organization and group name combined using a `/`.
@@ -35,5 +35,5 @@ of the SHA256-HMAC of the response body, generated with the shared secret
 provided when registering the webhook. This checksum **must** be validated
 before accepting the authority of new webhook events.
 
-[register webhook endpoint]: https://swagger.phylum.io/?urls.primaryName=Artifact+Repository+API#/default/add_webhook
+[register webhook endpoint]: https://swagger.phylum.io/?urls.primaryName=Package+Firewall+API#/default/add_webhook
 [package check endpoint]: https://swagger.phylum.io/?urls.primaryName=API#/Organizations/organizations_group_packages_check
