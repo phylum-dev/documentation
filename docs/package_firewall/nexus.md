@@ -35,10 +35,9 @@ source libraries/packages.
    is allowed or blocked by policy can take up to an additional day.
 6. In the HTTP section, enable username authentication. In the `Username` field
    enter the [Phylum organization and group](../knowledge_base/groups.md) where
-   you previously [defined your
-   policy](https://github.com/phylum-dev/documentation/blob/main/docs/knowledge_base/policy.md).
-   In the `Password` field, enter a [Phylum API
-   key](../knowledge_base/api-keys.md) with permission to access this group.
+   you previously [defined your policy](../knowledge_base/policy.md). In the
+   `Password` field, enter a [Phylum API key](../knowledge_base/api-keys.md)
+   with permission to access this group.
 
    ![HTTP authentication section with the authentication type set to
    "Username," the username set to "\<PHYLUM_ORG>/\<PHYLUM_GROUP>," and the
