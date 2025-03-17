@@ -129,6 +129,7 @@ const sidebars = {
       },
       items: [
         'package_firewall/artifactory',
+        'package_firewall/nexus',
         'package_firewall/cargo',
         'package_firewall/golang',
         'package_firewall/maven',
