@@ -1,6 +1,6 @@
-# Artifact Repositories
+# Package Firewalls
 
-Phylum for artifact repositories allows users to configure their artifact
+Phylum Package Firewalls allows users to configure their artifact
 repositories and/or package managers to block untrusted packages.
 
 ## How It Works
