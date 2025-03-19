@@ -112,7 +112,7 @@ Caused by:
   download of li/bc/libc failed
 
 Caused by:
-  failed to get successful HTTP response from `http://localhost:8080/li/bc/libc` (127.0.0.1), got 424
+  failed to get successful HTTP response from `https://cargo.phylum.io/li/bc/libc`, got 424
   body:
   "libc" failed Phylum analysis
 ```
