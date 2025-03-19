@@ -1,6 +1,6 @@
 # Transfer Group Ownership
 
-Ownership of a Phylum group can be transferred to another [Phylum PRO account](https://www.phylum.io/pricing). Only the owner of a group may add/remove members and delete projects or the group.
+Ownership of a Phylum group can be transferred to another Phylum account. Only the owner of a group may add/remove members and delete projects or the group.
 
 ## Walkthrough
 
@@ -25,7 +25,5 @@ phylum group transfer --group sample user@domain.com
    ![Phylum groups menu - transfer ownership button](../../assets/transfer_group_ownership_02.png)
 
 3. Type the email address of the account you want to transfer the group to.
-
-   > **NOTE:** Groups are a [Phylum PRO](https://www.phylum.io/pricing) feature, so the receiving account must be PRO.
 
 4. Click `Confirm Transfer` to complete the process.

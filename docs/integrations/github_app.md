@@ -8,7 +8,6 @@ Phylum provides a GitHub App to get your current and future repositories monitor
 
 * Ability to install Apps in GitHub
 * [Phylum account linked to GitHub](../knowledge_base/federate_account.md)
-* Phylum Account set to Pro, if additional functionality is desired
 
 ## Installation Walkthrough
 
@@ -40,7 +39,7 @@ Monitoring can be activated or paused by selecting the toggle for a given reposi
 
 ![GitHub app settings - select repo](../../assets/gh_app_settings_select_repo.png)
 
-> **NOTE:** [Phylum PRO accounts](https://www.phylum.io/pricing) can select to monitor all existing and future repositories!
+> **NOTE:** Phylum accounts can also select to monitor all existing and future repositories!
 >
 > ![GitHub app settings - PRO](../../assets/gh_app_settings_pro.png)
 
@@ -88,9 +87,7 @@ Phylum OSS Supply Chain Risk Analysis - INCOMPLETE
 
 ### Groups
 
-> **NOTE:** Only [Phylum PRO accounts](https://www.phylum.io/pricing) support groups.
-
-The GitHub App will automatically create a group with the name of your GitHub account/organization. All Phylum projects created by the GitHub App will be owned by that group and results can be shared by adding Phylum PRO accounts as members to the group.
+The GitHub App will automatically create a group with the name of your GitHub account/organization. All Phylum projects created by the GitHub App will be owned by that group and results can be shared by adding Phylum accounts as members to the group.
 
 ![Phylum groups management](../../assets/phylum_groups_management.png)
 
@@ -98,7 +95,7 @@ The default group that is created is owned by the account that installed the Git
 
 ### Policy
 
-The Phylum GitHub app uses the [established project policy](../knowledge_base/policy.md) for making overall success/failure risk decisions. No configuration is required for setting the policy since a default policy is used for all projects. However, [Phylum PRO users](https://www.phylum.io/pricing) may specify custom policies for their projects to exercise fine-grained control over the risk decision logic.
+The Phylum GitHub app uses the [established project policy](../knowledge_base/policy.md) for making overall success/failure risk decisions. No configuration is required for setting the policy since a default policy is used for all projects. However, Phylum users may specify custom policies for their projects to exercise fine-grained control over the risk decision logic.
 
 ### Remediation
 
