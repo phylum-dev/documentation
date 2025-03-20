@@ -75,5 +75,12 @@ A blocked package will show up in `poetry` output as missing:
 Could not find a matching version of package <malicious>
 ```
 
+If **all** versions of a package are blocked, it will be explicitly pointed out
+as having failed analysis:
+
+```text
+424 Client Error: "malicious" failed Phylum analysis for url: https://pypi.phylum.io/simple/malicious/
+```
+
 If a version range is accepted by the manifest, the package manager will
 automatically attempt to use a version that passes Phylum's policy.

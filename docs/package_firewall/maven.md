@@ -93,6 +93,27 @@ A blocked package will show up in `mvn` output as missing:
 [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
 ```
 
+If **all** versions of a package are blocked, it will be explicitly pointed out
+as having failed analysis:
+
+```text
+[WARNING] Could not transfer metadata org.apache.maven.plugins:maven-archetype-plugin/maven-metadata.xml from/to phylum (https://maven.phylum.io): status code: 424, reason phrase: "pkg:maven/org.apache.maven.plugins/maven-archetype-plugin" failed Phylum analysis (424)
+[WARNING] Plugin not found in any plugin repository: org.apache.maven.plugins:maven-archetype-plugin
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  6.753 s
+[INFO] Finished at: 2025-03-17T17:28:12+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Error resolving version for plugin 'org.apache.maven.plugins:maven-archetype-plugin' from the repositories [local (/Users/cdurr/.m2/repository), phylum (https://maven.phylum.io)]: Plugin not found in any plugin repository -> [Help 1]
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/PluginVersionResolutionException
+```
+
 If a version range is accepted by the manifest, the package manager will
 automatically attempt to use a version that passes Phylum's policy.
 
