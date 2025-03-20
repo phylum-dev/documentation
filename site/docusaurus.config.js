@@ -90,8 +90,8 @@ const config = {
       navbar: {
         title: 'Phylum Docs',
         logo: {
-          alt: 'Phylum Logo',
-          src: 'img/phylum_logo.svg',
+          alt: 'Veracode Logo',
+          src: 'img/veracode_logo.svg',
         },
         hideOnScroll: false,
         items: [
