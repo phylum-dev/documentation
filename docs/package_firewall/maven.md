@@ -37,7 +37,7 @@ printf "<PHYLUM_ORG>/<PHYLUM_GROUP>:<PHYLUM_API_KEY>" | base64
 >
 > Do not accidentally save your token into your shell history.
 
-Custom Maven registries can be configured in the `${user.home}/.m2/settings.xml`
+Custom Maven registries can be configured in the `~/.m2/settings.xml`
 file. Replace `[BASE64_OUTPUT]` in this XML with the token you've created in the
 previous step:
 
@@ -91,6 +91,43 @@ A blocked package will show up in `mvn` output as missing:
 [ERROR]
 [ERROR] For more information about the errors and possible solutions, please read the following articles:
 [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+```
+
+If a version range is accepted by the manifest, the package manager will
+automatically attempt to use a version that passes Phylum's policy.
+
+### Gradle
+
+Custom registries can be configured in the `~/.gradle/init.gradle` file:
+
+```groovy
+allprojects {
+    repositories {
+        // Deactivate all registries which aren't protected.
+        all { ArtifactRepository repo ->
+            if (repo.url.toString() != "https://maven.phylum.io") {
+                remove repo
+            }
+        }
+
+        maven {
+            url = "https://maven.phylum.io"
+            credentials {
+                username = "<PHYLUM_ORG>/<PHYLUM_GROUP>"
+                password = "<PHYLUM_API_KEY>"
+            }
+        }
+    }
+}
+```
+
+A blocked package will show up in `gradle` output as failed:
+
+```text
+runtimeClasspath - Runtime classpath of source set 'main'.
++--- com.google.code.gson:gson:2.10.1 FAILED
++--- com.google.code.gson:gson:{strictly 2.10.1} -> 2.10.1 FAILED
+\--- com.google.code.gson:gson:2.10.1 FAILED
 ```
 
 If a version range is accepted by the manifest, the package manager will
