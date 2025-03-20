@@ -102,7 +102,7 @@ const config = {
             label: 'Docs',
           },
           {
-            href: 'https://api.phylum.io/api/v0/swagger/index.html',
+            href: 'https://swagger.phylum.io/',
             position: 'left',
             label: 'API',
           },
@@ -116,11 +116,11 @@ const config = {
       },
       footer: {
         style: 'dark',
-        copyright: `Copyright © 2020-${new Date().getFullYear()} Phylum, Inc.`,
+        copyright: `Copyright © 2020-${new Date().getFullYear()} Veracode, Inc.`,
         links: [
           {
-            label: 'Phylum Home',
-            href: 'https://phylum.io',
+            label: 'Phylum App',
+            href: 'https://app.phylum.io',
           },
           {
             label: 'Discord',

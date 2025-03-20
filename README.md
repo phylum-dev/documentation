@@ -16,7 +16,7 @@ The rendered form of the documentation can be viewed at the <https://docs.phylum
 
 ## License
 
-Copyright (C) 2023  Phylum, Inc.
+Copyright (C) 2025  Veracode, Inc.
 
 All rights reserved.
 
