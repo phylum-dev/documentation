@@ -91,7 +91,7 @@ The GitHub App will automatically create a group with the name of your GitHub ac
 
 ![Phylum groups management](../../assets/phylum_groups_management.png)
 
-The default group that is created is owned by the account that installed the GitHub App. If you would like a different account to manage the GitHub App and group you may [transfer ownership](../knowledge_base/transfer_group_ownership.md) of the group.
+The default group that is created is owned by the account that installed the GitHub App.
 
 ### Policy
 

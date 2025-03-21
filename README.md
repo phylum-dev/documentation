@@ -45,6 +45,6 @@ Join us on the [Phylum Community Discord][discord_invite]!
 
 ## Questions/Issues
 
-Please contact Phylum with any questions or issues.
+Please contact Veracode with any questions or issues.
 
 Email: `phylum@veracode.com`
