@@ -34,6 +34,7 @@ registries:
 | Artifact Repository | Information Link |
 | ------------------- | ---------------- |
 | Artifactory | [Documentation][Artifactory] |
+| Nexus Repository | [Documentation][Nexus] |
 
 ### Package Registries
 
@@ -54,6 +55,7 @@ receive those notifications, you can [setup webhooks].
 
 [setup webhooks]: ./api.md#webhooks
 [Artifactory]: ./artifactory.md
+[Nexus]: ./nexus.md
 [Cargo]: ./cargo.md
 [Golang]: ./golang.md
 [Maven]: ./maven.md
