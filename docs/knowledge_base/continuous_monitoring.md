@@ -19,4 +19,4 @@ If no default label has been set, the project's current job will be the latest j
 
 ## How to Activate
 
-No activation required! Continuous Monitoring is a default platform feature for all Phylum accounts. Phylum Pro users have the additional option to trigger [notifications] on new Continuous Monitoring violations.
+No activation required! Continuous Monitoring is a default platform feature for all Phylum accounts. Phylum users have the additional option to trigger [notifications] on new Continuous Monitoring violations.

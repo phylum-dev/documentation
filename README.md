@@ -16,7 +16,7 @@ The rendered form of the documentation can be viewed at the <https://docs.phylum
 
 ## License
 
-Copyright (C) 2023  Phylum, Inc.
+Copyright (C) 2025  Veracode, Inc.
 
 All rights reserved.
 
@@ -45,6 +45,6 @@ Join us on the [Phylum Community Discord][discord_invite]!
 
 ## Questions/Issues
 
-Please contact Phylum with any questions or issues.
+Please contact Veracode with any questions or issues.
 
-Email: <support@phylum.io>
+Email: `phylum@veracode.com`

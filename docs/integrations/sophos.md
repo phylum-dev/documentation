@@ -24,11 +24,11 @@ Copy the token in preparation for adding it to your Sophos Factory credentials. 
 
 After logging into Sophos Factory, click `Credentials` in the left-hand navigation, then click the green `+ New Credential` button:
 
-![Adding a new credential in Sophos](../../assets/sophos_add_creds.png)
+![Adding a new credential in Sophos](../../assets/sophos/add_creds.png)
 
 A dialog will slide out from the right:
 
-![Create Phylum credential dialog](../../assets/sophos_create_cred_phylum.png)
+![Create Phylum credential dialog](../../assets/sophos/create_cred_phylum.png)
 
 Fill out the form as follows:
 
@@ -47,11 +47,11 @@ Click the green `+ Create` button at the bottom of the dialog.
 
 You will need your SSH *private* key. This file is commonly found in `~/.ssh/id_rsa`. Copy this file and head back to Sophos Factory. Click `Credentials` in the left-hand navigation and click the green `+ New Credential` button:
 
-![Adding a new credential in Sophos](../../assets/sophos_add_creds.png)
+![Adding a new credential in Sophos](../../assets/sophos/add_creds.png)
 
 A dialog will slide out from the right:
 
-![Create SSH key credential dialog](../../assets/sophos_create_cred_ssh.png)
+![Create SSH key credential dialog](../../assets/sophos/create_cred_ssh.png)
 
 Fill out this form as follows:
 
@@ -68,10 +68,10 @@ Click the green `+ Create` button to save this credential.
 
 Visit the [solution catalog](https://app.refactr.it/catalogs) and locate the Phylum solution. Click the green `Open` button:
 
-![Sophos solution catalog](../../assets/sophos_solution_catalog.png)
+![Sophos solution catalog](../../assets/sophos/solution_catalog.png)
 
 Under `Pipelines`, locate the `Phylum Analysis` pipeline and click on the green play button:
 
-![Phylum analysis pipeline](../../assets/sophos_pipeline_view.png)
+![Phylum analysis pipeline](../../assets/sophos/pipeline_view.png)
 
 In the dialog that slides out, select your `phylumApiToken`, populate the `gitRepo`, and define the `branch` you want to analyze. Then click the green `Run` button to kick off the pipeline.

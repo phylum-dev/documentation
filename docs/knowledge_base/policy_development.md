@@ -123,7 +123,7 @@ This test requires `constants.json` from the Phylum SDK. The test can be execute
 
 ## Evaluating policies using the Phylum API
 
-Using the [`evaluate_policy`](https://api.phylum.io/api/v0/swagger/index.html#/Jobs/evaluate_policy) API, it's possible to evaluate policies within Phylum. This is the same API used by Phylum tooling.
+Using the [`evaluate_policy`](https://swagger.phylum.io/#/Jobs/jobs_evaluate_policy) API, it's possible to evaluate policies within Phylum. This is the same API used by Phylum tooling.
 
 To evaluate an existing job using `example.rego` you can make an API call like this:
 

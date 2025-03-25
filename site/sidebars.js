@@ -100,7 +100,6 @@ const sidebars = {
         'knowledge_base/groups',
         'knowledge_base/issue_tags',
         'knowledge_base/notifications',
-        'knowledge_base/transfer_group_ownership',
         'knowledge_base/search'
       ]
     },

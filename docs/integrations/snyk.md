@@ -15,8 +15,8 @@ group is possible.
 Setup for a new connection is done on the group page by selecting `Import From >
 Snyk`.
 
-![Setup with empty group](../../assets/snyk_setup_empty_group.png)
-![Setup with existing group](../../assets/snyk_setup_existing_group.png)
+![Setup with empty group](../../assets/snyk/setup_empty_group.png)
+![Setup with existing group](../../assets/snyk/setup_existing_group.png)
 
 To import projects from Snyk, Phylum needs a Snyk API key. This key is not only
 used for authentication, but also decides which Snyk projects should be
@@ -26,9 +26,9 @@ Snyk service account with the desired access permissions is recommended.
 Instructions on setting up a service account can be found in Snyk's
 documentation:
 
-https://docs.snyk.io/enterprise-configuration/service-accounts#how-to-set-up-a-group-or-organization-service-account
+<https://docs.snyk.io/enterprise-configuration/service-accounts#how-to-set-up-a-group-or-organization-service-account>
 
-![Token entry](../../assets/snyk_setup_token.png)
+![Token entry](../../assets/snyk/setup_token.png)
 
 ## Updates
 
@@ -39,28 +39,28 @@ Imports run asynchronously, so it might take a while to finish and projects will
 not necessarily all show up at the same time. Phylum will show a message if an
 import is not completed yet.
 
-![Import in progress](../../assets/snyk_import_in_progress.png)
+![Import in progress](../../assets/snyk/import_in_progress.png)
 
 Manual imports can be started at any time if the daily update is not sufficient.
 This can be done by pressing the `Refresh Imports` button.
 
-![Manual import](../../assets/snyk_manual_import.png)
+![Manual import](../../assets/snyk/manual_import.png)
 
 ## Snyk Token Updates
 
 Phylum will notify you if the associated token is revoked or invalidated.
 
-![Invalid token](../../assets/snyk_invalid_token.png)
+![Invalid token](../../assets/snyk/invalid_token.png)
 
 In this case, the token can be updated by just pressing the red `Update Token`
 button.
 
-![Invalid token update](../../assets/snyk_invalid_token_update.png)
+![Invalid token update](../../assets/snyk/invalid_token_update.png)
 
 If you want to change a valid token, a manual change can be performed by
 selecting `Manage Access > Update Token`.
 
-![Valid token update](../../assets/snyk_manage_access.png)
+![Valid token update](../../assets/snyk/manage_access.png)
 
 ## Deletion
 
@@ -68,4 +68,4 @@ Snyk connections can be deleted by selecting `Manage Access > Revoke Connection`
 in any group with a Snyk connection. This will only stop future updates of the
 connection and will not delete projects that are already imported.
 
-![Revoke connection](../../assets/snyk_manage_access.png)
+![Revoke connection](../../assets/snyk/manage_access.png)

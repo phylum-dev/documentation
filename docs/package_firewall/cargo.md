@@ -102,6 +102,21 @@ location searched: registry `phylum`
 required by package `testing v0.1.0 (/tmp/testing)`
 ```
 
+If **all** versions of a package are blocked, it will be explicitly pointed out
+as having failed analysis:
+
+```text
+error: failed to query replaced source registry `crates-io`
+
+Caused by:
+  download of li/bc/libc failed
+
+Caused by:
+  failed to get successful HTTP response from `https://cargo.phylum.io/li/bc/libc`, got 424
+  body:
+  "libc" failed Phylum analysis
+```
+
 Alternatively, if a specific version constraint matches the blocked version:
 
 ```text

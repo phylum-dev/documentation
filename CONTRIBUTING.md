@@ -1,6 +1,6 @@
 # Contributing
 
-This guide is written for both internal contributors (Phylum, Inc. employees) and external/community contributors.
+This guide is written for both internal contributors (Veracode, Inc. employees) and external/community contributors.
 Community contributions are possible by submitting issues.
 
 ## Types of Contributions
@@ -56,8 +56,8 @@ is expected to treat other people with respect and more generally to follow the 
 
 ## Local Development
 
-Internal contributors (Phylum, Inc. employees) are able to contribute with content submissions and pull requests (PRs).
-Here's how to set up the Phylum `documentation` repository for local development.
+Internal contributors (Veracode, Inc. employees) are able to contribute with content submissions and pull requests
+(PRs). Here's how to set up the Phylum `documentation` repository for local development.
 
 1. Clone the `phylum-dev/documentation` repo locally
 
@@ -123,4 +123,4 @@ Docusaurus `plugin-client-redirects` plugin configuration in the larger `site/do
 If there are any outstanding questions about contributing to the Phylum documentation,
 they can be asked on the issue tracker: <https://github.com/phylum-dev/documentation/issues>.
 
-As an alternative, you can also email <support@phylum.io>.
+As an alternative, you can also email `phylum@veracode.com`.

@@ -16,12 +16,12 @@ regarding the acceptable use of open source libraries/packages.
 1. Create a remote repository for Phylum. Navigate to `Repositories > Administration`
    and click the green `Create a Repository` button in the top right and select `Remote`.
 
-   ![Artifactory_create_repo](../../assets/artifactory_create_repo.png)
+   ![Artifactory_create_repo](../../assets/artifactory/create_repo.png)
 
 2. Select the appropriate package repository to which you would like to apply the
    policy. See current [Phylum supported ecosystems here](./about.md#supported-ecosystems).
 
-   ![Artifactory_select_ecosystem](../../assets/artifactory_select_ecosystem.png)
+   ![Artifactory_select_ecosystem](../../assets/artifactory/select_ecosystem.png)
 
 3. Provide a name for your remote repository in the `Repository Key` field.
 4. In the `User Name` field enter the name of the [Phylum group](../knowledge_base/groups.md) where you
@@ -34,7 +34,7 @@ regarding the acceptable use of open source libraries/packages.
    This will ensure that redirects (e.g., `HTTP 301`) are allowed and that requests
    to the repository succeed.
 
-   ![Artifactory_lenient_host_auth](../../assets/artifactory_lenient_host_auth.png)
+   ![Artifactory_lenient_host_auth](../../assets/artifactory/lenient_host_auth.png)
 
 ## Update Virtual Repository
 
@@ -49,28 +49,28 @@ repository to use it.
 1. Under `Repositories > Administration` locate your virtual repository. Click on
    the virtual repository you want to update.
 
-   ![Artifactory_virtual_repos](../../assets/artifactory_virtual_repos.png)
+   ![Artifactory_virtual_repos](../../assets/artifactory/virtual_repos.png)
 
 2. In your virtual repository, scroll down to Repositories. You should see several
    repositories in the following format.
 
-   ![Artifactory_select_repo_1](../../assets/artifactory_select_repo_1.png)
+   ![Artifactory_select_repo_1](../../assets/artifactory/select_repo_1.png)
 
 3. Under the `Selected Repositories` section, remove the existing remote by clicking
    the checkbox next to its name and clicking the green arrows pointing to the left.
 
-   ![Artifactory_select_repo_2](../../assets/artifactory_select_repo_2.png)
+   ![Artifactory_select_repo_2](../../assets/artifactory/select_repo_2.png)
 
    ---
 
-   ![Artifactory_select_repo_3](../../assets/artifactory_select_repo_3.png)
+   ![Artifactory_select_repo_3](../../assets/artifactory/select_repo_3.png)
 
 4. Under the `Available Repositories` section, add your Phylum remote repository by
    clicking the checkbox next to its name and clicking the green arrows pointing to
    the right.
 
-   ![Artifactory_select_repo_4](../../assets/artifactory_select_repo_4.png)
+   ![Artifactory_select_repo_4](../../assets/artifactory/select_repo_4.png)
 
 5. Save your settings using the green `Save` button at the bottom right of the screen.
 
-   ![Artifactory_select_repo_5](../../assets/artifactory_select_repo_5.png)
+   ![Artifactory_select_repo_5](../../assets/artifactory/select_repo_5.png)
