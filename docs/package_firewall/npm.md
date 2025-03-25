@@ -52,8 +52,14 @@ If you're using `pnpm`, the output will look like this:
 
 ```text
  ERR_PNPM_NO_VERSIONS  No versions available for malicious. The package may be unpublished.
+```
 
-This error happened while installing a direct dependency of /tmp/testing
+If **all** versions of a package are blocked, it will be explicitly pointed out
+as having failed analysis:
+
+```text
+ ERR_PNPM_FETCH_424  GET https://npm.phylum.io/malicious: "malicious" failed Phylum analysis - 424
+ ERR_PNPM_NO_MATCHING_VERSION  No matching version found for malicious@latest while fetching it from https://npm.phylum.io/
 ```
 
 If a version range is accepted by the manifest, the package manager will
@@ -90,6 +96,17 @@ A blocked package will show up in `yarn` output as missing:
     at async /home/chris/.cache/node/corepack/v1/yarn/4.5.3/yarn.js:402:488
 
 ➤ Errors happened when preparing the environment required to run this command.
+```
+
+If **all** versions of a package are blocked, it will be explicitly pointed out
+as having failed analysis:
+
+```text
+➤ YN0027: malicious@unknown can't be resolved to a satisfying range
+➤ YN0035: The remote server failed to provide the requested resource
+➤ YN0035:   Response Code: 424 ("malicious" failed Phylum analysis)
+➤ YN0035:   Request Method: GET
+➤ YN0035:   Request URL: https://npm.phylum.io/malicious
 ```
 
 Alternatively, if only a specific version is affected:

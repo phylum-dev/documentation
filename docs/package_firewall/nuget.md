@@ -57,6 +57,15 @@ A blocked package will show up in `dotnet` output as missing:
 /Demo.csproj : error NU1102:   - Found 42 version(s) in Phylum [ Nearest version: 2.0.0 ]
 ```
 
+If **all** versions of a package are blocked, it will be explicitly pointed out
+as having failed analysis:
+
+```text
+error: NU1301: Failed to retrieve information about 'Example.Vulnerable' from remote source 'https://nuget.phylum.io/v3-flatcontainer/example.vulnerable/index.json'.
+error:   Response status code does not indicate success: 424 ("example.vulnerable" failed Phylum analysis).
+error: Value cannot be null. (Parameter 'version')
+```
+
 If a version range is accepted by the manifest, the package manager will
 automatically attempt to use a version that passes Phylum's policy.
 
@@ -90,6 +99,20 @@ A blocked package will show up in `nuget` output as missing:
 
 ```text
 Package 'Example.Vulnerable 1.2.3' is not found in the following primary source(s): 'https://nuget.phylum.io/v3/index.json'. Please verify all your online package sources are available (OR) package id, version are specified correctly.
+```
+
+If **all** versions of a package are blocked, it will be explicitly pointed out
+as having failed analysis:
+
+```text
+Feeds used:
+  https://nuget.phylum.io/v3/index.json
+
+Installing package 'Example.Vulnerable' to '/private/tmp/path'.
+  GET https://nuget.phylum.io/v3/registration5-gz-semver2/example.vulnerable/index.json
+  FailedDependency https://nuget.phylum.io/v3/registration5-gz-semver2/example.vulnerable/index.json 2399ms
+An error occurred while retrieving package metadata for 'Example.Vulnerable' from source 'Phylum'.
+  Response status code does not indicate success: 424 ("example.vulnerable" failed Phylum analysis).
 ```
 
 If a version range is accepted by the manifest, the package manager will
