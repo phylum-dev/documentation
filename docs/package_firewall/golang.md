@@ -42,6 +42,20 @@ A blocked package will show up in `go` output as missing:
 go: github.com/malicious: no matching versions for query "upgrade"
 ```
 
+If **all** versions of a package are blocked, it will be explicitly pointed out
+as having failed analysis:
+
+```text
+error: failed to query replaced source registry `crates-io`
+
+Caused by:
+  download of li/bc/libc failed
+
+Caused by:
+go: module gopkg.in/yaml.v3: reading https://golang.phylum.io/github.com/malicious/@v/list: 424 "github.com/malicious" failed Phylum analysis
+    server response: "github.com/malicious" failed Phylum analysis
+```
+
 Alternatively, if a specific version was requested:
 
 ```text
