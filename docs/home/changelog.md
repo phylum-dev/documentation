@@ -1,5 +1,100 @@
 # Changelog
 
+## 2025 Weeks 5-6
+
+### New
+- Veracode vulnerabilities are read from the SCA database.
+
+### Improved
+- Upgraded OPA policy engine
+
+## 2025 Week 5
+
+### New
+- Additional advisory sources from OSV (notably OSSF MAL and RUSTSEC).
+
+### Improved
+- Incomplete package versions are no longer returned by `/versions`.
+
+### Fixed
+- Vulnerability affected version range tests are more accurate.
+- Vulnerabilities properly affect old versions of Rubygems packages.
+- Vulnerabilities properly affect new versions released after the vulnerability was published.
+- Vulnerabilities are properly withdrawn when they no longer affect a package version.
+- Vulnerabilities with CVSS4 vectors now have correct base scores instead of 0.0.
+- Package search results now have correct published timestamps or default to 1970 if unknown.
+
+### Removed
+- Swagger UI hosted at `/api/v0/swagger`.
+- SUCCESS comments are no longer added to PRs.
+
+## 2024 Week 50
+
+### New
+- CVSS information in policy input.
+
+### Improved
+- Removed confusing "for the given id" language in 404 descriptions.
+
+## 2024 Week 49
+
+### New
+- Incomplete (un)suppression endpoints for projects.
+
+### Fixed
+- Unsupported PURL components now behave consistently across package check and submission endpoints.
+
+## 2024 Week 47
+
+### New
+- `organization` query parameter for filtering search results.
+- Project `get_endpoint` now returns the owning organization and group.
+
+### Improved
+- `filter.organization` parameter on the list projects endpoint now refers to the user's personal org when set to "-".
+
+### Fixed
+- Token docs link now respects UI base URL.
+- GitHub installation ownership is not transferred with legacy groups.
+- Package versions endpoint no longer returns 500 errors for invalid timestamps.
+- Continuous monitoring detects issues even if only some occurrences are blocked.
+
+### Removed
+- `/download` and `/download-url` package endpoints.
+
+## 2024 Week 44
+
+### New
+- `unsuppress-packages` endpoint to remove all package suppressions.
+- `pipeline_status` and `pipeline_error` fields added to `FullPackage` responses.
+- Endpoints for managing packages that are complete while processing.
+- Package ID included in issue suppression audit logs.
+
+### Improved
+- `incomplete_packages` in reports is now a list of structs instead of strings.
+- Members can set project policies via `PUT /projects/<id>/policies`.
+
+### Fixed
+- `PackageSpecifierWithPurl` schema no longer incorrectly requires `version`.
+- `submit_endpoint` no longer returns `AlreadyProcessed` for unprocessed packages.
+- Organization groups are now properly considered in searches.
+- Old group audit events now appear when filtering by the new owner organization.
+- PyPI package release counts are now accurate.
+- Project count in project list metadata is now correct.
+
+### Removed
+- Search metadata endpoint.
+
+## 2024 Week 41
+
+### Fixed
+- Restored deprecated `suppressed` property.
+- Empty package status errors are ignored.
+
+### Removed
+- Group IDs from policy locators.
+
+
 ## 2023 Weeks 49-52
 ### New
 - UI: Added an email invitation system when attempting to add an unknown user to a group
