@@ -53,6 +53,10 @@ registries:
 Phylum supports sending out notifications whenever a package fails analysis. To
 receive those notifications, you can [setup webhooks].
 
+### Frequently Asked Questions
+
+See the [FAQ] for common questions about using the package firewall.
+
 [setup webhooks]: ./api.md#webhooks
 [Artifactory]: ./artifactory.md
 [Nexus]: ./nexus.md
@@ -63,3 +67,4 @@ receive those notifications, you can [setup webhooks].
 [NuGet]: ./nuget.md
 [PyPI]: ./pypi.md
 [RubyGems]: ./rubygems.md
+[FAQ]: ./faq.md
