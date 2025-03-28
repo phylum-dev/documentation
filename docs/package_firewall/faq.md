@@ -5,14 +5,12 @@
 If a package's installation gets blocked by the firewall, possible malicious
 code execution will have been blocked, so there's no immediate need for action.
 
-Should you determine the policy violation to be a false-positive, you can add an
-exception by navigating to [the firewall overview], selecting the group
+Should you determine the policy violation to be a insignificant, you can add an
+exception by navigating to the [firewall overview], selecting the instance
 associated with the project, then clicking on the "Allow Package" button in the
 top-right.
 
-[the firewall overview]: https://app.phylum.io/firewall
-
-## Why are some packages violating a policy not being blocked?
+## Why are some policy-violating packages not being blocked?
 
 The package firewall acts as a proxy between the local package manager and the
 official registry. As a result only packages being retrieved from the official
@@ -36,10 +34,10 @@ avoid running any code that hasn't been analyzed. Any unprocessed package is
 automatically staged for processing, so the safest option is always to wait
 until processing is complete.
 
-If you wish to allow certain or all packages to be considered successful for the
-purpose of the package firewall, please reach out to [Veracode][aviary-support].
-
-[aviary-support]: mailto:phylum@veracode.com
+If you wish to allow certain, or all, incomplete packages to be considered
+successful for the purpose of the package firewall, you can add an exception by
+navigating to the [firewall overview], selecting the instance associated with
+the project, then clicking on the "Allow Incomplete" button in the top-right.
 
 ## How do I add the package firewall to an existing project?
 
@@ -54,3 +52,5 @@ or clearing local caches will also allow full analysis through the package
 firewall, but is more error prone due to the required technical knowledge.
 
 [package registries]: ./about.md#package-registries
+
+[firewall overview]: https://app.phylum.io/firewall
