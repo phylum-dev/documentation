@@ -5,7 +5,7 @@
 If a package's installation gets blocked by the firewall, possible malicious
 code execution will have been blocked, so there's no immediate need for action.
 
-Should you determine the policy violation to be a insignificant, you can add an
+Should you determine the policy violation to be insignificant, you can add an
 exception by navigating to the [firewall overview], selecting the instance
 associated with the project, then clicking on the "Allow Package" button in the
 top-right.
