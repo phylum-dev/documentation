@@ -137,6 +137,7 @@ const sidebars = {
         'package_firewall/pypi',
         'package_firewall/rubygems',
         'package_firewall/api',
+        'package_firewall/faq',
       ],
     },
     {
