@@ -39,27 +39,21 @@ export GOPROXY="https://<PHYLUM_ORG>%2F<PHYLUM_GROUP>:<PHYLUM_API_KEY>@golang.ph
 A blocked package will show up in `go` output as missing:
 
 ```text
-go: github.com/malicious: no matching versions for query "upgrade"
+go: example.org/malicious: no matching versions for query "upgrade"
 ```
 
 If **all** versions of a package are blocked, it will be explicitly pointed out
 as having failed analysis:
 
 ```text
-error: failed to query replaced source registry `crates-io`
-
-Caused by:
-  download of li/bc/libc failed
-
-Caused by:
-go: module gopkg.in/yaml.v3: reading https://golang.phylum.io/github.com/malicious/@v/list: 424 "github.com/malicious" failed Phylum analysis
-    server response: "github.com/malicious" failed Phylum analysis
+go: module example.org/malicious: reading https://golang.phylum.io/example.org/malicious/@v/list: 424 "example.org/malicious" failed Phylum analysis
+    server response: "example.org/malicious" failed Phylum analysis
 ```
 
 Alternatively, if a specific version was requested:
 
 ```text
-go: github.com/malicious@v1.2.3: reading https://golang.phylum.io/github.com/malicious/@v/v1.2.3.info: 424 Failed Dependency
+go: example.org/malicious@v1.2.3: reading https://golang.phylum.io/example.org/malicious/@v/v1.2.3.info: 424 Failed Dependency
 ```
 
 If a version range is accepted by the manifest, the package manager will
