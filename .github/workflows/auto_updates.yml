@@ -5,17 +5,28 @@ name: Update Deps
 
 on:
   workflow_dispatch:
-  # Run every Monday at 1435 UTC
+  # Run every Monday at 0235 UTC
   schedule:
-    - cron: '35 14 * * 1'
+    - cron: '35 2 * * 1'
 
 jobs:
   workflow-auto-updates:
     name: Update dependencies
     runs-on: ubuntu-latest
+    env:
+      UPDATE_BRANCH_NAME: workflow-auto-updates
     steps:
       - name: Checkout the repo
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+      # This GPG key is for the `phylum-bot` account and used in order to ensure commits are signed/verified
+      - name: Import GPG key for bot account
+        uses: crazy-max/ghaction-import-gpg@e89d40939c28e39f97cf32126055eeae86ba74ec # v6.3.0
+        with:
+          gpg_private_key: ${{ secrets.PHYLUM_BOT_GPG_PRIVATE_KEY }}
+          passphrase: ${{ secrets.PHYLUM_BOT_GPG_PASSPHRASE }}
+          git_user_signingkey: true
+          git_commit_gpgsign: true
 
       - name: Update Docusaurus Javascript dependencies
         working-directory: ./site
@@ -23,15 +34,20 @@ jobs:
 
       - name: Commit changes
         id: commit
+        # There may not be any updates to commit/push
         continue-on-error: true
+        # NOTE: The git user name and email used for commits is already configured,
+        #       by the crazy-max/ghaction-import-gpg action.
         run: |
-          git config user.name 'phylum-bot'
-          git config user.email '69485888+phylum-bot@users.noreply.github.com'
           git commit -a -m "build: bump static site Javascript dependencies"
-          git push --force origin HEAD:workflow-auto-updates
+          git push --force origin HEAD:${{ env.UPDATE_BRANCH_NAME }}
 
       - name: Create Pull Request
+        id: pr
         if: ${{ steps.commit.outcome == 'success' }}
+        # The PR may already exist (e.g., created in previous week and not merged yet) so we
+        # allow it here and check in the next step so workflow failures will be extraordinary
+        continue-on-error: true
         uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea # v7.0.1
         with:
           github-token: ${{ secrets.GH_RELEASE_PAT }}
@@ -39,9 +55,15 @@ jobs:
             const response = await github.rest.pulls.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              head: "workflow-auto-updates",
+              head: "${{ env.UPDATE_BRANCH_NAME }}",
               base: context.ref,
               title: "build: bump static site Javascript dependencies",
               body: "Bump dependencies in `site/package-lock.json` for all SemVer-compatible updates.",
             });
             console.log(response);
+
+      - name: Verify PR exists
+        if: ${{ steps.pr.outcome == 'failure' }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh pr view ${{ env.UPDATE_BRANCH_NAME }}
