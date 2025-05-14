@@ -61,7 +61,7 @@ With Poetry, the source URL can be configured per-project in the
 directory:
 
 ```sh
-poetry source add phylum https://pypi.phylum.io/simple/
+poetry source add --priority primary phylum https://pypi.phylum.io/simple/
 poetry config http-basic.phylum "<PHYLUM_ORG>%2F<PHYLUM_GROUP>" "<PHYLUM_API_KEY>"
 ```
 
@@ -79,7 +79,7 @@ If **all** versions of a package are blocked, it will be explicitly pointed out
 as having failed analysis:
 
 ```text
-424 Client Error: "malicious" failed Phylum analysis for url: https://pypi.phylum.io/simple/malicious/
+424 Client Error: Failed Dependency for url: https://pypi.phylum.io/simple/malicious/
 ```
 
 If a version range is accepted by the manifest, the package manager will
