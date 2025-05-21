@@ -53,6 +53,11 @@ registries:
 Phylum supports sending out notifications whenever a package fails analysis. To
 receive those notifications, you can [setup webhooks].
 
+### Currently Unsupported
+
+If you don't find what you're looking for here, please also see the
+[Currently Unsupported] page.
+
 ### Frequently Asked Questions
 
 See the [FAQ] for common questions about using the package firewall.
@@ -68,3 +73,4 @@ See the [FAQ] for common questions about using the package firewall.
 [PyPI]: ./pypi.md
 [RubyGems]: ./rubygems.md
 [FAQ]: ./faq.md
+[Currently Unsupported]: ./unsupported.md

@@ -138,6 +138,7 @@ const sidebars = {
         'package_firewall/rubygems',
         'package_firewall/api',
         'package_firewall/faq',
+        'package_firewall/unsupported',
       ],
     },
     {
