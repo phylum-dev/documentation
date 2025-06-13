@@ -30,6 +30,9 @@ const config = {
     // Enable all Docusaurus Faster features
     // Ref: https://docusaurus.io/blog/releases/3.6#adoption-strategy
     experimental_faster: true,
+    // Enable all Docusaurus v4 Future Flags
+    // Ref: https://docusaurus.io/blog/releases/3.8#future-flags
+    v4: true
   },
 
   i18n: {
