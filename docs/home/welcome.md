@@ -8,17 +8,24 @@ slug: /
 
 ---
 
-Not a user yet? Get the free version [here](https://app.phylum.io/register).
+> 💡 **INFO** 💡
+>
+> The free Community version of Phylum was sunset on 24 February 2025.
+> Phylum is now only available for teams and Enterprise organizations.
+> Unfortunately, this means we are no longer supporting individual licensing.
+> We invite existing users to convert to a paid version of the product.
+
+Not a user yet? Connect with the [Veracode sales team](https://www.veracode.com/contact-us/)
+to create an account.
 
 [Quickstart](../cli/quickstart.md) -> (set up takes less than 10 minutes)
 
-**OR** install our [GitHub App](https://github.com/marketplace/phylum-io) (a
-free account is created automatically and set up takes 5 minutes)
+**OR** install our [GitHub App](https://github.com/marketplace/phylum-io)
 
 ---
 
-Phylum provides a comprehensive, scalable approach to defending your software supply chain.
-Get started with one or all of the below capabilities.
+Phylum provides a comprehensive, scalable approach to defending your software
+supply chain. Get started with one or all of the below capabilities.
 
 ## Detect & Prevent
 
