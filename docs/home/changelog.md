@@ -25,7 +25,7 @@
 - Package search results now have correct published timestamps or default to 1970 if unknown.
 
 ### Removed
-- Swagger UI hosted at `/api/v0/swagger`.
+- Swagger UI hosted at `https://api.phylum.io/api/v0/swagger` in favor of the unified Swagger UI available at `https://swagger.phylum.io/`
 - SUCCESS comments are no longer added to PRs.
 
 ## 2024 Week 50
