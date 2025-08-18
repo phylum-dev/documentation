@@ -6,13 +6,11 @@
 # Introduction
 
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)][CoC]
-[![Discord](https://img.shields.io/discord/1070071012353376387?logo=discord)][discord_invite]
 
 This is the source repository for all documentation common to the Phylum platform.
 The rendered form of the documentation can be viewed at the <https://docs.phylum.io> main page.
 
 [CoC]: https://github.com/phylum-dev/documentation/blob/main/CODE_OF_CONDUCT.md
-[discord_invite]: https://discord.gg/Fe6pr5eW6p
 
 ## License
 
@@ -38,10 +36,6 @@ requests, is expected to treat other people with respect and more generally to f
 Found a security issue in this repository? See the [security policy][security] for details on coordinated disclosure.
 
 [security]: https://github.com/phylum-dev/documentation/blob/main/SECURITY.md
-
-## Discord
-
-Join us on the [Phylum Community Discord][discord_invite]!
 
 ## Questions/Issues
 
