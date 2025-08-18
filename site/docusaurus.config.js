@@ -126,10 +126,6 @@ const config = {
             href: 'https://app.phylum.io',
           },
           {
-            label: 'Discord',
-            href: 'https://discord.gg/Fe6pr5eW6p',
-          },
-          {
             label: 'Twitter',
             href: 'https://twitter.com/Phylum_IO',
           },
