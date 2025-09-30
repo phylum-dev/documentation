@@ -23,7 +23,6 @@ const config = {
 
   onBrokenLinks: 'throw',
   onBrokenAnchors: 'throw',
-  onBrokenMarkdownLinks: 'throw',
   onDuplicateRoutes: 'throw',
 
   future: {
@@ -181,6 +180,10 @@ const config = {
       comments: true,
       admonitions: false,
       headingIds: false,
+    },
+    hooks: {
+      onBrokenMarkdownLinks: 'throw',
+      onBrokenMarkdownImages: 'throw',
     },
   },
 
