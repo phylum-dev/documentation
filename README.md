@@ -39,6 +39,4 @@ Found a security issue in this repository? See the [security policy][security] f
 
 ## Questions/Issues
 
-Please contact Veracode with any questions or issues.
-
-Email: `phylum@veracode.com`
+Please contact your Veracode customer success POC with any questions or issues.
