@@ -123,4 +123,6 @@ Docusaurus `plugin-client-redirects` plugin configuration in the larger `site/do
 If there are any outstanding questions about contributing to the Phylum documentation,
 they can be asked on the issue tracker: <https://github.com/phylum-dev/documentation/issues>.
 
-As an alternative, you can also email `phylum@veracode.com`.
+As an alternative, you can also contact your Veracode customer success POC or [general support][veracode_support].
+
+[veracode_support]: mailto:support@veracode.com
