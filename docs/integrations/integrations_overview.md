@@ -23,7 +23,6 @@ Other integrations include:
 | -------------------- | ---------------- |
 | Git `pre-commit` Hooks | [Documentation][precommit_docs] |
 | Dazz | [Documentation][dazz_docs] |
-| Snyk | [Documentation][snyk_docs] |
 | Sophos | [Documentation][sophos_docs] |
 | Tines | [Documentation][tines_docs] |
 | Netskope | [Documentation][netskope_docs] |
@@ -41,7 +40,6 @@ Other integrations include:
 [sophos_docs]: ../integrations/sophos.md
 [tines_docs]: ../integrations/tines.md
 [netskope_docs]: ../integrations/netskope.md
-[snyk_docs]: ../integrations/snyk.md
 [sumologic_docs]: ../integrations/sumo_logic.md
 [circleci_orb_registry]: https://circleci.com/developer/orbs/orb/phylum-dev/phylum
 
