@@ -94,7 +94,6 @@
 ### Removed
 - Group IDs from policy locators.
 
-
 ## 2023 Weeks 49-52
 ### New
 - UI: Added an email invitation system when attempting to add an unknown user to a group
@@ -103,7 +102,7 @@
 ## 2023 Weeks 43-48
 ### New
 - Notifications: Added email and webhook [notification](../knowledge_base/notifications.md) feature that triggers on [continuous monitoring](../knowledge_base/continuous_monitoring.md) events
-- Integration: Added an integration for [Snyk](../integrations/snyk.md)
+- Integration: Added an integration for Snyk
 - Integration: Added an integration for [Sumo Logic](../integrations/sumo_logic.md)
 - Integration: Added an integration for [CircleCI](https://circleci.com/developer/orbs/orb/phylum-dev/phylum)
 - Authentication: Added support for AzureAD authentication provider
