@@ -114,7 +114,7 @@
 ## 2023 Weeks 37-42
 ### New
 - CLI/CI: Added support for manifest files by leveraging [lockfile generation](../cli/lockfile_generation.md)
-- Integration: Added an integration for [Netskope](../integrations/netskope.md)
+- Integration: Added an integration for Netskope
 - Experimental: Added GenerativeAI remediation suggestion capability
 
 ## 2023 Weeks 31-36
