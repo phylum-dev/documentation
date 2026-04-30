@@ -25,7 +25,6 @@ Other integrations include:
 | Dazz | [Documentation][dazz_docs] |
 | Sophos | [Documentation][sophos_docs] |
 | Tines | [Documentation][tines_docs] |
-| Netskope | [Documentation][netskope_docs] |
 | Sumo Logic | [Documentation][sumologic_docs] |
 
 [github_app_docs]: ../integrations/github_app.md
@@ -39,7 +38,6 @@ Other integrations include:
 [dazz_docs]: ../integrations/dazz.md
 [sophos_docs]: ../integrations/sophos.md
 [tines_docs]: ../integrations/tines.md
-[netskope_docs]: ../integrations/netskope.md
 [sumologic_docs]: ../integrations/sumo_logic.md
 [circleci_orb_registry]: https://circleci.com/developer/orbs/orb/phylum-dev/phylum
 
