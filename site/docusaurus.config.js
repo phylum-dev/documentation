@@ -26,9 +26,6 @@ const config = {
   onDuplicateRoutes: 'throw',
 
   future: {
-    // Enable all Docusaurus Faster features
-    // Ref: https://docusaurus.io/blog/releases/3.6#adoption-strategy
-    experimental_faster: true,
     // Enable all Docusaurus v4 Future Flags
     // Ref: https://docusaurus.io/blog/releases/3.8#future-flags
     v4: true
@@ -85,7 +82,12 @@ const config = {
       },
       /* Add a temporary site announcement bar */
       announcementBar: {
-        content: 'Phylum is now part of Veracode! Please bear with us during the transition.',
+        content: `
+          Phylum is now part of Veracode!<br />
+          This documentation is for a legacy platform.<br />
+          Contact <a href="mailto:support@veracode.com">support@veracode.com</a> to migrate.<br />
+          See <a href=https://docs.veracode.com/r/Veracode_Package_Firewall>updated Veracode docs here</a>.
+        `,
         textColor: '#fff',
         backgroundColor: '#3480eb',
       },
@@ -175,12 +177,6 @@ const config = {
   markdown: {
     format: 'detect',
     mermaid: true,
-    // Ref: https://docusaurus.io/docs/migration/v3#turn-off-mdx-v1-compat
-    mdx1Compat: {
-      comments: true,
-      admonitions: false,
-      headingIds: false,
-    },
     hooks: {
       onBrokenMarkdownLinks: 'throw',
       onBrokenMarkdownImages: 'throw',
@@ -191,9 +187,9 @@ const config = {
     // This plugin is needed due to interactions between docusaurus and webpack/rspack
     // not handling symlinks correctly. Without it, the site won't build due to failures
     // in following the symlinks in `docs` to their git submodules. The "Docusaurus Faster"
-    // infrastructure (enabled in v3 with `experimental_faster` feature flag) uses rspack
-    // instead of webpack, but the lifecycle API plugin retains the `configureWebpack`
-    // name for now. References:
+    // infrastructure (enabled in v3 with `faster` feature flag) uses rspack instead of
+    // webpack, but the lifecycle API plugin retains the `configureWebpack` name for now.
+    // References:
     // https://github.com/facebook/docusaurus/issues/3272#issuecomment-876374383
     // https://github.com/facebook/docusaurus/issues/6257
     // https://docusaurus.io/docs/api/plugin-methods
@@ -268,7 +264,8 @@ const config = {
         // switch from Readme.com to Docusaurus SSG output hosted on GitHub Pages.
         // It redirects from the old flat "/docs/X" namespace to the new path-based namespaces.
         // It is also used to account for bulk changes since then.
-        createRedirects(existingPath) {
+        /** @param {string} existingPath */
+        createRedirects: (existingPath) => {
           // Account for the bulk change from "artifact_repositories" back to "package_firewall"
           if (existingPath.includes('/package_firewall/')) {
             return existingPath.replace('/package_firewall/', '/artifact_repositories/');
