@@ -1,4 +1,4 @@
-<!doctype html><html lang=en dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-cli/lockfile_generation" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>Lockfile Generation | Phylum Documentation</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://docs.phylum.io/cli/lockfile_generation /><meta data-rh=true property=og:locale content=en /><meta data-rh=true name=docusaurus_locale content=en /><meta data-rh=true name=docsearch:language content=en /><meta data-rh=true name=docusaurus_version content=current /><meta data-rh=true name=docusaurus_tag content=docs-default-current /><meta data-rh=true name=docsearch:version content=current /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-current /><meta data-rh=true property=og:title content="Lockfile Generation | Phylum Documentation"/><meta data-rh=true name=description content="Lockfiles can be directly parsed and analyzed by Phylum's CLI. However, since"/><meta data-rh=true property=og:description content="Lockfiles can be directly parsed and analyzed by Phylum's CLI. However, since"/><link data-rh=true rel=icon href=/img/favicon.ico /><link data-rh=true rel=canonical href=https://docs.phylum.io/cli/lockfile_generation /><link data-rh=true rel=alternate href=https://docs.phylum.io/cli/lockfile_generation hreflang=en /><link data-rh=true rel=alternate href=https://docs.phylum.io/cli/lockfile_generation hreflang=x-default /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://docs.phylum.io/cli/lockfile_generation","name":"Lockfile Generation","position":1}]}</script><link rel=stylesheet href=/assets/css/styles.c9de7014.css /><script src=/assets/js/runtime~main.d2080c17.js defer></script><script src=/assets/js/main.088a6a69.js defer></script></head><body><svg style="display: none;"><defs>
+<!doctype html><html lang=en dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-cli/lockfile_generation" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>Lockfile Generation | Phylum Documentation</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://docs.phylum.io/cli/lockfile_generation /><meta data-rh=true property=og:locale content=en /><meta data-rh=true name=docusaurus_locale content=en /><meta data-rh=true name=docsearch:language content=en /><meta data-rh=true name=docusaurus_version content=current /><meta data-rh=true name=docusaurus_tag content=docs-default-current /><meta data-rh=true name=docsearch:version content=current /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-current /><meta data-rh=true property=og:title content="Lockfile Generation | Phylum Documentation"/><meta data-rh=true name=description content="Lockfiles can be directly parsed and analyzed by Phylum's CLI. However, since"/><meta data-rh=true property=og:description content="Lockfiles can be directly parsed and analyzed by Phylum's CLI. However, since"/><link data-rh=true rel=icon href=/img/favicon.ico /><link data-rh=true rel=canonical href=https://docs.phylum.io/cli/lockfile_generation /><link data-rh=true rel=alternate href=https://docs.phylum.io/cli/lockfile_generation hreflang=en /><link data-rh=true rel=alternate href=https://docs.phylum.io/cli/lockfile_generation hreflang=x-default /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://docs.phylum.io/cli/lockfile_generation","name":"Lockfile Generation","position":1}]}</script><link rel=stylesheet href=/assets/css/styles.c9de7014.css /><script src=/assets/js/runtime~main.1d72ce4e.js defer></script><script src=/assets/js/main.088a6a69.js defer></script></head><body><svg style="display: none;"><defs>
 <symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
 </defs></svg>
 <script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme-504")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}(),document.documentElement.setAttribute("data-announcement-bar-initially-dismissed",function(){try{return"true"===localStorage.getItem("docusaurus.announcement.dismiss-504")}catch(t){}return!1}())</script><div id=__docusaurus><link rel=preload as=image href=/img/veracode_logo.svg /><div role=region aria-label="Skip to main content"><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>Skip to main content</a></div><div class="theme-announcement-bar announcementBar_mb4j" style=background-color:#3480eb;color:#fff role=banner><div class=announcementBarPlaceholder_vyr4></div><div class="content_knG7 announcementBarContent_xLdY">
@@ -15,76 +15,6 @@ passed to <a class="" href=/cli/commands/phylum_parse><code>phylum parse</code><
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=lockfile-generators>Lockfile generators<a href=#lockfile-generators class=hash-link aria-label="Direct link to Lockfile generators" title="Direct link to Lockfile generators" translate=no>​</a></h2>
 <p>The following table shows the supported manifest files for each lockfile type
 and which tools must be installed to facilitate automatic lockfile generation:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lockfile type<th>Manifests<th>Required tool<tbody><tr><td><code>npm</code><td><code>package.json</code><td><a href=https://nodejs.org target=_blank rel="noopener noreferrer" class=""><code>npm</code></a><tr><td><code>yarn</code><td><code>package.json</code><td><a href=https://yarnpkg.com target=_blank rel="noopener noreferrer" class=""><code>yarn</code></a><tr><td><code>pnpm</code><td><code>package.json</code><td><a href=https://pnpm.io target=_blank rel="noopener noreferrer" class=""><code>pnpm</code></a><tr><td><code>pip</code><td><code>requirements*.txt</code> <br/> <code>requirements.in</code> <br/> <code>setup.py</code> <br/> <code>pyproject.toml</code><td><a href=https://pip.pypa.io target=_blank rel="noopener noreferrer" class=""><code>pip</code></a> version 23.0.0+<tr><td><code>pipenv</code><td><code>Pipfile</code><td><a href=https://github.com/pypa/pipenv target=_blank rel="noopener noreferrer" class=""><code>pipenv</code></a><tr><td><code>poetry</code><td><code>pyproject.toml</code><td><a href=https://python-poetry.org target=_blank rel="noopener noreferrer" class=""><code>poetry</code></a><tr><td><code>gem</code><td><code>Gemfile</code><td><code>bundle</code> (from <a href=https://bundler.io target=_blank rel="noopener noreferrer" class="">Bundler</a>)<tr><td><code>mvn</code><td><code>pom.xml</code><td><code>mvn</code> (from <a href=https://maven.apache.org target=_blank rel="noopener noreferrer" class="">Maven</a>)<tr><td><code>gradle</code><td><code>build.gradle</code> <br/> <code>build.gradle.kts</code><td><a href=https://gradle.org target=_blank rel="noopener noreferrer" class=""><code>gradle</code></a> version 7.0.0+<tr><td><code>go</code><td><code>go.mod</code><td><a href=https://go.dev target=_blank rel="noopener noreferrer" class=""><code>go</code></a><tr><td><code>cargo</code><td><code>Cargo.toml</code><td><a href=https://www.rust-lang.org target=_blank rel="noopener noreferrer" class=""><code>cargo</code></a><tr><td><code>nugetlock</code><td><code>*.csproj</code><td><a href=https://dotnet.microsoft.com target=_blank rel="noopener noreferrer" class=""><code>dotnet</code></a></table>
 <blockquote>
 <p><strong>TIP:</strong></p>
